@@ -1,29 +1,85 @@
 @appleBodyWidth: 640px;
 
-body{width:@appleBodyWidth;}
+body{
+	width:@appleBodyWidth;
+	font-family: "Microsoft YaHei", sans-serif;
+}
 
 .subnavbar{
 	height:auto;
-			background-color: #007aff;
+	background-color: #007aff;
 	.buttons-row{
-		padding: 1em;
-
+		padding: 1em 0;
 		.button:first-child {
-		  border-left-width: 0;
+			border-left-width: 0;
 		}
 	}
 	.button.button-big-big {
-	  height: auto;
-	  line-height: auto;
-
-	  i {
-	  	font-size:3em;
-	  }
+		height: auto;
+		line-height: auto;
+		padding:0;
+		i {
+			font-size:2.94em;
+		}
 	}
 }
 
 #apply-page{
 	.page-content {
-	  padding-top: 155px;
+		padding-top: 14em;
+		.list-block ul.month-match{
+			box-shadow:0 1px 3px #d1d1d1;
+			margin-bottom: 2px;
+			li{
+				background-color: #fafafa;
+				border-bottom: 1px solid #ececec;
+				span{
+					position: absolute;
+					font-size: 1.35em;
+					color: white;
+					font-weight: bold;
+				}
+			}
+			.month-title{
+				text-align: center;
+				font-size:1.47em;
+				font-weight: bold;
+				color:#007aff;
+				line-height: 2.26;
+				border-bottom: 1px solid #ececec;
+			}
+			.item-content{
+				.item-inner:after{
+					display:none;
+				}
+				.item-inner{
+					text-align:center;
+					.item-title{
+						font-size:2.64em;
+						font-weight: bold;
+						color:#ebebeb;
+						text-shadow:0 -2px 1px #d9d9d9;
+					}
+					.item-subtitle{
+						font-size: 1.12em;
+						text-shadow:0 0 1px #d9d9d9;
+					}
+				}
+			}
+		} 
+	}
+}
+.navbar{
+	height:3.53em;
+	/*margin-bottom: 10px;*/
+	background-color: white;
+	[data-page="index"].navbar-inner{
+		.left{
+			font-size: 1.82em;
+			font-weight: bold;
+		}
+		.subnavbar a span{
+			font-size: 1.29em;
+		}
 	}
 }
