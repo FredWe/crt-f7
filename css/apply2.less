@@ -1,0 +1,75 @@
+@appleBodyWidth: 640px;
+
+body{
+	width:@appleBodyWidth;
+	font-family: "Microsoft YaHei", sans-serif;
+}
+
+.subnavbar{
+	height:auto;
+	background-color: #007aff;
+	.buttons-row{
+		padding: 1em 0;
+		.button:first-child {
+			border-left-width: 0;
+		}
+	}
+	.button.button-big-big {
+		height: auto;
+		line-height: auto;
+		padding:0;
+		i {
+			font-size:2.94em;
+		}
+	}
+}
+
+#apply-page2{
+	.page-content {
+		background-color: white;
+		.content-block.apply-swiper{
+			padding:0 2.18em;
+		}
+		.content-block.apply-banner{
+			color: white;
+			height: 17.47em;
+			background-image: url(../resources/apply2-pic1.jpg);
+		}
+	}
+}
+.navbar{
+	height:3.53em;
+	/*margin-bottom: 10px;*/
+	background-color: white;
+	[data-page="apply2"].navbar-inner{
+		.left{
+			font-size: 1.82em;
+			font-weight: bold;
+		}
+		.subnavbar a span{
+			font-size: 1.29em;
+		}
+	}
+}
+
+.swiper-slide {
+  background: #fff;
+  box-sizing: border-box;
+  span{
+	  text-align:center;
+	  display:block;
+	  margin: 20px;
+	  font-size:21px;  	
+  }
+}
+
+.swiper-custom {
+	position:relative;
+	height:120px;
+	.swiper-container {
+	  height: 100%;
+	}  
+	.swiper-button-prev,.swiper-button-next{
+
+	}
+}
