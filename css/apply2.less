@@ -28,12 +28,52 @@ body{
 	.page-content {
 		background-color: white;
 		.content-block.apply-swiper{
-			padding:0 2.18em;
+			margin: 0;
+			padding:0 4.29em;
 		}
 		.content-block.apply-banner{
 			color: white;
 			height: 17.47em;
+			padding:2.00em 2.14em;
 			background-image: url(../resources/apply2-pic1.jpg);
+			a{
+				color: white;
+				font-size: 1.29em;
+			}
+			.banner-title{
+				text-align: center;
+			}
+			.banner-title1{
+				font-size: 1.43em;
+				padding-top: 1em;
+				letter-spacing: 0.2em;
+			}
+			.banner-title2{
+				font-size: 3.43em;
+				font-weight: bold;
+				padding-top: 0.125em;
+				letter-spacing: 0.1em;
+			}
+			.banner-title3,.banner-title4{
+				font-size: 1.57em;
+			}
+			.banner-title3{
+				font-weight:bold;
+			}
+			.banner-title4{
+				padding: 0.36em;
+			}
+		}
+	}
+	.toolbar{
+		border-top: 1px solid #ececec;
+		height: 7.06em;
+		display: table-cell;
+		vertical-align: middle;
+		a.button-big{
+			border-radius: 0.47em;
+			height: 4.70em;
+			width: 35.3em;
 		}
 	}
 }
@@ -58,18 +98,27 @@ body{
   span{
 	  text-align:center;
 	  display:block;
-	  margin: 20px;
-	  font-size:21px;  	
+	  margin: 0 0.33em;
+	  font-size:4.29em;  
+	  color: #007aff;	
   }
 }
 
 .swiper-custom {
 	position:relative;
-	height:120px;
+	padding: 2.14em 0;
+	border-bottom: 1px solid #ededed;
+	height:8.58em;
 	.swiper-container {
 	  height: 100%;
 	}  
-	.swiper-button-prev,.swiper-button-next{
-
+	.explain-text{
+		z-index: 10;
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		color: black;
+		font-size:1.71em;
+		bottom: 1.58em;
 	}
 }
