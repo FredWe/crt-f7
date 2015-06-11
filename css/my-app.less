@@ -1,7 +1,7 @@
 @appleBodyWidth: 640px;
 
 body{
-	width:@appleBodyWidth;
+	/*width:@appleBodyWidth;*/
 	font-family: "Microsoft YaHei", sans-serif;
 }
 
@@ -33,20 +33,25 @@ body{
 			li{
 				background-color: #fafafa;
 				border-bottom: 1px solid #ececec;
-				div.img-title{
+				.img-title{
 					position: absolute;
+					bottom: 20px+32px;
+					left: 30px;
 					font-size: 1.35em;
 					color: white;
 					font-weight: bold;
 				}
-				div.img-title  {font-weight: normal}
+				.img-title + .img-title{
+					bottom: 20px;
+					font-weight: normal;
+				}
 			}
 			.month-title{
 				text-align: center;
 				font-size:1.47em;
 				font-weight: bold;
 				color:#007aff;
-				line-height: 2.26;
+				line-height: 1.8;
 				border-bottom: 1px solid #ececec;
 			}
 			.item-content{
@@ -72,15 +77,16 @@ body{
 }
 .navbar{
 	height:3.53em;
-	/*margin-bottom: 10px;*/
 	background-color: white;
 	[data-page="index"].navbar-inner{
 		.left{
 			font-size: 1.82em;
 			font-weight: bold;
 		}
-		.subnavbar a span{
-			font-size: 1.29em;
+		.subnavbar{
+			 a span{
+				font-size: 1.29em;
+			}
 		}
 	}
 }

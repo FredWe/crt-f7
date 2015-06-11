@@ -1,10 +1,27 @@
 @appleBodyWidth: 640px;
 
 body{
-	width:@appleBodyWidth;
+	/*width:@appleBodyWidth;*/
 	font-family: "Microsoft YaHei", sans-serif;
 }
-
+.navbar{
+	height:3.53em;
+	/*margin-bottom: 10px;*/
+	background-color: white;
+	[data-page="apply2"].navbar-inner{
+		.left{
+			font-size: 1.82em;
+			font-weight: bold;
+			.logo{
+				margin: 17px 12px 0;
+			}
+		}
+		.subnavbar a span{
+			font-size: 1.29em;
+		}
+	}
+}
+.navbar::after{display: none;}
 .subnavbar{
 	height:auto;
 	background-color: #007aff;
@@ -27,13 +44,17 @@ body{
 #apply-page2{
 	.page-content {
 		background-color: white;
+		padding:61px 0 120px;
 		.content-block.apply-swiper{
 			margin: 0;
 			padding:0 4.29em;
 		}
+		.content-block{
+			margin: 0;
+		}
 		.content-block.apply-banner{
 			color: white;
-			height: 17.47em;
+			height: 241px;
 			padding:2.00em 2.14em;
 			background-image: url(../resources/apply2-pic1.jpg);
 			a{
@@ -65,33 +86,35 @@ body{
 			}
 		}
 	}
+	.toolbar::before{
+		display:none;
+	}
 	.toolbar{
 		border-top: 1px solid #ececec;
 		height: 7.06em;
-		display: table-cell;
-		vertical-align: middle;
+		display: -webkit-flex;
+		display: flex;
+		align-items:center;
+		justify-content:center;
+		-webkit-align-items:center;
+		-webkit-justify-content:center;
 		a.button-big{
-			border-radius: 0.47em;
-			height: 4.70em;
-			width: 35.3em;
+			display: flex;
+			display: -webkit-flex;
+			align-items:center;
+			justify-content:center;
+			-webkit-align-items:center;
+			-webkit-justify-content:center;
+			background-color: #007aff;
+			color: white;
+			font-size: 1.24em;
+			font-weight: bold;			
+			border-radius: 0.38em;
+			height: 3.79em;
+			width: 28.47em;
 		}
 	}
 }
-.navbar{
-	height:3.53em;
-	/*margin-bottom: 10px;*/
-	background-color: white;
-	[data-page="apply2"].navbar-inner{
-		.left{
-			font-size: 1.82em;
-			font-weight: bold;
-		}
-		.subnavbar a span{
-			font-size: 1.29em;
-		}
-	}
-}
-
 .swiper-slide {
   background: #fff;
   box-sizing: border-box;
@@ -106,7 +129,7 @@ body{
 
 .swiper-custom {
 	position:relative;
-	padding: 2.14em 0;
+	padding: 27px 0;
 	border-bottom: 1px solid #ededed;
 	height:8.58em;
 	.swiper-container {
@@ -121,4 +144,15 @@ body{
 		font-size:1.71em;
 		bottom: 1.58em;
 	}
+}
+.content-block.apply-swiper+.list-block{
+	font-size: 24px;
+	input{
+		font-size: inherit;
+	}
+}
+i.icon.icon-form-name-identity {
+  width: 29px;
+  height: 29px;
+  background-image: url("../resources/i-form-name-identity.png");
 }
