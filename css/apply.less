@@ -1,4 +1,14 @@
+/*variable*/
 @appleBodyWidth: 640px;
+/*mixin*/
+.flex-xy-center {
+	display: -webkit-flex;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	-webkit-align-items:center;
+	-webkit-justify-content:center;
+}
 
 body{
 	width:@appleBodyWidth;
@@ -98,6 +108,26 @@ body{
 	}
 }
 /********************************************/
+.toolbar::before{
+	display:none;
+}
+.toolbar{
+	border-top: 1px solid #ececec;
+	height: 120px;
+	.flex-xy-center;/*mixin*/
+	a.button-big{
+		.flex-xy-center;/*mixin*/
+		background-color: #007aff;
+		color: white;
+		font-size: 21px;
+		font-weight: bold;			
+		border-radius: 8px;
+		height: 80px;
+		width: 600px;
+	}
+}
+
+/********************************************/
 #apply-page2,#apply-page2-2{
 	.page-content {
 		background-color: white;
@@ -144,34 +174,6 @@ body{
 			}
 		}
 	}
-	.toolbar::before{
-		display:none;
-	}
-	.toolbar{
-		border-top: 1px solid #ececec;
-		height: 120px;
-		display: -webkit-flex;
-		display: flex;
-		align-items:center;
-		justify-content:center;
-		-webkit-align-items:center;
-		-webkit-justify-content:center;
-		a.button-big{
-			display: flex;
-			display: -webkit-flex;
-			align-items:center;
-			justify-content:center;
-			-webkit-align-items:center;
-			-webkit-justify-content:center;
-			background-color: #007aff;
-			color: white;
-			font-size: 21px;
-			font-weight: bold;			
-			border-radius: 8px;
-			height: 80px;
-			width: 600px;
-		}
-	}
 }
 .swiper-slide {
   background: #fff;
@@ -206,11 +208,7 @@ body{
 .content-block.apply-swiper+.list-block{
 	.partner-title{
 		display: flex;
-		align-items: center;
-		justify-content: center;
-		display: -webkit-flex;
-		-webkit-align-items: center;
-		-webkit-justify-content: center;
+		.flex-xy-center;/*mixin*/
 		margin-bottom: 18px; 
 	}
 	font-size: 24px;
@@ -239,4 +237,37 @@ i.icon.icon-form-name,i.icon.icon-form-name-identity{
 }
 i.icon.icon-form-name-identity {
   background-image: url("../resources/i-form-name-identity.png");
+}
+/********************************************/
+#reg-page1,#reg-page2,#reg-page2-playerHistory,#reg-page3,#reg-page4{
+	.page-content {
+		background-color: white;
+		padding:61px 0 120px;
+		.content-block{
+			margin: 0;
+			padding: 0 21px;
+		}
+		.content-block.reg-banner{
+			color: white;
+			height: 485px;
+			width: 100%;
+			background-image: url(../resources/reg-pic1.jpg);
+			background-size: cover;
+			.flex-xy-center;/*mixin*/
+			.banner-title{
+				text-align: center;
+			}
+			.banner-title1{
+				font-size: 20px;
+				padding-top: 20px;
+				letter-spacing: 4px;
+			}
+			.banner-title2{
+				font-size: 48px;
+				font-weight: bold;
+				padding-top: 6px;
+				letter-spacing: 5px;
+			}		
+		}
+	}	
 }
