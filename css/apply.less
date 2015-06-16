@@ -1,5 +1,7 @@
 /*variable*/
 @appleBodyWidth: 640px;
+@regFormItemPadding: 22px;
+
 /*mixin*/
 .flex-xy-center {
 	display: -webkit-flex;
@@ -9,12 +11,51 @@
 	-webkit-align-items:center;
 	-webkit-justify-content:center;
 }
+.flex-y-center-but-x-justify {
+	display: -webkit-flex;
+	display: flex;
+	align-items:center;
+	justify-content:space-between;
+	-webkit-align-items:center;
+	-webkit-justify-content:space-between;
+}
+.tennis-logo {
+	display: inline-block;
+	height: 25px;
+	width: 25px;
+	text-align: center;
+	background-image: url(../resources/tennis.png);
+	color: #ea2929;
+	font-style: italic;
+}
+.form-apply(@itemPadding: 39px){
+	font-size: 24px;
+	input{
+		font-size: inherit;
+	}
+	ul::before,ul::after{
+		display: none;
+	}
+	ul li .item-content{
+		padding: 0 @itemPadding;
+		.item-inner::after{
+			background: #e9e9e9;
+		}
+		li:last-child .item-inner::after{
+			display:inline;
+		}		
+	}
+	li:last-child .item-inner:after {
+	  display: block;
+	}	
+}
 
+/*content*/
 body{
 	width:@appleBodyWidth;
 	font-family: "Microsoft YaHei", sans-serif;
 }
-
+/**common**************************************/
 .navbar{
 	height:60px;
 	background-color: white;
@@ -55,7 +96,7 @@ body{
 		display: block;
 	}
 }
-
+/**apply****************************************/
 #apply-page{
 	.page-content {
 		padding-top: 196px;
@@ -107,7 +148,7 @@ body{
 		} 
 	}
 }
-/********************************************/
+/**common***************************************/
 .toolbar::before{
 	display:none;
 }
@@ -127,7 +168,7 @@ body{
 	}
 }
 
-/********************************************/
+/**apply2*****************************************/
 #apply-page2,#apply-page2-2{
 	.page-content {
 		background-color: white;
@@ -135,13 +176,14 @@ body{
 		.content-block.apply-swiper{
 			margin: 0;
 			padding:0 39px;
+			height: 38.791%;
 		}
 		.content-block{
 			margin: 0;
 		}
 		.content-block.apply-banner{
 			color: white;
-			height: 241px;
+			height: 32.566%;
 			padding:28px 30px;
 			background-image: url(../resources/apply2-pic1.jpg);
 			background-size: cover;
@@ -154,7 +196,7 @@ body{
 			}
 			.banner-title1{
 				font-size: 20px;
-				padding-top: 20px;
+				padding-top: 7.095%;
 				letter-spacing: 4px;
 			}
 			.banner-title2{
@@ -189,9 +231,9 @@ body{
 
 .swiper-custom {
 	position:relative;
-	padding: 27px 0;
+	padding: 4.214% 0; /*computed based on width*/
 	border-bottom: 1px solid #ededed;
-	height:8.58em;
+	height: 34.286%;
 	.swiper-container {
 	  height: 100%;
 	}  
@@ -201,35 +243,17 @@ body{
 		width: 100%;
 		text-align: center;
 		color: black;
-		font-size:1.71em;
-		bottom: 1.58em;
+		font-size: 24px;
+		bottom: 12.67%;
 	}
 }
-.content-block.apply-swiper+.list-block{
+.list-block.form-info{
 	.partner-title{
 		display: flex;
 		.flex-xy-center;/*mixin*/
 		margin-bottom: 18px; 
 	}
-	font-size: 24px;
-	input{
-		font-size: inherit;
-	}
-	ul::before,ul::after{
-		display: none;
-	}
-	ul li .item-content{
-		padding: 0 39px;
-		.item-inner::after{
-			background: #e9e9e9;
-		}
-		li:last-child .item-inner::after{
-			display:inline;
-		}		
-	}
-	li:last-child .item-inner:after {
-	  display: block;
-	}	
+	.form-apply;/*mixin*/
 }
 i.icon.icon-form-name,i.icon.icon-form-name-identity{
 	width: 43px;
@@ -238,7 +262,7 @@ i.icon.icon-form-name,i.icon.icon-form-name-identity{
 i.icon.icon-form-name-identity {
   background-image: url("../resources/i-form-name-identity.png");
 }
-/********************************************/
+/**reg**************************************/
 #reg-page1,#reg-page2,#reg-page2-playerHistory,#reg-page3,#reg-page4{
 	.page-content {
 		background-color: white;
@@ -249,8 +273,7 @@ i.icon.icon-form-name-identity {
 		}
 		.content-block.reg-banner{
 			color: white;
-			height: 485px;
-			width: 100%;
+			height: 411px;
 			background-image: url(../resources/reg-pic1.jpg);
 			background-size: cover;
 			.flex-xy-center;/*mixin*/
@@ -269,5 +292,80 @@ i.icon.icon-form-name-identity {
 				letter-spacing: 5px;
 			}		
 		}
+		.content-block{
+			.row.form-header{
+				height: 93px;
+				.flex-y-center-but-x-justify;
+				.form-title{
+					font-size:29px;
+					color: #333333;
+				}
+				>:nth-last-child(1){
+					font-size: 18px;
+					font-weight: bold;
+					text-align:right;
+					color: #999999;
+					span.tennis-logo{
+						.tennis-logo;
+					}
+				}
+				:first-child{
+					.go-back{
+						font-size: 20px;
+					}
+				}
+			}
+		}
+		.content-block.EULA{
+			.EULA-content{
+				margin:21px 0;
+				padding: 24px 18px;
+				white-space: pre-line;
+				height: 330px;
+				font-size: 24px;
+				overflow: auto;
+				color: #666666;
+				background-color: #ececec;
+			}
+			.EULA-checkbox{
+				padding: 12px 0;
+				font-size: 18px;
+				font-weight: bold;
+				input[type="checkbox"] {
+					-webkit-appearance: none;
+					background: #fff url("../resources/checkbox.png");
+					height: 18px;
+					width: 18px;
+					background-position: -20px 0;
+					vertical-align: middle;
+				}
+				input[type="checkbox"]:checked {
+					background-position: 0;
+				}						
+			}
+		}
 	}	
+}
+/**reg2********************************************/
+#reg-page2{
+	.page-content{
+		background-color: #cecece;
+		.content-block.reg-basic{
+			background-color: white;
+			margin-top: 11px;
+			border-bottom: 1px solid #e4e4e4;
+		}
+		.list-block.form-basic{
+			margin: 0;
+			.form-apply(@regFormItemPadding);
+			.item-inner{
+				justify-content:flex-start;
+				.item-after{
+					height: 100%;
+					max-height: none;
+					padding-left: 5px;
+				}
+			}
+		}
+	}
 }
