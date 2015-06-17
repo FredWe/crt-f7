@@ -1,8 +1,26 @@
 /*variable*/
 @appleBodyWidth: 640px;
 @regFormItemPadding: 22px;
-
+@dxBetwNavAndSubnav: 9px;
 /*mixin*/
+.flex-y-center {
+	display: -webkit-flex;
+	display: flex;
+	align-items:center;
+	-webkit-align-items:center;
+}
+.flex-x-center {
+	display: -webkit-flex;
+	display: flex;
+	justify-content:center;
+	-webkit-justify-content:center;
+}
+.flex-x-justify {
+	display: -webkit-flex;
+	display: flex;
+	justify-content:center;
+	-webkit-justify-content:center;
+}
 .flex-xy-center {
 	display: -webkit-flex;
 	display: flex;
@@ -49,6 +67,12 @@
 	  display: block;
 	}	
 }
+.form-item-padding-topbottom(@pad: 15px){
+	.item-inner{
+		padding-top: @pad;
+		padding-bottom: @pad;
+	}
+}
 
 /*content*/
 body{
@@ -59,23 +83,30 @@ body{
 .navbar{
 	height:60px;
 	background-color: white;
-	.navbar-inner{
-		.left{
-			font-size: 31px;
-			font-weight: bold;
-			z-index: 30;
-			[alt="CRT-logo"]{
-				margin: 17px 12px 0;
-			}
+}
+.navbar-inner{
+	.left{
+		font-size: 31px;
+		font-weight: bold;
+		z-index: 30;
+		[alt="CRT-logo"]{
+			margin: 17px 12px 0;
 		}
-		.subnavbar a span{
-			font-size: 18px;
-		}
+	}
+	a{
+		font-size: 18px;
+	}
+	a.back.link{
+		margin-left: 14px;
+		font-size: 20px;
+		font-weight: normal;
+	}
+	.center.sliding{
+		font-size: 24px; 
 	}
 }
 .navbar::after{display: none;}
 .subnavbar{
-	top: 70px;
 	height:auto;
 	background-color: #007aff;
 	.buttons-row{
@@ -96,8 +127,34 @@ body{
 		display: block;
 	}
 }
+.smart-select-page {
+	.list-block {
+		li{
+			padding-left:21px;
+			padding-right:21px;
+			font-size: 23px;
+		}
+		label.label-checkbox i.icon-form-checkbox{
+			width: 30px;
+			height: 30px;
+		}
+		label.item-content{
+			padding-left: 10px;
+		}
+	}
+	.form-item-padding-topbottom;	
+}
 /**apply****************************************/
+[data-page="apply"] {
+	.navbar-inner{
+		border-bottom: @dxBetwNavAndSubnav solid #cecece;
+	}
+	.subnavbar{
+		margin-top: @dxBetwNavAndSubnav;
+	}
+}
 #apply-page{
+	
 	.page-content {
 		padding-top: 196px;
 		.list-block ul.month-match{
@@ -156,6 +213,9 @@ body{
 	border-top: 1px solid #ececec;
 	height: 120px;
 	.flex-xy-center;/*mixin*/
+	.row{
+		width: 600px;
+	}
 	a.button-big{
 		.flex-xy-center;/*mixin*/
 		background-color: #007aff;
@@ -164,7 +224,6 @@ body{
 		font-weight: bold;			
 		border-radius: 8px;
 		height: 80px;
-		width: 600px;
 	}
 }
 
@@ -263,7 +322,7 @@ i.icon.icon-form-name-identity {
   background-image: url("../resources/i-form-name-identity.png");
 }
 /**reg**************************************/
-#reg-page1,#reg-page2,#reg-page2-playerHistory,#reg-page3,#reg-page4{
+#reg-page1,.reg-page{
 	.page-content {
 		background-color: white;
 		padding:61px 0 120px;
@@ -347,12 +406,11 @@ i.icon.icon-form-name-identity {
 	}	
 }
 /**reg2********************************************/
-#reg-page2{
+.reg-page{
 	.page-content{
-		background-color: #cecece;
 		.content-block.reg-basic{
 			background-color: white;
-			margin-top: 11px;
+			border-top: 11px solid #cecece;
 			border-bottom: 1px solid #e4e4e4;
 		}
 		.list-block.form-basic{
@@ -366,6 +424,7 @@ i.icon.icon-form-name-identity {
 					padding-left: 5px;
 				}
 			}
+			.form-item-padding-topbottom;
 		}
 	}
 }

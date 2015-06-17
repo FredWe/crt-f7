@@ -42,3 +42,7 @@ var mySwiper2 = myApp.swiper('.swiper-2', {
   nextButton: '.swiper-custom .swiper-2 ~ .swiper-button-next',
   prevButton: '.swiper-custom .swiper-2 ~ .swiper-button-prev'
 }); 
+
+var calendarDefault = myApp.calendar({
+    input: '#calendar-default',
+});
