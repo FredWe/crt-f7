@@ -1,0 +1,205 @@
+/*variable*/
+@appleBodyWidth: 640px;
+@navbarHeight: 60px;
+
+/*mixin*/
+.flex-y-center {
+	display: -webkit-flex;
+	display: flex;
+	align-items:center;
+	-webkit-align-items:center;
+}
+.flex-x-center {
+	display: -webkit-flex;
+	display: flex;
+	justify-content:center;
+	-webkit-justify-content:center;
+}
+.flex-x-justify {
+	display: -webkit-flex;
+	display: flex;
+	justify-content:center;
+	-webkit-justify-content:center;
+}
+.flex-y-center-but-x-justify {
+	display: -webkit-flex;
+	display: flex;
+	align-items:center;
+	justify-content:space-between;
+	-webkit-align-items:center;
+	-webkit-justify-content:space-between;
+}
+.tennis-logo {
+	display: inline-block;
+	height: 25px;
+	width: 25px;
+	text-align: center;
+	background-image: url(../resources/tennis.png);
+	color: #ea2929;
+	font-style: italic;
+}
+.border-test {border: 1px solid black;}
+.shadow-bottom(@bottom) { box-shadow: 0px @bottom 3px #cfd6d8 }
+.btn-aqua(@fontsize, @bordersize, @heightsize, @weightsize, @borderadius) {
+	font-size: @fontsize;
+	color: white;
+	height: @heightsize;
+	line-height: @heightsize - 2*@bordersize;
+	text-align: center;
+	width: @weightsize;
+	border: @bordersize solid white;
+	border-radius: @borderadius;
+	background-color: #33ccff;
+}
+
+/*content*/
+body{
+	width:@appleBodyWidth;
+	font-family: "Microsoft YaHei", sans-serif;
+}
+/**common**************************************/
+.navbar-through .page-content {
+	padding-top: @navbarHeight;
+}
+.navbar{
+	height:@navbarHeight;
+	background-color: white;
+	.shadow-bottom(1px);
+}
+.navbar-inner{
+	line-height: @navbarHeight;
+	.left{
+		font-size: 30px;
+		font-weight: bold;
+		z-index: 30;
+		[alt="CRT-logo"]{
+			margin: 17px 12px 0;
+		}
+	}
+	a.back.link.right{
+		font-size: 24px;
+		color: #33ccff;
+		margin-right: 32px;
+	}
+}
+.navbar::after{display: none;}
+.button {
+	border: none;
+}
+
+#user-center-page {
+	.content-block {
+		margin: 0;
+	}
+	.content-block#user-contact {
+		height: 235px;
+		background-image: url("../resources/usercenter-banner.jpg");
+		padding: 0;
+		line-height: 1;
+		color: white;
+		.mask {
+			box-sizing: border-box;
+			height: 100%;
+			background-color: rgba(0,184,240,0.90);
+			padding: 48px 48px 39px;
+		}
+		#user-name, #user-phone, #user-mail {
+			padding: 0 3px;
+		}
+		#user-name {
+			font-size: 37px;
+			font-weight: bold;
+			margin-bottom: 19px;
+		}
+		#user-phone, #user-mail {
+			font-size: 23px;
+		}
+		a.btn#edit {
+			margin-top: 24px;
+			/*.btn-aqua(@fontsize, @bordersize, @heightsize, @weightsize, @borderadius);*/
+			.btn-aqua(22px, 3px, 53px, 142px, 11px);
+		}
+	}
+	.content-block#user-function {
+		padding: 0;
+		background-color: white;
+		text-align: center;
+		.shadow-bottom(1px);
+		.row#user-display {
+			padding: 13px 0;
+			border-bottom: 1px solid #c8c7cc;
+			.col-auto {
+				border-right: 1px solid #c8c7cc;
+				.info {
+					font-size: 29px;
+					color: #666666;
+				}
+				.title {
+					font-size: 20px;
+					color: #999999;
+				}
+			}
+			.col-auto:last-child {
+				border-right: none;
+			}
+		}
+		.row#user-operation {
+			padding: 34px 21px;
+			a.btn-bigsquare#apply { background-color: #3b5999; }
+			a.btn-bigsquare#sign { background-color: #33ccff; }
+			a.btn-bigsquare#history { background-color: #ea764e; }
+			a.btn-bigsquare {
+				display: flex;
+				display: -webkit-flex;
+				flex-direction: column;
+				-webkit-flex-direction: column;
+				justify-content: center;
+				-webkit-justify-content: center;
+				width: 176px;
+				height: 141px;
+				color: white;
+				border-radius: 5px;
+				.icon {
+					font-size: 53px;
+				}
+				.title {
+					font-size: 23px;
+				}
+			}
+		}
+	}
+	.list-block#user-info {
+		margin-top: 3px;
+		.item-inner::after { display: none; }
+		ul::before, ul::after { display: none; }
+		li.accordion-item {
+			border-bottom: 3px solid #efefef;
+			a.item-link {
+				line-height: 82px;
+				font-size: 24px;
+				background-color: #ecf4f6;
+				padding-left: 0;
+			}
+			.item-inner {
+				padding-left: 72px;
+				padding-right: 88px;
+			}
+			.item-title:first-child { color: #76d7fd; }
+			.item-title:last-child { color: #666666; }
+		}
+		li.accordion-item.accordion-item-expanded .item-inner {
+			border-top: 3px solid white;
+			border-left: 7px solid white;
+		}
+		.accordion-item-content {
+			li {
+				padding-left: 54px;
+				padding-right: 35px;
+			}
+			.btn.sign {
+				/*.btn-aqua(@fontsize, @bordersize, @heightsize, @weightsize, @borderadius);*/
+				.btn-aqua(19px, 0px, 49px, 131px, 5px);
+			}
+		}
+	}
+}

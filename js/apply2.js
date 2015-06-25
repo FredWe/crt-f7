@@ -18,15 +18,36 @@ var mainView = myApp.addView('.view-main', {
     domCache: true
 });
 
+var itemBeijing = $$('#item-beijing').html();
+var itemWuhan = $$('#item-wuhan').html();
+$$('li.item-beijing').append(itemBeijing);
+$$('li.item-wuhan').append(itemWuhan);
+
+var logobarHTML = Template7.templates.logobarTemplate(
+  {
+    title: document.querySelector('.navbar>.navbar-inner').dataset.logobarTitle
+  }
+  );
+// var logobarTop = $$('#logobar-top').html();
+$$('.navbar>.navbar-inner').append(logobarHTML);
+
 var mySwiper1 = myApp.swiper('.swiper-1', {
   pagination:'.swiper-1 .swiper-pagination',
+  paginationHide: true,
+  paginationClickable: true,
   spaceBetween: 0,
-  nextButton: '.swiper-custom .swiper-1~.swiper-button-next',
-  prevButton: '.swiper-custom .swiper-1~.swiper-button-prev'
+  nextButton: '.swiper-custom .swiper-1 ~ .swiper-button-next',
+  prevButton: '.swiper-custom .swiper-1 ~ .swiper-button-prev'
 });
 var mySwiper2 = myApp.swiper('.swiper-2', {
   pagination:'.swiper-2 .swiper-pagination',
+  paginationHide: true,
+  paginationClickable: true,
   spaceBetween: 0,
-  nextButton: '.swiper-custom .swiper-2~.swiper-button-next',
-  prevButton: '.swiper-custom .swiper-2~.swiper-button-prev'
+  nextButton: '.swiper-custom .swiper-2 ~ .swiper-button-next',
+  prevButton: '.swiper-custom .swiper-2 ~ .swiper-button-prev'
 }); 
+
+var calendarDefault = myApp.calendar({
+    input: '#calendar-default',
+});
