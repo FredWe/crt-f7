@@ -23,13 +23,14 @@ var itemWuhan = $$('#item-wuhan').html();
 $$('li.item-beijing').append(itemBeijing);
 $$('li.item-wuhan').append(itemWuhan);
 
-var logobarHTML = Template7.templates.logobarTemplate(
-  {
-    title: document.querySelector('.navbar>.navbar-inner').dataset.logobarTitle
-  }
-  );
+var generateNav = function(e){
+  var logobarHTML = Template7.templates.logobarTemplate(
+   { title: e.dataset.logobarTitle } 
+   );
+  e.innerHTML += logobarHTML;
+};
 // var logobarTop = $$('#logobar-top').html();
-$$('.navbar>.navbar-inner').append(logobarHTML);
+$$('.navbar>.navbar-inner').each( function(index,e){ generateNav(e); } );
 
 var mySwiper1 = myApp.swiper('.swiper-1', {
   pagination:'.swiper-1 .swiper-pagination',

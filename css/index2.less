@@ -40,7 +40,7 @@
 }
 .border-test {border: 1px solid black;}
 .shadow-bottom(@bottom) { box-shadow: 0px @bottom 3px #cfd6d8 }
-.btn-aqua(@fontsize, @bordersize, @heightsize, @weightsize, @borderadius) {
+.btn-aqua(@fontsize, @bordersize: 0px, @heightsize, @weightsize, @borderadius) { /*with .button*/
 	font-size: @fontsize;
 	color: white;
 	height: @heightsize;
@@ -50,6 +50,10 @@
 	border: @bordersize solid white;
 	border-radius: @borderadius;
 	background-color: #33ccff;
+}
+.single-line-center(@lineheight) {
+	height: @lineheight;
+	line-height: @lineheight;
 }
 
 /*content*/
@@ -63,10 +67,11 @@ body{
 }
 .navbar{
 	height:@navbarHeight;
-	background-color: white;
-	.shadow-bottom(1px);
+	background-color: transparent;
 }
 .navbar-inner{
+	.shadow-bottom(1px);
+	background-color: white;
 	line-height: @navbarHeight;
 	.left{
 		font-size: 30px;
@@ -79,14 +84,13 @@ body{
 	a.back.link.right{
 		font-size: 24px;
 		color: #33ccff;
-		margin-right: 32px;
+		padding-right: 32px;
 	}
 }
 .navbar::after{display: none;}
 .button {
 	border: none;
 }
-
 #user-center-page {
 	.content-block {
 		margin: 0;
@@ -114,10 +118,9 @@ body{
 		#user-phone, #user-mail {
 			font-size: 23px;
 		}
-		a.btn#edit {
+		a.btn.btn-edit {
 			margin-top: 24px;
-			/*.btn-aqua(@fontsize, @bordersize, @heightsize, @weightsize, @borderadius);*/
-			.btn-aqua(22px, 3px, 53px, 142px, 11px);
+			.btn-aqua(@fontsize: 22px, @bordersize: 3px, @heightsize: 53px, @weightsize: 142px, @borderadius: 11px);
 		}
 	}
 	.content-block#user-function {
@@ -145,9 +148,9 @@ body{
 		}
 		.row#user-operation {
 			padding: 34px 21px;
-			a.btn-bigsquare#apply { background-color: #3b5999; }
-			a.btn-bigsquare#sign { background-color: #33ccff; }
-			a.btn-bigsquare#history { background-color: #ea764e; }
+			a.btn-bigsquare.btn-apply { background-color: #3b5999; }
+			a.btn-bigsquare.btn-sign { background-color: #33ccff; }
+			a.btn-bigsquare.btn-history { background-color: #ea764e; }
 			a.btn-bigsquare {
 				display: flex;
 				display: -webkit-flex;
@@ -193,13 +196,86 @@ body{
 		}
 		.accordion-item-content {
 			li {
-				padding-left: 54px;
-				padding-right: 35px;
+				padding-left: 37px;
+				/*padding-right: 35px;*/
 			}
 			.btn.sign {
-				/*.btn-aqua(@fontsize, @bordersize, @heightsize, @weightsize, @borderadius);*/
-				.btn-aqua(19px, 0px, 49px, 131px, 5px);
+				.btn-aqua(@fontsize: 19px, @heightsize: 49px, @weightsize: 131px, @borderadius: 5px);
+			}
+			.row {
+				.col-75 {
+					p {
+						font-size: 19px;
+						color: #b8b8b8;
+						margin-bottom: 0;
+					}
+					.row:last-child { margin-bottom: 19px; }
+					span { color: #666666; }
+					.info { font-size: 24px; }
+				}
+				.col-25 {
+					height: 100%;
+					align-self: center;
+					-webkit-align-self: center;
+				}
 			}
 		}
 	}
+}
+.navbar-inner[data-page=index] { display: none; }
+#sign-in-page {
+	.page-content { background-color: white; }
+	.content-block { 
+		margin: 0; 
+		padding-left: 22px;
+		padding-right: 20px;
+	}
+	.content-title#sign-in_title {
+		background-color: #ecf4f6;
+		border-bottom: 1px solid #e4e4e4;
+		.single-line-center(100px);
+		span.go-back a {
+			padding-left: 4px;
+			padding-right: 40px;
+			font-size: 19px;
+			color: #33ccff;
+			display: inline-block;
+		}
+		span.title-name {
+			font-size: 29px;
+			color: #333333;
+		}
+	}
+	.content-block#sign-in_user-account {
+		padding-top: 26px;
+		ul::before, ul::after { display:none; }
+		.item-inner::after { display:none; }
+		.list-block { margin: 0; }
+		li.item-content {
+			background-color: #ececec;
+			margin-bottom: 24px; 
+			input { font-size: 25px; }
+			color: #868686;
+			.single-line-center(80px);
+		}
+		.list-block #signin {
+			margin-top: 31px;
+			margin-bottom: 37px;
+			.btn-aqua(@fontsize: 22px, @heightsize: 82px, @weightsize: 100%, @borderadius: 9px);
+			font-weight: bold;
+		}
+		.list-block .list-block-label {
+			padding-left: 9px;
+			color: #666666;
+			font-size: 25px;
+			a {
+				color: #33ccff;
+			}
+		}
+	}
+}
+.button.active-state {
+  opacity: 0.4;
+  -webkit-transition-duration: 50ms;
+  transition-duration: 50ms;
 }

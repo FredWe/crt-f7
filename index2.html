@@ -11,7 +11,7 @@
     <!-- Path to Font-Awesome Library CSS-->
     <link rel="stylesheet" href="Font-Awesome/css/font-awesome.css">
     <!-- Path to your custom app styles-->
-    <link rel="stylesheet/less" type="text/css" href="css/apply2.less">
+    <link rel="stylesheet/less" type="text/css" href="css/index2.less">
     <script src="js/less.min.js" type="text/javascript"></script>
     <style>
       
@@ -32,11 +32,13 @@
             <a href="#" class="back link right">登出</a>
           </div>
 
-          <div data-page="check-in" class="navbar-inner cached"></div>
+          <div data-page="check-in" class="navbar-inner cached" data-logobar-title="中国CRT中网级别联赛选手签到"></div>
           <div data-page="match-info1" class="navbar-inner cached"></div>
           <div data-page="match-info12" class="navbar-inner cached"></div>
           <div data-page="match-info22" class="navbar-inner cached"></div>
           <div data-page="match-info23" class="navbar-inner cached"></div>          
+          <div data-page="index" class="navbar-inner cached"></div>
+          <div data-page="sign-in" class="navbar-inner cached" data-logobar-title="中国CRT赛事选手登录"></div>
         </div>
 
         <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
@@ -54,7 +56,7 @@
                   <span id="user-mail">
                     <i class="fa fa-envelope-o"></i> ddd333@sina.com.cn
                   </span>
-                  <a href="#" class="button btn" id="edit">编辑</a>
+                  <a href="#" class="button btn btn-edit">编辑</a>
                 </div>
               </div>
               <div class="content-block" id="user-function">
@@ -74,7 +76,7 @@
                 </div>
                 <div class="row" id="user-operation">
                   <div class="col-auto">
-                    <a href="#" class="button btn-bigsquare" id="apply">
+                    <a href="#" class="button btn-bigsquare btn-apply">
                       <div class="icon">
                         <i class="fa fa-pencil-square-o"></i>
                       </div>
@@ -82,7 +84,7 @@
                     </a>
                   </div>
                   <div class="col-auto">
-                    <a href="#" class="button btn-bigsquare" id="sign">
+                    <a href="#" class="button btn-bigsquare btn-sign">
                       <div class="icon">
                         <i class="fa fa-check-circle"></i>
                       </div>
@@ -90,7 +92,7 @@
                     </a>
                   </div>
                   <div class="col-auto">
-                    <a href="#" class="button btn-bigsquare" id="history">
+                    <a href="#" class="button btn-bigsquare btn-history">
                       <div class="icon">
                         <i class="fa fa-repeat"></i>
                       </div>
@@ -110,7 +112,78 @@
                     </a>
                     <div class="accordion-item-content">
                       <div class="content-block">
-                        <p>Item 1 content. Lorem ipsum dolor sit amet...</p>
+                        <ul>
+                          <li>
+                            <div class="row no-gutter">
+                              <div class="col-75">
+                                <p>2015 CRT中网级别联赛 第一季 北京 5.0级别</p>
+                                <p>项目：
+                                  <span class="info">单打</span> &emsp; 参赛者：
+                                  <span class="info">王默默</span>
+                                </p>
+                                <div class="row no-gutter">
+                                  <div class="col-auto">
+                                    <p>抽签日期:
+                                      <span class="number">2015-06-16</span>
+                                    </p>
+                                    <p>签位数:
+                                      <span class="number">256</span>
+                                    </p>
+                                  </div>
+                                  <div class="col-auto">
+                                    <p>
+                                      比赛日期:
+                                      <span class="number">2015-06-18</span>
+                                    </p>
+                                    <p>
+                                     签/报:
+                                      <span class="number">2015-06-16</span>
+                                    </p>
+                                  </div>
+                                </div>
+
+                              </div>
+                              <div class="col-25">
+                                <a href="#" class="button btn sign">选手签到</a>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="row no-gutter">
+                              <div class="col-75">
+                                <p>2015 CRT中网级别联赛 第一季 北京 5.0级别</p>
+                                <p>项目：
+                                  <span class="info">单打</span> &emsp; 参赛者：
+                                  <span class="info">王默默</span>
+                                </p>
+                                <div class="row no-gutter">
+                                  <div class="col-auto">
+                                    <p>抽签日期:
+                                      <span class="number">2015-06-16</span>
+                                    </p>
+                                    <p>签位数:
+                                      <span class="number">256</span>
+                                    </p>
+                                  </div>
+                                  <div class="col-auto">
+                                    <p>
+                                      比赛日期:
+                                      <span class="number">2015-06-18</span>
+                                    </p>
+                                    <p>
+                                     签/报:
+                                      <span class="number">2015-06-16</span>
+                                    </p>
+                                  </div>
+                                </div>
+
+                              </div>
+                              <div class="col-25">
+                                <a href="#" class="button btn sign">选手签到</a>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </li>
@@ -125,17 +198,74 @@
                       <div class="content-block">
                         <ul>
                           <li>
-                            <div class="row">
-                              <div class="col-auto">
-                                <p>Item 2 content. Lorem ipsum dolor sit amet...</p>
+                            <div class="row no-gutter">
+                              <div class="col-75">
+                                <p>2015 CRT中网级别联赛 第一季 北京 5.0级别</p>
+                                <p>项目：
+                                  <span class="info">单打</span> &emsp; 参赛者：
+                                  <span class="info">王默默</span>
+                                </p>
+                                <div class="row no-gutter">
+                                  <div class="col-auto">
+                                    <p>抽签日期:
+                                      <span class="number">2015-06-16</span>
+                                    </p>
+                                    <p>签位数:
+                                      <span class="number">256</span>
+                                    </p>
+                                  </div>
+                                  <div class="col-auto">
+                                    <p>
+                                      比赛日期:
+                                      <span class="number">2015-06-18</span>
+                                    </p>
+                                    <p>
+                                     签/报:
+                                      <span class="number">2015-06-16</span>
+                                    </p>
+                                  </div>
+                                </div>
+
                               </div>
-                              <div class="col-auto">
+                              <div class="col-25">
                                 <a href="#" class="button btn sign">选手签到</a>
                               </div>
                             </div>
                           </li>
                           <li>
-                            <p>Item 2 content. Lorem ipsum dolor sit amet...</p>
+                            <div class="row no-gutter">
+                              <div class="col-75">
+                                <p>2015 CRT中网级别联赛 第一季 北京 5.0级别</p>
+                                <p>项目：
+                                  <span class="info">单打</span> &emsp; 参赛者：
+                                  <span class="info">王默默</span>
+                                </p>
+                                <div class="row no-gutter">
+                                  <div class="col-auto">
+                                    <p>抽签日期:
+                                      <span class="number">2015-06-16</span>
+                                    </p>
+                                    <p>签位数:
+                                      <span class="number">256</span>
+                                    </p>
+                                  </div>
+                                  <div class="col-auto">
+                                    <p>
+                                      比赛日期:
+                                      <span class="number">2015-06-18</span>
+                                    </p>
+                                    <p>
+                                     签/报:
+                                      <span class="number">2015-06-16</span>
+                                    </p>
+                                  </div>
+                                </div>
+
+                              </div>
+                              <div class="col-25">
+                                <a href="#" class="button btn sign">选手签到</a>
+                              </div>
+                            </div>
                           </li>
                         </ul>
                       </div>
@@ -150,7 +280,78 @@
                     </a>
                     <div class="accordion-item-content">
                       <div class="content-block">
-                        <p>Item 2 content. Lorem ipsum dolor sit amet...</p>
+                        <ul>
+                          <li>
+                            <div class="row no-gutter">
+                              <div class="col-75">
+                                <p>2015 CRT中网级别联赛 第一季 北京 5.0级别</p>
+                                <p>项目：
+                                  <span class="info">单打</span> &emsp; 参赛者：
+                                  <span class="info">王默默</span>
+                                </p>
+                                <div class="row no-gutter">
+                                  <div class="col-auto">
+                                    <p>抽签日期:
+                                      <span class="number">2015-06-16</span>
+                                    </p>
+                                    <p>签位数:
+                                      <span class="number">256</span>
+                                    </p>
+                                  </div>
+                                  <div class="col-auto">
+                                    <p>
+                                      比赛日期:
+                                      <span class="number">2015-06-18</span>
+                                    </p>
+                                    <p>
+                                     签/报:
+                                      <span class="number">2015-06-16</span>
+                                    </p>
+                                  </div>
+                                </div>
+
+                              </div>
+                              <div class="col-25">
+                                <a href="#" class="button btn sign">选手签到</a>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="row no-gutter">
+                              <div class="col-75">
+                                <p>2015 CRT中网级别联赛 第一季 北京 5.0级别</p>
+                                <p>项目：
+                                  <span class="info">单打</span> &emsp; 参赛者：
+                                  <span class="info">王默默</span>
+                                </p>
+                                <div class="row no-gutter">
+                                  <div class="col-auto">
+                                    <p>抽签日期:
+                                      <span class="number">2015-06-16</span>
+                                    </p>
+                                    <p>签位数:
+                                      <span class="number">256</span>
+                                    </p>
+                                  </div>
+                                  <div class="col-auto">
+                                    <p>
+                                      比赛日期:
+                                      <span class="number">2015-06-18</span>
+                                    </p>
+                                    <p>
+                                     签/报:
+                                      <span class="number">2015-06-16</span>
+                                    </p>
+                                  </div>
+                                </div>
+
+                              </div>
+                              <div class="col-25">
+                                <a href="#" class="button btn sign">选手签到</a>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </li>                  
@@ -200,6 +401,24 @@
                       </div>
                     </a>
                   </li>
+                  <li>
+                    <a href="#index" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">index</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>                  
+                  <li>
+                    <a href="#sign-in" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">sign-in</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>                  
                 </ul>
               </div>      
             </div>
@@ -648,7 +867,79 @@
               </div>  
             </div>           
           </div>         
-
+          <div data-page="index" class="page no-navbar cached" id="index-page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+              <div class="content-block" id="user-contact">
+                <div class="mask">
+                  <div id="user-name">纳达尔</div>
+                  <span id="user-phone">
+                    <i class="fa fa-mobile"></i> 12533333333&nbsp;
+                  </span>
+                  <span id="user-mail">
+                    <i class="fa fa-envelope-o"></i> ddd333@sina.com.cn
+                  </span>
+                  <a href="#" class="button btn" id="edit">编辑</a>
+                </div>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li>
+                    <a href="#sign-in" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">sign-in</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>      
+            </div>
+          </div>
+          <div data-page="sign-in" class="page cached" id="sign-in-page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+              <div class="content-block content-title" id="sign-in_title">
+                <span class="go-back">
+                  <a href="#" class="back link"><i class="fa fa-chevron-left"></i> 返回</a>
+                </span>
+                <span class="title-name">选手登录</span>
+              </div>
+              <div class="content-block" id="sign-in_user-account">
+                <form>
+                  <div class="list-block">
+                    <ul>
+                      <li class="item-content">
+                        <div class="item-inner">
+                          <div class="item-input">
+                            <input type="text" name="username" placeholder="用户名">
+                          </div>
+                        </div>
+                      </li>
+                      <li class="item-content">
+                        <div class="item-inner">
+                          <div class="item-input">
+                            <input type="password" name="password" placeholder="密码">
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="list-block">
+                    <ul>
+                      <li>
+                        <a href="#" class="item-link list-button button" id="signin">登&emsp;录</a>
+                      </li>
+                    </ul>
+                    <div class="list-block-label">
+                      还没有注册？ <a href="#">注册一个账户</a>
+                    </div>
+                  </div>
+                </form>
+              </div>             
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -683,6 +974,6 @@
     <!-- Path to Framework7 Library JS-->
     <script type="text/javascript" src="Framework7-1.0.6/dist/js/framework7.js"></script>
     <!-- Path to your app js-->
-    <script type="text/javascript" src="js/apply2.js"></script>
+    <script type="text/javascript" src="js/index2.js"></script>
   </body>
 </html>
