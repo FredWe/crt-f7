@@ -32,6 +32,14 @@ var generateNav = function(e){
 // var logobarTop = $$('#logobar-top').html();
 $$('.navbar>.navbar-inner').each( function(index,e){ generateNav(e); } );
 
+var bgImg = [1,2];
+var bgColor = ["blue", "green", "red", "purple"];
+var btnName = {
+  en: ["beijing", "shanghai", "guangzhou", "changchun", "alashan", "wuhan", "nanchang", "chengdu", "kunming", "mianyang", "chongqing", "suining", "shijingshan"], 
+  cn: ["北京", "上海", "广州", "长春", "阿拉善", "武汉", "南昌", "成都", "昆明", "绵阳", "重庆", "遂宁", "石景山"]
+};
+
+
 var mySwiper1 = myApp.swiper('.swiper-1', {
   pagination:'.swiper-1 .swiper-pagination',
   paginationHide: true,
@@ -52,3 +60,4 @@ var mySwiper2 = myApp.swiper('.swiper-2', {
 var calendarDefault = myApp.calendar({
     input: '#calendar-default',
 });
+
