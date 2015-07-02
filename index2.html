@@ -7,12 +7,12 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>My App</title>
     <!-- Path to Framework7 Library CSS-->
-    <link rel="stylesheet" href="Framework7-1.0.6/dist/css/framework7.css">
+    <link rel="stylesheet" href="Framework7/dist/css/framework7.css">
     <!-- Path to Font-Awesome Library CSS-->
     <link rel="stylesheet" href="Font-Awesome/css/font-awesome.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet/less" type="text/css" href="css/index2.less">
-    <script src="js/less.min.js" type="text/javascript"></script>
+    <script src="js/less.js" type="text/javascript"></script>
     <style>
       
     </style>
@@ -33,10 +33,11 @@
           </div>
 
           <div data-page="check-in" class="navbar-inner cached" data-logobar-title="中国CRT中网级别联赛选手签到"></div>
-          <div data-page="match-info1" class="navbar-inner cached" data-logobar-title="CRT中网级别联赛 赛程安排"></div>
-          <div data-page="match-info12" class="navbar-inner cached"></div>
-          <div data-page="match-info22" class="navbar-inner cached"></div>
-          <div data-page="match-info23" class="navbar-inner cached"></div>          
+          <div data-page="match-info-table" class="navbar-inner cached" data-logobar-title="CRT中网级别联赛 赛程安排"></div>
+          <div data-page="match-info-choose" class="navbar-inner cached" data-logobar-title="中国CRT中网级别联赛赛程安排"></div>
+          <div data-page="match-info-first" class="navbar-inner cached" data-logobar-title="中网级别联赛对阵表"></div>
+          <div data-page="match-info-middle" class="navbar-inner cached" data-logobar-title="中网级别联赛对阵表"></div>                  
+          <div data-page="match-info-last" class="navbar-inner cached" data-logobar-title="中网级别联赛对阵表"></div>          
           <div data-page="index" class="navbar-inner cached"></div>
           <div data-page="sign-in" class="navbar-inner cached" data-logobar-title="中国CRT赛事选手登录"></div>
         </div>
@@ -369,38 +370,46 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#match-info1" class="item-link">
+                    <a href="#match-info-table" class="item-link">
                       <div class="item-content">
                         <div class="item-inner"> 
-                          <div class="item-title">match-info1</div>
+                          <div class="item-title">match-info-table</div>
                         </div>
                       </div>
                     </a>
                   </li>
-                  <li><a href="#match-info12" class="item-link">
+                  <li><a href="#match-info-choose" class="item-link">
                       <div class="item-content">
                         <div class="item-inner">
-                          <div class="item-title">match-info12</div>
+                          <div class="item-title">match-info-choose</div>
                         </div>
                       </div>
                     </a>
                   </li>
-                  <li><a href="#match-info22" class="item-link">
+                  <li><a href="#match-info-first" class="item-link">
                       <div class="item-content">
                         <div class="item-inner">
-                          <div class="item-title">match-info22</div>
+                          <div class="item-title">match-info-first</div>
                         </div>
                       </div>
                     </a>
                   </li>                   
-                  <li><a href="#match-info23" class="item-link">
+                  <li><a href="#match-info-middle" class="item-link">
                       <div class="item-content">
                         <div class="item-inner">
-                          <div class="item-title">match-info23</div>
+                          <div class="item-title">match-info-middle</div>
                         </div>
                       </div>
                     </a>
                   </li>
+                  <li><a href="#match-info-last" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner">
+                          <div class="item-title">match-info-last</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>                  
                   <li>
                     <a href="#index" class="item-link">
                       <div class="item-content">
@@ -462,12 +471,13 @@
               <a href="#" class="button button-big">确认签到</a>
             </div>
           </div>
-          <div data-page="match-info1" class="page cached" id="match-info1-page">
+
+          <div data-page="match-info-table" class="page cached" id="match-info-table-page">
             <!-- Scrollable page content-->
             <div class="page-content">
               <div class="content-block sub-title">
                 <a href="#" class="prev link">
-                  <i class="fa fa-chevron-left"></i>2014年
+                  <i class="fa fa-chevron-left"></i> 2014年
                 </a>
                 <span class="title-name">2015年CRT中网级别联赛 赛程安排</span>
               </div>
@@ -476,46 +486,88 @@
               </div>
             </div>
           </div>
-          <div data-page="match-info12" class="page cached" id="match-info12-page">
-            <div class="page-content hide-bars-on-scroll">
-              <div class="content-block reg-banner">
-                <div class="banner-title">
-                  <div class="banner-title1">欢迎报名2015中国网球分级系列赛</div>
-                  <div class="banner-title2">CRT中网级别联赛</div>
+
+          <div data-page="match-info-choose" class="page cached" id="match-info-choose-page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+              <div class="content-block checkin-banner">
+                <a href="#" class="back link"><i class="fa fa-chevron-left"></i> 返回</a>
+                <div class="banner-title banner-title-head">2015中国网球分级系列赛</div>
+                <div class="banner-title banner-title-main">北京站</div>
+                <div class="banner-title banner-title-foot">赛程安排</div>
+              </div>
+              <div class="content-block matchinfo-swiper">
+                <div class="swiper-custom" id="match-season">
+                  <div class="swiper-title">比赛</div>
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><span>第一季</span></div>
+                      <div class="swiper-slide"><span>第二季</span></div>
+                      <div class="swiper-slide"><span>第三季</span></div>
+                      <div class="swiper-slide"><span>第四季</span></div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+                <div class="swiper-custom" id="match-type">
+                  <div class="swiper-title">项目</div>
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><span>男单</span></div>
+                      <div class="swiper-slide"><span>男双</span></div>
+                      <div class="swiper-slide"><span>女单</span></div>
+                      <div class="swiper-slide"><span>女双</span></div>
+                      <div class="swiper-slide"><span>混双</span></div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
                 </div>
               </div>
-              <div class="content-block">
-                <div class="row form-header">
-                  <div class="col-auto form-title">报名须知</div>
-                  <div class="col-auto">第<span class="tennis-logo">1</span>步</div>
+              <div class="content-block matchinfo-details">
+                <div class="swiper-title">详细</div>
+                <div class="swiper-custom" id="match-level">
+                  <div class="swiper-title">级别</div>
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><span>5.0</span></div>
+                      <div class="swiper-slide"><span>4.0</span></div>
+                      <div class="swiper-slide"><span>3.0</span></div>
+                      <div class="swiper-slide"><span>2.0</span></div>
+                      <div class="swiper-slide"><span>1.0</span></div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-foot">级</div>
                 </div>
-
-              </div>
-              <div class="content-block EULA">
-                <div class="EULA-content">
-                  为保障您的权益，请详细阅读本合约所有内容，为保障您的权益，请详细阅读本合约所有内容，为保障您的权益，请详细阅读本合约所有内容，
-
-                  1.为保障您的权益，请详细阅读本合约所有内容，为保障您的权益，请详细阅读本合约所有内容，为保障您的权益，请详细阅读本合约所有内容，为保障您的权益，请详细阅读本合约所有内容，
-
-                  3.为保障您的权益，请详细阅读本合约所有内容，为保障您的权益，请详细阅读本合约所有内容，为保障您的权益，请详细阅读本合约所有内容，为保障您的权益，请详细阅读本合约所有内容，
-
-                  3.为保障您的权益，请详细阅读本合约所有内容，为保障您的权益，请详细阅读本合约所有内容，为保障您的权益，请详细阅读本合约所有内容，为保障您的权益，请详细阅读本合约所有内容，
-                </div>
-                <div class="EULA-checkbox">
-                  <input type="checkbox" checked="true">
-                  我已阅读并同意以上条款
+                <div class="swiper-custom" id="match-round">
+                  <div class="swiper-title">轮次</div>
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><span>256</span></div>
+                      <div class="swiper-slide"><span>128</span></div>
+                      <div class="swiper-slide"><span>64</span></div>
+                      <div class="swiper-slide"><span>32</span></div>
+                      <div class="swiper-slide"><span>16</span></div>
+                      <div class="swiper-slide"><span>8</span></div>
+                      <div class="swiper-slide"><span>4</span></div>
+                      <div class="swiper-slide"><span>2</span></div>                      
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-foot">强</div>
                 </div>
               </div>
             </div>
             <div class="toolbar">
-              <div class="row">
-                <div class="col-auto">
-                  <a href="#reg2" class="button button-big">下一步</a>
-                </div>
-              </div>          
-            </div>            
-          </div>
-          <div data-page="match-info22" class="page cached" id="match-info22-page">
+              <a href="#" class="button button-big">浏览赛程</a>
+            </div>
+          </div>  
+
+          <div data-page="match-info-first" class="page cached" id="match-info-first-page">
             <div class="page-content">
               <div class="content-block reg-basic">
                 <div class="row no-gutter form-header">
@@ -726,7 +778,8 @@
               </div> 
             </div> 
           </div>
-          <div data-page="match-info23" class="page cached" id="reg-page3">
+
+          <div data-page="match-info-middle" class="page cached" id="match-info-middle-page">
             <div class="page-content">
               <div class="content-block reg-basic">
                 <div class="row no-gutter form-header">
@@ -785,7 +838,69 @@
                 </div>
               </div>  
             </div>           
-          </div>         
+          </div>      
+
+          <div data-page="match-info-last" class="page cached" id="match-info-last-page">
+            <div class="page-content">
+              <div class="content-block reg-basic">
+                <div class="row no-gutter form-header">
+                  <div class="col-15">
+                    <div class="go-back">
+                      <a href="#" class="back link"><i class="fa fa-chevron-left"></i> 返回</a>
+                    </div>
+                  </div>
+                  <div class="col-35 form-title">联系方法</div>
+                  <div class="col-50">第<span class="tennis-logo">3</span>步</div>
+                </div>
+              </div>
+              <div class="list-block form-basic">
+                <ul>
+                  <!-- Text inputs -->
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-name-identity"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title label">手机号码</div>
+                        <div class="item-input">
+                          <input type="text" placeholder="你的手机号">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-name"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title label">座机号码</div>
+                        <div class="item-input">
+                          <input type="text" placeholder="可选填">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-name"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title label">电子邮件</div>
+                        <div class="item-input">
+                          <input type="text" placeholder="你的电子邮箱">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="toolbar">
+              <div class="row">
+                <div class="col-auto">
+                  <a href="#reg4" class="button button-big button-green">下一步</a>
+                </div>
+              </div>  
+            </div>           
+          </div>          
+
           <div data-page="index" class="page no-navbar cached" id="index-page">
             <!-- Scrollable page content-->
             <div class="page-content">
@@ -822,12 +937,11 @@
               </div>      
             </div>
             <div class="toolbar">
-                <div class="toolbar-inner">
-                    <a href="#" class="link button btn-row btn-signin">选手登录</a>
-                    <a href="#" class="link button btn-row btn-register">新人？先注册吧</a>
-                </div>
+              <a href="#" class="link button btn-row btn-signin">选手登录</a>
+              <a href="#" class="link button btn-row btn-register">新人？先注册吧</a>
             </div>            
           </div>
+
           <div data-page="sign-in" class="page cached" id="sign-in-page">
             <!-- Scrollable page content-->
             <div class="page-content">
@@ -903,8 +1017,8 @@
           </div>
         </div>
     </script> 
-    <script type="text/template7" id="item-area">
-      <a href="" class="button">
+    <script type="text/template7" id="itemArea">
+      <a href="#" class="button">
         <div class="button-mask">
           <div class="name-en">{{nameEn}}</div>
           <div class="name-cn">{{nameCn}}</div>
@@ -912,9 +1026,8 @@
       </a>
     </script> 
     <!-- Path to Framework7 Library JS-->
-    <script type="text/javascript" src="Framework7-1.0.6/dist/js/framework7.js"></script>
+    <script type="text/javascript" src="Framework7/dist/js/framework7.js"></script>
     <!-- Path to your app js-->
-    <script type="text/javascript" src="js/pinyin.js"></script>
     <script type="text/javascript" src="js/index2.js"></script>
   </body>
 </html>

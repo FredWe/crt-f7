@@ -23,6 +23,8 @@ var itemWuhan = $$('#item-wuhan').html();
 $$('li.item-beijing').append(itemBeijing);
 $$('li.item-wuhan').append(itemWuhan);
 
+// this section for navbar different title text for page
+//------------------------------------------------------
 var generateNav = function(e){
   var logobarHTML = Template7.templates.logobarTemplate(
    { title: e.dataset.logobarTitle } 
@@ -32,32 +34,61 @@ var generateNav = function(e){
 // var logobarTop = $$('#logobar-top').html();
 $$('.navbar>.navbar-inner').each( function(index,e){ generateNav(e); } );
 
+// this section for different button blocks in area-content
+//------------------------------------------------------
+// variables:
 var bgImg = [1,2];
 var bgColor = ["blue", "green", "red", "purple"];
 var btnName = {
   en: ["beijing", "shanghai", "guangzhou", "changchun", "alashan", "wuhan", "nanchang", "chengdu", "kunming", "mianyang", "chongqing", "suining", "shijingshan"], 
   cn: ["北京", "上海", "广州", "长春", "阿拉善", "武汉", "南昌", "成都", "昆明", "绵阳", "重庆", "遂宁", "石景山"]
 };
+// area-content marked
+var area = document.querySelector("#match-info-table-page .area-content");
+var appendArea = function(v,i){
+  var tempHTML = Template7.templates.itemArea(
+   {nameCn: v,
+    nameEn: btnName.en[i].toUpperCase()
+    } 
+   );
+  area.innerHTML += tempHTML;
+};
+btnName.cn.forEach( function(value,index){ appendArea(value,index); } );
+var randomAppendClass = function (elementSet, classTextSet) {
+  elementSet = Array.prototype.slice.call(elementSet);
+  elementSet.forEach( 
+    function(member,index){ 
+      var indexRandomSelected = (Math.random() * (classTextSet.length - 1)).toFixed();
+      member.setAttribute("class", member.getAttribute("class") + " " + classTextSet[indexRandomSelected])
+    } 
+    );
+}
+randomAppendClass(
+  area.getElementsByClassName("button"),
+  bgImg.map(function(val,i){return "button-bg-" + val})
+  );
+randomAppendClass(
+  area.getElementsByClassName("button-mask"),
+  bgColor.map(function(val,i){return "button-mask-" + val})
+  );
 
+//match-info-choose page swiper initialization
+var packedSwiperInit = function (swiperCustomId){
+  var mySwiper = myApp.swiper(".swiper-custom#" + swiperCustomId + " " + ".swiper-container", {
+    nextButton: ".swiper-custom#" + swiperCustomId + " " + ".swiper-button-next",
+    prevButton: ".swiper-custom#" + swiperCustomId + " " + ".swiper-button-prev",
+  });   
+  return mySwiper;
+}
+myApp.onPageInit("match-info-choose",
+  function(pageData){
+    var swiperSet=["match-season", "match-type", "match-level", "match-round"].map(packedSwiperInit);
+  }); 
+       
 
-var mySwiper1 = myApp.swiper('.swiper-1', {
-  pagination:'.swiper-1 .swiper-pagination',
-  paginationHide: true,
-  paginationClickable: true,
-  spaceBetween: 0,
-  nextButton: '.swiper-custom .swiper-1 ~ .swiper-button-next',
-  prevButton: '.swiper-custom .swiper-1 ~ .swiper-button-prev'
-});
-var mySwiper2 = myApp.swiper('.swiper-2', {
-  pagination:'.swiper-2 .swiper-pagination',
-  paginationHide: true,
-  paginationClickable: true,
-  spaceBetween: 0,
-  nextButton: '.swiper-custom .swiper-2 ~ .swiper-button-next',
-  prevButton: '.swiper-custom .swiper-2 ~ .swiper-button-prev'
-}); 
 
 var calendarDefault = myApp.calendar({
     input: '#calendar-default',
 });
+
 
