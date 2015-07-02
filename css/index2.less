@@ -606,3 +606,19 @@ body{
 		}
 	}
 }
+#match-info-middle-page {
+	.page-content {
+		padding-bottom: 0;
+		background-color: #fbfbfb;
+	}
+	.content-block { margin: 0; }
+	@subTitleHeight: 100px;
+	.content-block.sub-title { height: @subTitleHeight; }
+	.content-block.matchinfo-content-basic {
+		margin: 0;
+		padding: 0;
+		background-color: aqua;
+		width: 100%;
+		height: ~"calc(100% - " @subTitleHeight ~")";
+	}
+}
