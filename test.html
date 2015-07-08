@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=640px; user-scalable=no; minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="Framework7/dist/css/framework7.css">
+    <!-- Path to Font-Awesome Library CSS-->
+    <link rel="stylesheet" href="Font-Awesome/css/font-awesome.css">
+    <link rel="stylesheet/less" type="text/css" href="css/test.less">
+    <script src="js/less.js" type="text/javascript"></script>    
+    <style>
+.swiper-custom {
+  position:relative;
+  height:100%;
+}
+.swiper-container {
+  height:100%;
+}
+.swiper-slide {
+  background: #fff;
+}
+.swiper-slide span {
+  text-align:center;
+  display:block;
+  margin: 20px;
+  font-size:21px;
+}
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: none;
+  border:1px solid #aaa;
+  border-radius: 0 0 0 0;
+  opacity:1;
+  cursor: pointer;
+}
+.swiper-pagination-bullet-active {
+  background: #007aff;
+  border-color: #007aff;
+}         
+    </style>
+  </head>
+  <body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+        <p>Left panel content goes here</p>
+      </div>
+    </div>
+    <!-- Views -->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+            <div class="center sliding">Awesome App</div>
+            <div class="right">
+              <!-- 
+                Right link contains only icon - additional "icon-only" class
+                Additional "open-panel" class tells app to open panel when we click on this link
+              -->
+              <a href="#" class="link icon-only open-panel"><i class="icon icon-bars-blue"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Page, "data-page" contains page name -->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content -->
+            <div class="page-content">
+<!-- <div class="swiper-custom">
+  <div class="swiper-container">
+    <div class="swiper-pagination"></div>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><span>Slide 1</span></div>
+      <div class="swiper-slide"><span>Slide 2</span></div>
+      <div class="swiper-slide"><span>Slide 3</span></div>
+      <div class="swiper-slide"><span>Slide 4</span></div>
+      <div class="swiper-slide"><span>Slide 5</span></div>
+      <div class="swiper-slide"><span>Slide 6</span></div>
+      <div class="swiper-slide"><span>Slide 7</span></div>
+    </div>
+  </div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div> -->
+<div id="test0"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Toolbar-->
+        <div class="toolbar">
+          <div class="toolbar-inner">
+            <!-- Toolbar links -->
+            <a href="#" class="link">Link 1</a>
+            <a href="#" class="link">Link 2</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="Framework7/dist/js/framework7.js"></script>
+    <!-- Path to your app js-->
+    <script>
+var myApp = new Framework7(); 
+ 
+var mySwiper = myApp.swiper('.swiper-container', {
+  pagination: '.swiper-pagination',
+  nextButton: '.swiper-button-next',
+  prevButton: '.swiper-button-prev',
+});       
+    </script>
+  </body>
+</html>
