@@ -1,4 +1,7 @@
 /*variable*/
+@regFormItemPadding: 22px;
+@dxBetwNavAndSubnav: 9px;
+
 @appleBodyWidth: 640px;
 @navbarHeight: 60px;
 @aquaBlue: #33ccff;
@@ -42,6 +45,25 @@
 	color: #ea2929;
 	font-style: italic;
 }
+
+.form-apply(@itemPadding: 39px){
+	font-size: 24px;
+	input { font-size: inherit; }
+	ul::before,ul::after{ display: none; }
+	ul li .item-content{
+		padding: 0 @itemPadding;
+		.item-inner::after{ background: #e9e9e9; }
+		li:last-child .item-inner::after{ display:inline; }		
+	}
+	li:last-child .item-inner:after { display: block; }	
+}
+.form-item-padding-topbottom(@pad: 15px){
+	.item-inner{
+		padding-top: @pad;
+		padding-bottom: @pad;
+	}
+}
+
 .border-test {border: 1px solid black;}
 .shadow-bottom(@bottom) { box-shadow: 0px @bottom 3px #cfd6d8 }
 .btn-aqua(@fontsize, @bordersize: 0px, @heightsize, @weightsize, @borderadius) { /*with .button*/

@@ -31,8 +31,13 @@ var generateNav = function(e){
    );
   e.innerHTML += logobarHTML;
 };
-// var logobarTop = $$('#logobar-top').html();
-$$('.navbar>.navbar-inner').each( function(index,e){ generateNav(e); } );
+
+myApp.onPageInit( '*', 
+  function(page){ 
+    $$('.navbar>.navbar-inner').each( 
+      function(index,e){ generateNav(e); }
+      );
+  });
 
 // this section for different button blocks in area-content
 //------------------------------------------------------
@@ -44,16 +49,15 @@ var btnName = {
   cn: ["北京", "上海", "广州", "长春", "阿拉善", "武汉", "南昌", "成都", "昆明", "绵阳", "重庆", "遂宁", "石景山"]
 };
 // area-content marked
-var area = document.querySelector("#match-info-table-page .area-content");
-var appendArea = function(v,i){
+var appendArea = function(area, v, i){
   var tempHTML = Template7.templates.itemArea(
-   {nameCn: v,
-    nameEn: btnName.en[i].toUpperCase()
-    } 
-   );
+    {
+      nameCn: v,
+      nameEn: btnName.en[i].toUpperCase()
+    }
+    );
   area.innerHTML += tempHTML;
 };
-btnName.cn.forEach( function(value,index){ appendArea(value,index); } );
 var randomAppendClass = function (elementSet, classTextSet) {
   elementSet = Array.prototype.slice.call(elementSet);
   elementSet.forEach( 
@@ -63,14 +67,20 @@ var randomAppendClass = function (elementSet, classTextSet) {
     } 
     );
 }
-randomAppendClass(
-  area.getElementsByClassName("button"),
-  bgImg.map(function(val,i){return "button-bg-" + val})
-  );
-randomAppendClass(
-  area.getElementsByClassName("button-mask"),
-  bgColor.map(function(val,i){return "button-mask-" + val})
-  );
+myApp.onPageInit( "match-info-table", 
+  function(page){ 
+    var area = document.querySelector("#match-info-table-page .area-content");
+    btnName.cn.forEach( function(value,index){ appendArea(area, value, index); } );
+    randomAppendClass(
+      area.getElementsByClassName("button"),
+      bgImg.map(function(val,i){return "button-bg-" + val})
+      );
+    randomAppendClass(
+      area.getElementsByClassName("button-mask"),
+      bgColor.map(function(val,i){return "button-mask-" + val})
+      );
+  });
+
 
 //match-info-choose page swiper initialization
 var packedSwiperInit = function (swiperCustomId){
@@ -84,8 +94,6 @@ myApp.onPageInit("match-info-choose",
   function(pageData){
     var swiperSet=["match-season", "match-type", "match-level", "match-round"].map(packedSwiperInit);
   }); 
-       
-
 
 var calendarDefault = myApp.calendar({
     input: '#calendar-default',

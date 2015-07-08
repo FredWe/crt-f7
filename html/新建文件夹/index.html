@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=640px, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="../Framework7/dist/css/framework7.css">
+    <!-- Path to Font-Awesome Library CSS-->
+    <link rel="stylesheet" href="../Font-Awesome/css/font-awesome.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet/less" type="text/css" href="../css/index2.less">
+    <script type="text/javascript" src="../js/less.js"></script>
+    <style>
+    </style>
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <div data-page="index" class="navbar-inner"></div>
+        </div>       
+
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <div data-page="index" class="page no-navbar" id="index-page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+              <div class="content-block" id="index-title">
+                <div class="mask">
+                  <img src="../resources/logo.png" alt="CRT-logo" id="title-logo">
+                  <div id="title-main">CRT中网级别联赛</div>
+                  <div id="title-vice">欢迎您来到联赛微信官网</div>
+                </div>
+              </div>
+              <div class="content-block" id="index-linkgroup">
+                <a href="#" class="button">
+                  <div class="mask">
+                    <div class="link-name">报名须知</div>
+                  </div>
+                </a>
+                <a href="#" class="button">
+                  <div class="mask">
+                    <div class="link-name">2015年赛事信息</div>
+                  </div>
+                </a>
+                <a href="#" class="button">
+                  <div class="mask">
+                    <div class="link-name">赛事新闻</div>
+                  </div>
+                </a>
+              </div>               
+              <div class="list-block" id="index-news">
+                <ul>
+                  <li>CRT上海第二季成绩</li>
+                  <li>2015CRT中网级别联赛常规</li>
+                  <li>北京赛区第二季缴费通知</li>            
+                </ul>
+              </div>    
+              <div class="list-block part1">
+                <ul>
+                  <li>
+                    <a href="user-center.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">user-center</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>                
+                  <li>
+                    <a href="check-in.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">check-in</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="match-info-table.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">match-info-table</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="match-info-choose.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner">
+                          <div class="item-title">match-info-choose</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="match-info-first.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner">
+                          <div class="item-title">match-info-first</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>                   
+                  <li>
+                    <a href="match-info-middle.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner">
+                          <div class="item-title">match-info-middle</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="match-info-last.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner">
+                          <div class="item-title">match-info-last</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>                  
+                  <li>
+                    <a href="fake-index.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">index</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>                  
+                  <li>
+                    <a href="sign-in.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">sign-in</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>                  
+                </ul>
+              </div>      
+              <div class="list-block part2">
+                <ul>
+                  <li>
+                    <a href="user-center_news.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">user-center_news</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>  
+                  <li>
+                    <a href="news-list.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">news-list</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>  
+                  <li>
+                    <a href="news-content.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">news-content</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>         
+                </ul>
+              </div>                  
+            </div>
+            <div class="toolbar">
+              <a href="#" class="link button btn-row btn-signin">选手登录</a>
+              <a href="#" class="link button btn-row btn-register">新人？先注册吧</a>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/template7" id="logobarTemplate">
+        <div class="left">
+          <img src="../resources/logo.png" alt="CRT-logo">
+          <span>{{title}}</span>
+        </div>
+    </script>
+    <script type="text/template7" id="item-beijing">
+        <div class="img-title">2015 CRT中网级别联赛<br>第一季  北京地区</div>
+        <div class="img-title">2015-05-30～2015-05-31</div>
+        <div class="item-content">
+          <div class="item-media"><img src="../resources/pic1.png"></div>
+          <div class="item-inner">
+            <div class="item-title">立即报名</div>
+            <div class="item-subtitle">报名时间:03-20~05-25<br>抽签时间:05-26  签位数:128</div>
+          </div>
+        </div>
+    </script>
+    <script type="text/template7" id="item-wuhan">
+        <div class="img-title">2015 CRT中网级别联赛<br>第一季  北京地区</div>
+        <div class="img-title">2015-05-30～2015-05-31</div>
+        <div class="item-content">
+          <div class="item-media"><img src="../resources/pic2.png"></div>
+          <div class="item-inner">
+            <div class="item-title">立即报名</div>
+            <div class="item-subtitle">报名时间:03-20~05-25<br>抽签时间:05-26  签位数:128</div>
+          </div>
+        </div>
+    </script> 
+    <script type="text/template7" id="itemArea">
+      <a href="#" class="button">
+        <div class="button-mask">
+          <div class="name-en">{{nameEn}}</div>
+          <div class="name-cn">{{nameCn}}</div>
+        </div>
+      </a>
+    </script> 
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="../Framework7/dist/js/framework7.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="../js/index2.js"></script>
+  </body>
+</html>
+
+
+
