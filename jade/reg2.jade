@@ -1,0 +1,221 @@
+html
+  body
+    .navbar
+      .navbar-inner(data-page='reg2')
+    #reg2-page.page.reg-page(data-page='reg2')
+      .page-content.hide-bars-on-scroll
+        .content-block.reg-basic
+          .row.no-gutter.form-header
+            .col-15
+              .go-back
+                a.back.link(href='#')
+                  i.fa.fa-chevron-left
+                  |  返回
+            |         
+            .col-35.form-title 用户基本资料
+            |         
+            .col-50
+              | 第
+              span.tennis-logo 2
+              | 步
+        |     
+        .list-block.form-basic
+          ul
+            // Text inputs
+            li
+              .item-content
+                .item-media
+                  i.icon.icon-form-name-identity
+                |             
+                .item-inner
+                  .item-title.label 真实姓名
+                  |               
+                  .item-input
+                    input(type='text', placeholder='你的名字')
+            |         
+            li
+              .item-content
+                .item-media
+                  i.icon.icon-form-name
+                |             
+                .item-inner
+                  .item-title.label 身份证号
+                  |               
+                  .item-input
+                    input(type='text', placeholder='你身份证号码')
+            |         
+            li
+              .item-content
+                .item-media
+                  i.icon.icon-form-name
+                |             
+                .item-inner
+                  .item-title.label 用户名
+                  |               
+                  .item-input
+                    input(type='text', placeholder='您在CRT官网的用户名')
+            |         
+            li
+              .item-content
+                .item-media
+                  i.icon.icon-form-name
+                |             
+                .item-inner
+                  .item-title.label 输入密码
+                  |               
+                  .item-input
+                    input(type='text', placeholder='输入密码')
+            |         
+            li
+              .item-content
+                .item-media
+                  i.icon.icon-form-name
+                |             
+                .item-inner
+                  .item-title.label 再次输入密码
+                  |               
+                  .item-input
+                    input(type='text', placeholder='再次输入密码')
+            |         
+            li
+              // Additional "smart-select" class
+              a.item-link.smart-select(href='#')
+                // select
+                select(name='gender')
+                  option(value='man', selected='') 男
+                  |               
+                  option(value='woman') 女
+                |             
+                .item-content
+                  .item-media
+                    i.icon.icon-form-name
+                  |               
+                  .item-inner
+                    // Select label
+                    .item-title.label 性别
+                    // Selected value, not required
+                    .item-after 男
+            |         
+            li
+              .item-content
+                .item-media
+                  i.icon.icon-form-name
+                |             
+                .item-inner
+                  .item-title.label 出生日期
+                  |               
+                  .item-input
+                    input#calendar-default(type='text', placeholder='选择出生日期', readonly='')
+            |         
+            li
+              // Additional "smart-select" class
+              a.item-link.smart-select(href='#')
+                // select
+                select(name='region')
+                  option(value='man', selected='') 点击选取您所在的区域
+                  |               
+                  option(value='woman') 女
+                |             
+                .item-content
+                  .item-media
+                    i.icon.icon-form-name
+                  |               
+                  .item-inner
+                    // Select label
+                    .item-title.label 所属地区
+                    // Selected value, not required
+                    .item-after 点击选取您所在的区域
+            |         
+            li
+              // Additional "smart-select" class
+              a.item-link.smart-select(href='#')
+                // select
+                select(name='gender')
+                  option(value='man', selected='') 点击选取您的国籍
+                  |               
+                  option(value='woman') 女
+                |             
+                .item-content
+                  .item-media
+                    i.icon.icon-form-name
+                  |               
+                  .item-inner
+                    // Select label
+                    .item-title.label 国籍
+                    // Selected value, not required
+                    .item-after 点击选取您的国籍
+            |                   
+            |         
+            li
+              // Additional "smart-select" class
+              a.item-link.smart-select(href='#')
+                // select
+                select(name='gender')
+                  option(value='man', selected='') 点击选取您的所在城市
+                  |               
+                  option(value='woman') 女
+                |             
+                .item-content
+                  .item-media
+                    i.icon.icon-form-name
+                  |               
+                  .item-inner
+                    // Select label
+                    .item-title.label 常驻城市
+                    // Selected value, not required
+                    .item-after 点击选取您的所在城市
+            |                   
+            |         
+            li
+              a.item-link.smart-select(href='#', data-back-text='返回')
+                // "multiple" attribute for multiple select
+                select(name='car', multiple='')
+                  // options grouped within "optgroup" tag
+                  optgroup(label='5.0级别')
+                    option(value='honda', selected='') Honda
+                    |                 
+                    option(value='lexus') Lexus
+                    |                 
+                    option(value='mazda') Mazda
+                    |                 
+                    option(value='nissan') Nissan
+                    |                 
+                    option(value='toyota') Toyota
+                  |               
+                  optgroup(label='4.0级别')
+                    option(value='audi', selected='') Audi
+                    |                 
+                    option(value='bmw') BMW
+                    |                 
+                    option(value='mercedes') Mercedes
+                    |                 
+                    option(value='vw') Volkswagen
+                    |                 
+                    option(value='volvo') Volvo
+                  |               
+                  optgroup(label='3.0级别')
+                    option(value='cadillac') Cadillac
+                    |                 
+                    option(value='chrysler') Chrysler
+                    |                 
+                    option(value='dodge') Dodge
+                    |                 
+                    option(value='ford', selected='') Ford
+                |             
+                .item-content
+                  .item-media
+                    i.icon.icon-form-name
+                  |                 
+                  .item-inner
+                    // Select label
+                    .item-title.label 球员往绩
+                    // Selected value, not required
+                    .item-after.smart-select-value 请如实选择您的往绩
+      |   
+      .toolbar
+        .row
+          .col-auto
+            a.button.button-big.disabled(href='#reg2') 上一步
+          |       
+          .col-auto
+            a.button.button-big.button-green(href='#reg3') 下一步

@@ -1,0 +1,102 @@
+html
+  body
+    .navbar
+      .navbar-inner(data-page='apply2-2')
+    #apply2-2-page.page(data-page='apply2-2')
+      // Scrollable page content
+      .page-content.hide-bars-on-scroll
+        .content-block.apply-banner
+          .go-back
+            a.back.link(href='#')
+              i.fa.fa-chevron-left
+              |  返回
+          |       
+          .banner-title.banner-title1 欢迎报名2015中国网球分级系列赛
+          |       
+          .banner-title.banner-title2 北京站
+          |       
+          .banner-title.banner-title3 第一季
+          |       
+          .banner-title.banner-title4 2015-05-30～2015-05-31
+        |     
+        .content-block.apply-swiper
+          .swiper-custom
+            .swiper-container.swiper-1
+              .swiper-wrapper
+                .swiper-slide
+                  span 男单
+                |             
+                .swiper-slide
+                  span 男双
+                |             
+                .swiper-slide
+                  span 女单
+                |             
+                .swiper-slide
+                  span 女双
+                |             
+                .swiper-slide
+                  span 混双
+            |         
+            .swiper-button-prev
+            |         
+            .swiper-button-next
+            |         
+            .explain-text 项目
+          |       
+          .swiper-custom
+            .swiper-container.swiper-2
+              .swiper-wrapper
+                .swiper-slide
+                  span 5.0
+                |             
+                .swiper-slide
+                  span 4.0
+                |             
+                .swiper-slide
+                  span 3.0
+                |             
+                .swiper-slide
+                  span 2.0
+                |             
+                .swiper-slide
+                  span 1.0
+            |         
+            .swiper-button-prev
+            |         
+            .swiper-button-next
+            |         
+            .explain-text 级别
+        |     
+        .list-block.form-info.partner
+          .row.partner-title
+            | 请填写拍档的资料
+          |       
+          ul
+            // Text inputs
+            li
+              .item-content
+                .item-media
+                  i.icon.icon-form-name-identity
+                |             
+                .item-inner
+                  .item-title.label 真实姓名
+                  |               
+                  .item-input
+                    input(type='text', placeholder='你拍档的名字')
+            |         
+            li
+              .item-content
+                .item-media
+                  i.icon.icon-form-name
+                |             
+                .item-inner
+                  .item-title.label 身份证号
+                  |               
+                  .item-input
+                    input(type='text', placeholder='你拍档的身份证号码')
+      |   
+      .toolbar
+        .row
+          .col-auto
+            a.button.button-big(href='#') 确认报名

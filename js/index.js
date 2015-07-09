@@ -18,31 +18,120 @@ var mainView = myApp.addView('.view-main', {
     domCache: true
 });
 
-var itemBeijing = $$('#item-beijing').html();
-var itemWuhan = $$('#item-wuhan').html();
-$$('li.item-beijing').append(itemBeijing);
-$$('li.item-wuhan').append(itemWuhan);
+var pageSetPart1 = ["apply", "apply2", "apply2-2", "reg1", "reg2", "reg3", "reg4"];
+var isMember = function(element, array) {
+  return array.indexOf(element) != -1;
+}
 
-var logobarTop = $$('#logobar-top').html();
-$$('.navbar>.navbar-inner').append(logobarTop);
+myApp.onPageInit( "apply", 
+  function(page){ 
+    var itemBeijing = $$('#item-beijing').html();
+    var itemWuhan = $$('#item-wuhan').html();
+    $$('li.item-beijing').append(itemBeijing);
+    $$('li.item-wuhan').append(itemWuhan);
+  });
 
-var mySwiper1 = myApp.swiper('.swiper-1', {
-  pagination:'.swiper-1 .swiper-pagination',
-  paginationHide: true,
-  paginationClickable: true,
-  spaceBetween: 0,
-  nextButton: '.swiper-custom .swiper-1 ~ .swiper-button-next',
-  prevButton: '.swiper-custom .swiper-1 ~ .swiper-button-prev'
-});
-var mySwiper2 = myApp.swiper('.swiper-2', {
-  pagination:'.swiper-2 .swiper-pagination',
-  paginationHide: true,
-  paginationClickable: true,
-  spaceBetween: 0,
-  nextButton: '.swiper-custom .swiper-2 ~ .swiper-button-next',
-  prevButton: '.swiper-custom .swiper-2 ~ .swiper-button-prev'
-}); 
+//merge from index.js
+myApp.onPageInit( "apply2", 
+  function(page){ 
+    var mySwiper1 = myApp.swiper('.swiper-1', {
+      pagination:'.swiper-1 .swiper-pagination',
+      paginationHide: true,
+      paginationClickable: true,
+      spaceBetween: 0,
+      nextButton: '.swiper-custom .swiper-1 ~ .swiper-button-next',
+      prevButton: '.swiper-custom .swiper-1 ~ .swiper-button-prev'
+    });
+    var mySwiper2 = myApp.swiper('.swiper-2', {
+      pagination:'.swiper-2 .swiper-pagination',
+      paginationHide: true,
+      paginationClickable: true,
+      spaceBetween: 0,
+      nextButton: '.swiper-custom .swiper-2 ~ .swiper-button-next',
+      prevButton: '.swiper-custom .swiper-2 ~ .swiper-button-prev'
+    }); 
+  });
+
+// this section for navbar different title text for page
+//------------------------------------------------------
+var generateNav = function(e){
+  var logobarHTML = Template7.templates.logobarTemplate(
+   { title: e.dataset.logobarTitle } 
+   );
+  e.innerHTML += logobarHTML;
+};
+
+myApp.onPageInit( '*', 
+  function(page){ 
+    if (isMember(page.name, pageSetPart1)) {
+      var logobarTop = $$('#logobar-top').html();
+      $$('.navbar>.navbar-inner').append(logobarTop);
+    }
+    else {
+      $$('.navbar>.navbar-inner').each( 
+        function(index,e){ generateNav(e); }
+        );      
+    }
+  });
+
+// this section for different button blocks in area-content
+//------------------------------------------------------
+// variables:
+var bgImg = [1,2];
+var bgColor = ["blue", "green", "red", "purple"];
+var btnName = {
+  en: ["beijing", "shanghai", "guangzhou", "changchun", "alashan", "wuhan", "nanchang", "chengdu", "kunming", "mianyang", "chongqing", "suining", "shijingshan"], 
+  cn: ["北京", "上海", "广州", "长春", "阿拉善", "武汉", "南昌", "成都", "昆明", "绵阳", "重庆", "遂宁", "石景山"]
+};
+// area-content marked
+var appendArea = function(area, v, i){
+  var tempHTML = Template7.templates.itemArea(
+    {
+      nameCn: v,
+      nameEn: btnName.en[i].toUpperCase()
+    }
+    );
+  area.innerHTML += tempHTML;
+};
+var randomAppendClass = function (elementSet, classTextSet) {
+  elementSet = Array.prototype.slice.call(elementSet);
+  elementSet.forEach( 
+    function(member,index){ 
+      var indexRandomSelected = (Math.random() * (classTextSet.length - 1)).toFixed();
+      member.setAttribute("class", member.getAttribute("class") + " " + classTextSet[indexRandomSelected])
+    } 
+    );
+}
+myApp.onPageInit( "match-info-table", 
+  function(page){ 
+    var area = document.querySelector("#match-info-table-page .area-content");
+    btnName.cn.forEach( function(value,index){ appendArea(area, value, index); } );
+    randomAppendClass(
+      area.getElementsByClassName("button"),
+      bgImg.map(function(val,i){return "button-bg-" + val})
+      );
+    randomAppendClass(
+      area.getElementsByClassName("button-mask"),
+      bgColor.map(function(val,i){return "button-mask-" + val})
+      );
+  });
+
+
+//match-info-choose page swiper initialization
+var packedSwiperInit = function (swiperCustomId){
+  var mySwiper = myApp.swiper(".swiper-custom#" + swiperCustomId + " " + ".swiper-container", {
+    nextButton: ".swiper-custom#" + swiperCustomId + " " + ".swiper-button-next",
+    prevButton: ".swiper-custom#" + swiperCustomId + " " + ".swiper-button-prev",
+  });   
+  return mySwiper;
+}
+myApp.onPageInit("match-info-choose",
+  function(pageData){
+    var swiperSet=["match-season", "match-type", "match-level", "match-round"].map(packedSwiperInit);
+  }); 
 
 var calendarDefault = myApp.calendar({
     input: '#calendar-default',
 });
+
+
