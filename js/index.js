@@ -116,7 +116,6 @@ myApp.onPageInit( "match-info-table",
       );
   });
 
-
 //match-info-choose page swiper initialization
 var packedSwiperInit = function (swiperCustomId){
   var mySwiper = myApp.swiper(".swiper-custom#" + swiperCustomId + " " + ".swiper-container", {
@@ -134,4 +133,17 @@ var calendarDefault = myApp.calendar({
     input: '#calendar-default',
 });
 
+//this section for controlling "div.list-block.form-info.partner" visible/hidden in apply2.html 
+var controlFormVisible = function (record, observer){
+  console.log(observer);
+}
+var formObserver = new MutationObserver(controlFormVisible);
 
+myApp.onPageInit("apply2",
+  function(pageData){
+    var slide = document.getElementsByClassName("swiper-slide-active");
+    var  options = {
+      'characterData': true,
+    } ;
+    formObserver.observe(slide[0], options);
+  }); 

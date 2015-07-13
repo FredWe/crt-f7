@@ -1,0 +1,302 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"in",
+				"index"
+			],
+			[
+				"mat",
+				"match-info-table-page"
+			],
+			[
+				"l",
+				"log"
+			],
+			[
+				"page",
+				"onPageInit"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 380.0,
+		"last_filter": "pcip",
+		"selected_items":
+		[
+			[
+				"pcip",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/galaxystudio/Desktop/local/。。.md",
+		"/D/Downloads/Toolbox_DVD_828D_V04_05_02_00/Setups.cfg",
+		"/D/Downloads/Toolbox_DVD_828D_V04_05_02_00/autorun.inf",
+		"/C/Users/galaxystudio/Desktop/新建文本文档.md",
+		"/C/Users/galaxystudio/Documents/CRT-f7/jade/apply2-2.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/jade/reg4.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/jade/sign-in.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/jade/user-center.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/jade/user-center_news.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/jade/match-info-middle.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/jade/match-info-table.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/jade/news-content.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/jade/news-list.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/jade/reg3.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/jade/reg1.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/jade/reg2.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/jade/index.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/jade/check-in.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/jade/match-info-choose.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/jade/match-info-first.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/jade/match-info-last.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/jade/apply.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/jade/apply2.jade",
+		"/C/Users/galaxystudio/Documents/GitHub/demo/src/templates/index.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/x.bat",
+		"/C/Users/galaxystudio/Documents/CRT-f7/reg3.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/reg4.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/sign-in.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/user-center.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/apply.html.bat",
+		"/C/Users/galaxystudio/Documents/CRT-f7/apply.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/apply.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/sign-in.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/user-center_news.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/news-list.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/news-content.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/match-info-middle.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/match-info-last.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/match-info-first.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/match-info-choose.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/match-info-table.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/check-in.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/user-center.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/reg2.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/reg3.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/reg1.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/apply2-2.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/apply2.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/css/index.less",
+		"/C/Users/galaxystudio/Documents/CRT-f7/index.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/reg4.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/apply2.html.bat",
+		"/C/Users/galaxystudio/Documents/CRT-f7/x - 副本.bat",
+		"/C/Users/galaxystudio/Documents/CRT-f7/js/index.js",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/reg4.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/apply.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/index.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/css/index2.less",
+		"/C/Users/galaxystudio/Documents/CRT-f7/js/index2.js",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/apply2.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/apply2-2.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/reg1.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/reg2.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/reg3.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/新建文件夹/index.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/html1/index.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/user-center.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/html1/user-center.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/check-in.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/fake-index.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/match-info-choose.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/sign-in.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/match-info-table.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/match-info-first.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/match-info-middle.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/match-info-last.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/user-center_news.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/news-list.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/news-content.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/Framework7/examples/inline-pages/about.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/Framework7/examples/inline-pages/index.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/index2.html",
+		"/C/Users/galaxystudio/Documents/CRT-f7/html/x.bat",
+		"/C/Users/galaxystudio/Documents/CRT-f7/index2.jade",
+		"/C/Users/galaxystudio/Documents/CRT-f7/index.jade"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 96.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"apply2-2",
+			"partner-title",
+			".html\"",
+			"./resources",
+			"../resources",
+			"./resources/che.",
+			"./resources/reg",
+			"./resources/i",
+			"./resources/i-",
+			"./resources/i-f",
+			"./resources/app",
+			"./resources/index2/",
+			"./",
+			"../",
+			"index2.",
+			"index",
+			"tenni",
+			"swiperBtnBgNext",
+			"tennis",
+			"class=\"navbar-inner cached\"",
+			"class=\"page cached\""
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			".html",
+			"../resources",
+			"./resources",
+			"../resources/app",
+			"../resources/index2/",
+			"../",
+			"./",
+			"index.",
+			"class=\"navbar-inner\"",
+			"class=\"page\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "calendar.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
