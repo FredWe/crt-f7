@@ -56,3 +56,6 @@ del reg4.html.bat
 del sign-in.html.bat
 del user-center.html.bat
 del user-center_news.html.bat
+
+del jade\*.jade
+move .\*.jade jade

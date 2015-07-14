@@ -23,7 +23,7 @@ var isMember = function(element, array) {
   return array.indexOf(element) != -1;
 }
 
-myApp.onPageInit( "apply", 
+myApp.onPageInit("apply", 
   function(page){ 
     var itemBeijing = $$('#item-beijing').html();
     var itemWuhan = $$('#item-wuhan').html();
@@ -32,7 +32,7 @@ myApp.onPageInit( "apply",
   });
 
 //merge from index.js
-myApp.onPageInit( "apply2", 
+myApp.onPageInit("apply2", 
   function(page){ 
     var mySwiper1 = myApp.swiper('.swiper-1', {
       pagination:'.swiper-1 .swiper-pagination',
@@ -55,13 +55,12 @@ myApp.onPageInit( "apply2",
 // this section for navbar different title text for page
 //------------------------------------------------------
 var generateNav = function(e){
-  var logobarHTML = Template7.templates.logobarTemplate(
-   { title: e.dataset.logobarTitle } 
-   );
+  var logobarHTML = Template7.templates.logobarTemplate({
+    title: e.dataset.logobarTitle 
+  });
   e.innerHTML += logobarHTML;
 };
-
-myApp.onPageInit( '*', 
+myApp.onPageInit('*', 
   function(page){ 
     if (isMember(page.name, pageSetPart1)) {
       var logobarTop = $$('#logobar-top').html();
@@ -85,24 +84,20 @@ var btnName = {
 };
 // area-content marked
 var appendArea = function(area, v, i){
-  var tempHTML = Template7.templates.itemArea(
-    {
+  var tempHTML = Template7.templates.itemArea({
       nameCn: v,
       nameEn: btnName.en[i].toUpperCase()
-    }
-    );
+    });
   area.innerHTML += tempHTML;
 };
 var randomAppendClass = function (elementSet, classTextSet) {
   elementSet = Array.prototype.slice.call(elementSet);
-  elementSet.forEach( 
-    function(member,index){ 
+  elementSet.forEach( function(member,index){ 
       var indexRandomSelected = (Math.random() * (classTextSet.length - 1)).toFixed();
       member.setAttribute("class", member.getAttribute("class") + " " + classTextSet[indexRandomSelected])
-    } 
-    );
+    });
 }
-myApp.onPageInit( "match-info-table", 
+myApp.onPageInit("match-info-table", 
   function(page){ 
     var area = document.querySelector("#match-info-table-page .area-content");
     btnName.cn.forEach( function(value,index){ appendArea(area, value, index); } );
@@ -128,10 +123,6 @@ myApp.onPageInit("match-info-choose",
   function(pageData){
     var swiperSet=["match-season", "match-type", "match-level", "match-round"].map(packedSwiperInit);
   }); 
-
-var calendarDefault = myApp.calendar({
-    input: '#calendar-default',
-});
 
 //this section for controlling "div.list-block.form-info.partner" visible/hidden in apply2.html 
 myApp.onPageInit("apply2",
@@ -175,4 +166,12 @@ myApp.onPageInit("apply2",
       // 'subtree': true,
     } ;
     formObserver.observe(swiperWrapper, options);
+  }); 
+
+//for 'reg2'
+myApp.onPageInit("reg2",
+  function(pageData){
+    var calendarDefault = myApp.calendar({
+        input: '#calendar-default',
+    });
   }); 
