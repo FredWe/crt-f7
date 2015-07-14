@@ -134,16 +134,22 @@ var calendarDefault = myApp.calendar({
 });
 
 //this section for controlling "div.list-block.form-info.partner" visible/hidden in apply2.html 
-var controlFormVisible = function (record, observer){
-  console.log(observer);
-}
-var formObserver = new MutationObserver(controlFormVisible);
-
 myApp.onPageInit("apply2",
   function(pageData){
-    var slide = document.getElementsByClassName("swiper-slide-active");
+    var swiperWrapper = document.querySelector(".swiper-1 .swiper-wrapper");
+    var testDouble = (function(){
+      // swiperWrapper.getElementsByTagName("span")
+    }());
+    var controlFormVisible = function (record, observer){
+      console.log(observer);
+    }
+    var formObserver = new MutationObserver(controlFormVisible);
+    
     var  options = {
-      'characterData': true,
+      // 'childList': true,
+      'attributes': true,
+      // 'characterData': true,
+      // 'subtree': true,
     } ;
-    formObserver.observe(slide[0], options);
+    formObserver.observe(swiperWrapper, options);
   }); 
