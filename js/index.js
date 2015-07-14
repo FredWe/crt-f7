@@ -137,14 +137,37 @@ var calendarDefault = myApp.calendar({
 myApp.onPageInit("apply2",
   function(pageData){
     var swiperWrapper = document.querySelector(".swiper-1 .swiper-wrapper");
+    var addClass = function(elem,className){
+      if(elem.className.match(className) === null){
+        elem.className += ' ';
+        elem.className += className;
+        elem.className = elem.className.trim();
+      }
+    }
+    var removeClass = function(elem,className){
+        elem.className = elem.className.replace(className,'');
+        elem.className = elem.className.trim();
+    }
     var testDouble = (function(){
-      // swiperWrapper.getElementsByTagName("span")
+      var slideSet = swiperWrapper.getElementsByTagName("span");
+      var slideArray = Array.prototype.slice.call(slideSet);
+      var slideDouble = slideArray.filter(function(elem){
+        return elem.textContent.indexOf('双') != -1;
+      });
+      slideDouble.forEach(function(elem,ind,arr){
+        addClass(elem,'double');
+      });
     }());
     var controlFormVisible = function (record, observer){
-      console.log(observer);
+      var formControlled = document.querySelector('.list-block.form-info.partner');
+      var sig = (swiperWrapper.querySelector('.swiper-slide-active .double') != null);
+      if(sig){
+        removeClass(formControlled,'disappeared');
+      }else{
+        addClass(formControlled,'disappeared');
+      }
     }
     var formObserver = new MutationObserver(controlFormVisible);
-    
     var  options = {
       // 'childList': true,
       'attributes': true,

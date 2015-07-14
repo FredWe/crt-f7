@@ -158,7 +158,6 @@ body{
 	/*merge from former index.less*/
 [data-page = "apply"].navbar-inner, 
 [data-page = "apply2"].navbar-inner, 
-[data-page = "apply2-2"].navbar-inner, 
 [data-page = "reg1"].navbar-inner, 
 [data-page = "reg2"].navbar-inner, 
 [data-page = "reg3"].navbar-inner, 
@@ -224,7 +223,6 @@ body{
 }
 #apply-page,
 #apply2-page,
-#apply2-2-page,
 #reg1-page,
 #reg2-page,
 #reg3-page,
@@ -614,6 +612,7 @@ body{
 				color: #666;
 				font-size: 22px;
 				line-height: 2.045;
+				a { color: inherit; }
 			}
 			li::before { 
 				content: "•";
@@ -1142,7 +1141,7 @@ body{
 	}
 }
 /**apply2*****************************************/
-#apply2-page, #apply2-2-page{
+#apply2-page{
 	.page-content {
 		background-color: white;
 		padding:61px 0 120px;
@@ -1188,7 +1187,7 @@ body{
 				padding: 8px;
 			}
 		}
-		.disappeared { display: none; }
+		.disappeared { visibility: hidden; }
 	}
 }
 /**reg**************************************/
@@ -1300,3 +1299,5 @@ body{
 		}
 	}
 }
+
+
