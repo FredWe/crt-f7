@@ -66,7 +66,7 @@
 
 .border-test {border: 1px solid black;}
 .shadow-bottom(@bottom) { box-shadow: 0px @bottom 3px #cfd6d8 }
-.btn-aqua(@fontsize, @bordersize: 0px, @heightsize, @weightsize, @borderadius) { /*with .button*/
+.btn-aqua(@fontsize, @bordersize: 0px, @heightsize, @weightsize, @borderadius, @btnColor: #33ccff) { /*with .button*/
 	font-size: @fontsize;
 	color: white;
 	height: @heightsize;
@@ -75,7 +75,7 @@
 	width: @weightsize;
 	border: @bordersize solid white;
 	border-radius: @borderadius;
-	background-color: #33ccff;
+	background-color: @btnColor;
 }
 .single-line-center(@lineheight) {
 	height: @lineheight;
@@ -369,7 +369,8 @@ body{
 }
 
 /* pages */
-#user-center-page {
+#user-center-page,
+#user-center_news-page {
 	.content-block {
 		margin: 0;
 	}
@@ -1306,6 +1307,14 @@ body{
 				}
 			}
 			.form-item-padding-topbottom;
+		}
+	}
+}
+
+#user-center_news-page {
+	.accordion-item-content {
+		.btn.pay {
+			.btn-aqua(@fontsize: 19px, @heightsize: 49px, @weightsize: 131px, @borderadius: 5px, @btnColor: #f66);
 		}
 	}
 }
