@@ -125,20 +125,20 @@ myApp.onPageInit("match-info-choose",
   }); 
 
 //this section for controlling "div.list-block.form-info.partner" visible/hidden in apply2.html 
+var addClass = function(elem,className){
+  if(elem.className.match(className) === null){
+    elem.className += ' ';
+    elem.className += className;
+    elem.className = elem.className.trim();
+  }
+}
+var removeClass = function(elem,className){
+    elem.className = elem.className.replace(className,'');
+    elem.className = elem.className.trim();
+}
 myApp.onPageInit("apply2",
   function(pageData){
     var swiperWrapper = document.querySelector(".swiper-1 .swiper-wrapper");
-    var addClass = function(elem,className){
-      if(elem.className.match(className) === null){
-        elem.className += ' ';
-        elem.className += className;
-        elem.className = elem.className.trim();
-      }
-    }
-    var removeClass = function(elem,className){
-        elem.className = elem.className.replace(className,'');
-        elem.className = elem.className.trim();
-    }
     var testDouble = (function(){
       var slideSet = swiperWrapper.getElementsByTagName("span");
       var slideArray = Array.prototype.slice.call(slideSet);
@@ -175,3 +175,23 @@ myApp.onPageInit("reg2",
         input: '#calendar-default',
     });
   }); 
+
+//for 'news-list'
+myApp.onPageInit("news-list",
+  function(pageData){
+    var aSet = document.querySelectorAll('.list-block.news-list ul li a');
+    var aArray = Array.prototype.slice.call(aSet);
+    aArray.forEach(function(elem,ind,arr){
+      elem.addEventListener('click',function(){
+        addClass(elem,'readed');
+      });
+    });
+    // optional:
+    var aSet = document.querySelectorAll('.filter-details a.btn-remove');
+    var aArray = Array.prototype.slice.call(aSet);
+    aArray.forEach(function(elem,ind,arr){
+      elem.addEventListener('click',function(){
+        elem.parentNode.remove();
+      });
+    });
+  });
