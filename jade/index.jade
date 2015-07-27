@@ -1,239 +1,237 @@
 doctype html
-html
-  head
-    meta(charset='utf-8')
-    |     
-    meta(name='viewport', content='width=640px, user-scalable=no, minimal-ui')
-    |     
-    meta(name='apple-mobile-web-app-capable', content='yes')
-    |     
-    meta(name='apple-mobile-web-app-status-bar-style', content='black')
-    |     
-    title My App
-    // Path to Framework7 Library CSS
-    link(rel='stylesheet', href='./Framework7/dist/css/framework7.css')
-    // Path to Font-Awesome Library CSS
-    link(rel='stylesheet', href='./Font-Awesome/css/font-awesome.css')
-    // Path to your custom app styles
-    link(rel='stylesheet/less', type='text/css', href='./css/index.less')
-    |     
-    script(type='text/javascript', src='./js/less.js')
-    |     
-    style.
-  |   
-  body
-    // Status bar overlay for fullscreen mode
-    .statusbar-overlay
-    // Views
-    .views
-      // Your main view, should have "view-main" class
-      .view.view-main
-        // Top Navbar
-        .navbar
-          .navbar-inner(data-page='index')
-        // Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes
-        .pages.navbar-through.toolbar-through
-          #index-page.page.no-navbar(data-page='index')
-            // Scrollable page content
-            .page-content
-              #index-title.content-block
-                .mask
-                  img#title-logo(src='./resources/logo.png', alt='CRT-logo')
-                  |                   
-                  #title-main CRT中网级别联赛
-                  |                   
-                  #title-vice 欢迎您来到联赛微信官网
-              |               
-              #index-linkgroup.content-block
-                a.button(href='#')
-                  .mask
-                    .link-name 报名须知
-                |                 
-                a.button(href='#')
-                  .mask
-                    .link-name 2015年赛事信息
-                |                 
-                a.button(href='#')
-                  .mask
-                    .link-name 赛事新闻
-              |                
-              |               
-              #index-news.list-block
-                ul
-                  li
-                    a(href='#') CRT上海第二季成绩
-                  |                   
-                  li
-                    a(href='#') 2015CRT中网级别联赛常规
-                  |                   
-                  li
-                    a(href='#') 北京赛区第二季缴费通知
-              |               
-              .list-block.part1
-                ul
-                  li
-                    a.item-link(href='apply.html')
-                      .item-content
-                        .item-inner
-                          .item-title apply
-                  |   
-                  |                   
-                  li
-                    a.item-link(href='apply2.html')
-                      .item-content
-                        .item-inner
-                          .item-title apply2
-                  |   
-                  |                   
-                  li
-                    a.item-link(href='reg1.html')
-                      .item-content
-                        .item-inner
-                          .item-title reg1
-                  |                   
-                  li
-                    a.item-link(href='reg2.html')
-                      .item-content
-                        .item-inner
-                          .item-title reg2
-                  |                   
-                  li
-                    a.item-link(href='reg3.html')
-                      .item-content
-                        .item-inner
-                          .item-title reg3
-                  |                   
-                  li
-                    a.item-link(href='reg4.html')
-                      .item-content
-                        .item-inner
-                          .item-title reg4
+head
+  meta(charset='utf-8')
+  |     
+  meta(name='viewport', content='width=640px, user-scalable=no, minimal-ui')
+  |     
+  meta(name='apple-mobile-web-app-capable', content='yes')
+  |     
+  meta(name='apple-mobile-web-app-status-bar-style', content='black')
+  |     
+  title My App
+  // Path to Framework7 Library CSS
+  link(rel='stylesheet', href='./Framework7/dist/css/framework7.css')
+  // Path to Font-Awesome Library CSS
+  link(rel='stylesheet', href='./Font-Awesome/css/font-awesome.css')
+  // Path to your custom app styles
+  link(rel='stylesheet/less', type='text/css', href='./css/index.less')
+  |     
+  script(type='text/javascript', src='./js/less.js')
+  |     
+  style.
+|   
+// Status bar overlay for fullscreen mode
+.statusbar-overlay
+// Views
+.views
+  // Your main view, should have "view-main" class
+  .view.view-main
+    // Top Navbar
+    .navbar
+      .navbar-inner(data-page='index')
+    // Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes
+    .pages.navbar-through.toolbar-through
+      #index-page.page.no-navbar(data-page='index')
+        // Scrollable page content
+        .page-content
+          #index-title.content-block
+            .mask
+              img#title-logo(src='./resources/logo.png', alt='CRT-logo')
               |                   
-              |               
-              .list-block.part2
-                ul
-                  li
-                    a.item-link(href='user-center.html')
-                      .item-content
-                        .item-inner
-                          .item-title user-center
-                  |                 
-                  |                   
-                  li
-                    a.item-link(href='check-in.html')
-                      .item-content
-                        .item-inner
-                          .item-title check-in
-                  |                   
-                  li
-                    a.item-link(href='match-info-table.html')
-                      .item-content
-                        .item-inner
-                          .item-title match-info-table
-                  |                   
-                  li
-                    a.item-link(href='match-info-choose.html')
-                      .item-content
-                        .item-inner
-                          .item-title match-info-choose
-                  |                   
-                  li
-                    a.item-link(href='match-info-first.html')
-                      .item-content
-                        .item-inner
-                          .item-title match-info-first
-                  |                    
-                  |                   
-                  li
-                    a.item-link(href='match-info-middle.html')
-                      .item-content
-                        .item-inner
-                          .item-title match-info-middle
-                  |                   
-                  li
-                    a.item-link(href='match-info-last.html')
-                      .item-content
-                        .item-inner
-                          .item-title match-info-last
-                  |                                    
-                  |                   
-                  li
-                    a.item-link(href='sign-in.html')
-                      .item-content
-                        .item-inner
-                          .item-title sign-in
-              |       
-              |               
-              .list-block.part3
-                ul
-                  li
-                    a.item-link(href='user-center_news.html')
-                      .item-content
-                        .item-inner
-                          .item-title user-center_news
-                  |   
-                  |                   
-                  li
-                    a.item-link(href='news-list.html')
-                      .item-content
-                        .item-inner
-                          .item-title news-list
-                  |   
-                  |                   
-                  li
-                    a.item-link(href='news-content.html')
-                      .item-content
-                        .item-inner
-                          .item-title news-content
-            |             
-            .toolbar
-              a.link.button.btn-row.btn-signin(href='#') 选手登录
-              |               
-              a.link.button.btn-row.btn-register(href='#') 新人？先注册吧
-    |     
-    script#logobar-top(type='text/template7').
-      <div class="left">
-      <img src="./resources/logo.png" alt="CRT-logo">
-      中国CRT赛事赛
-      </div>
-    |     
-    script#logobarTemplate(type='text/template7').
-      <div class="left">
-      <img src="./resources/logo.png" alt="CRT-logo">
-      <span>{{title}}</span>
-      </div>
-    |     
-    script#item-beijing(type='text/template7').
-      <div class="img-title">2015 CRT中网级别联赛<br>第一季  北京地区</div>
-      <div class="img-title">2015-05-30～2015-05-31</div>
-      <div class="item-content">
-      <div class="item-media"><img src="./resources/pic1.png"></div>
-      <div class="item-inner">
-      <div class="item-title">立即报名</div>
-      <div class="item-subtitle">报名时间:03-20~05-25<br>抽签时间:05-26  签位数:128</div>
-      </div>
-      </div>
-    |     
-    script#item-wuhan(type='text/template7').
-      <div class="img-title">2015 CRT中网级别联赛<br>第一季  武汉地区</div>
-      <div class="img-title">2015-05-30～2015-05-31</div>
-      <div class="item-content">
-      <div class="item-media"><img src="./resources/pic2.png"></div>
-      <div class="item-inner">
-      <div class="item-title">立即报名</div>
-      <div class="item-subtitle">报名时间:03-20~05-25<br>抽签时间:05-26  签位数:128</div>
-      </div>
-      </div>
-    |  
-    |     
-    script#itemArea(type='text/template7').
-      <a href="#" class="button">
-      <div class="button-mask">
-      <div class="name-en">{{nameEn}}</div>
-      <div class="name-cn">{{nameCn}}</div>
-      </div>
-      </a>
-    // Path to Framework7 Library JS
-    script(type='text/javascript', src='./Framework7/dist/js/framework7.js')
-    // Path to your app js
-    script(type='text/javascript', src='./js/index.js')
+              #title-main CRT中网级别联赛
+              |                   
+              #title-vice 欢迎您来到联赛微信官网
+          |               
+          #index-linkgroup.content-block
+            a.button(href='reg1.html')
+              .mask
+                .link-name 报名须知
+            |                 
+            a.button(href='match-info-table.html')
+              .mask
+                .link-name 2015年赛事信息
+            |                 
+            a.button(href='#')
+              .mask
+                .link-name 赛事新闻
+          |                
+          |               
+          #index-news.list-block
+            ul
+              li
+                a(href='#') CRT上海第二季成绩
+              |                   
+              li
+                a(href='#') 2015CRT中网级别联赛常规
+              |                   
+              li
+                a(href='#') 北京赛区第二季缴费通知
+          |               
+          .list-block.part1
+            ul
+              li
+                a.item-link(href='apply.html')
+                  .item-content
+                    .item-inner
+                      .item-title apply
+              |   
+              |                   
+              li
+                a.item-link(href='apply2.html')
+                  .item-content
+                    .item-inner
+                      .item-title apply2
+              |   
+              |                   
+              li
+                a.item-link(href='reg1.html')
+                  .item-content
+                    .item-inner
+                      .item-title reg1
+              |                   
+              li
+                a.item-link(href='reg2.html')
+                  .item-content
+                    .item-inner
+                      .item-title reg2
+              |                   
+              li
+                a.item-link(href='reg3.html')
+                  .item-content
+                    .item-inner
+                      .item-title reg3
+              |                   
+              li
+                a.item-link(href='reg4.html')
+                  .item-content
+                    .item-inner
+                      .item-title reg4
+          |                   
+          |               
+          .list-block.part2
+            ul
+              li
+                a.item-link(href='user-center.html')
+                  .item-content
+                    .item-inner
+                      .item-title user-center
+              |                 
+              |                   
+              li
+                a.item-link(href='check-in.html')
+                  .item-content
+                    .item-inner
+                      .item-title check-in
+              |                   
+              li
+                a.item-link(href='match-info-table.html')
+                  .item-content
+                    .item-inner
+                      .item-title match-info-table
+              |                   
+              li
+                a.item-link(href='match-info-choose.html')
+                  .item-content
+                    .item-inner
+                      .item-title match-info-choose
+              |                   
+              li
+                a.item-link(href='match-info-first.html')
+                  .item-content
+                    .item-inner
+                      .item-title match-info-first
+              |                    
+              |                   
+              li
+                a.item-link(href='match-info-middle.html')
+                  .item-content
+                    .item-inner
+                      .item-title match-info-middle
+              |                   
+              li
+                a.item-link(href='match-info-last.html')
+                  .item-content
+                    .item-inner
+                      .item-title match-info-last
+              |                                    
+              |                   
+              li
+                a.item-link(href='sign-in.html')
+                  .item-content
+                    .item-inner
+                      .item-title sign-in
+          |       
+          |               
+          .list-block.part3
+            ul
+              li
+                a.item-link(href='user-center_news.html')
+                  .item-content
+                    .item-inner
+                      .item-title user-center_news
+              |   
+              |                   
+              li
+                a.item-link(href='news-list.html')
+                  .item-content
+                    .item-inner
+                      .item-title news-list
+              |   
+              |                   
+              li
+                a.item-link(href='news-content.html')
+                  .item-content
+                    .item-inner
+                      .item-title news-content
+        |             
+        .toolbar
+          a.link.button.btn-row.btn-signin(href='#') 选手登录
+          |               
+          a.link.button.btn-row.btn-register(href='#') 新人？先注册吧
+|     
+script#logobar-top(type='text/template7').
+  <div class="left">
+  <img src="./resources/logo.png" alt="CRT-logo">
+  中国CRT赛事赛
+  </div>
+|     
+script#logobarTemplate(type='text/template7').
+  <div class="left">
+  <img src="./resources/logo.png" alt="CRT-logo">
+  <span>{{title}}</span>
+  </div>
+|     
+script#item-beijing(type='text/template7').
+  <div class="img-title">2015 CRT中网级别联赛<br>第一季  北京地区</div>
+  <div class="img-title">2015-05-30～2015-05-31</div>
+  <div class="item-content">
+  <div class="item-media"><img src="./resources/pic1.png"></div>
+  <div class="item-inner">
+  <div class="item-title">立即报名</div>
+  <div class="item-subtitle">报名时间:03-20~05-25<br>抽签时间:05-26  签位数:128</div>
+  </div>
+  </div>
+|     
+script#item-wuhan(type='text/template7').
+  <div class="img-title">2015 CRT中网级别联赛<br>第一季  武汉地区</div>
+  <div class="img-title">2015-05-30～2015-05-31</div>
+  <div class="item-content">
+  <div class="item-media"><img src="./resources/pic2.png"></div>
+  <div class="item-inner">
+  <div class="item-title">立即报名</div>
+  <div class="item-subtitle">报名时间:03-20~05-25<br>抽签时间:05-26  签位数:128</div>
+  </div>
+  </div>
+|  
+|     
+script#itemArea(type='text/template7').
+  <a href="#" class="button">
+  <div class="button-mask">
+  <div class="name-en">{{nameEn}}</div>
+  <div class="name-cn">{{nameCn}}</div>
+  </div>
+  </a>
+// Path to Framework7 Library JS
+script(type='text/javascript', src='./Framework7/dist/js/framework7.js')
+// Path to your app js
+script(type='text/javascript', src='./js/index.js')

@@ -1,88 +1,86 @@
-html
-  body
-    .navbar
-      .navbar-inner(data-page='news-list', data-logobar-title='中国CRT赛事新闻')
-    #news-list-page.page(data-page='news-list')
-      .page-content
-        .content-block.news-filter
-          .accordion-item.accordion-item-expanded
-            .accordion-item-content.filter-options
-              .box
-                i.fa.fa-bullhorn
-                |             
-                .box-text 公告通知
-              |           
-              .box
-                i.fa.fa-calendar
-                |             
-                .box-text 赛程安排
-              |           
-              .box
-                i.fa.fa-thumb-tack
-                |             
-                .box-text 赛区
-              |           
-              .box
-                i.fa.fa-arrows
-                |             
-                .box-text 时间
-            |         
-            .accordion-item-content.filter-details
-              span.filter-details-item
-                | 赛事:
-                span.filter-details-item-text
-                  | 2015 CRT中网级别联赛
-                  a.btn-remove(href='#') ☓
-              |           
-              span.filter-details-item
-                | 类型:
-                span.filter-details-item-text
-                  | 第一季
-                  a.btn-remove(href='#') ☓
-                |             
-                span.filter-details-item-text
-                  | 第二季
-                  a.btn-remove(href='#') ☓
-              |           
-              span.filter-details-item
-                | 地区:
-                span.filter-details-item-text
-                  | 北京
-                  a.btn-remove(href='#') ☓
-            |           
-            |         
-            .accordion-item-toggle
-              .toggle-content.display-expanded
-                i.fa.fa-angle-double-up
-                |             收起
-              |           
-              .toggle-content.display-non-expanded
-                i.fa.fa-angle-double-down
-                |             筛选
+.navbar
+  .navbar-inner(data-page='news-list', data-logobar-title='中国CRT赛事新闻')
+#news-list-page.page(data-page='news-list')
+  .page-content
+    .content-block.news-filter
+      .accordion-item.accordion-item-expanded
+        .accordion-item-content.filter-options
+          .box
+            i.fa.fa-bullhorn
+            |             
+            .box-text 公告通知
+          |           
+          .box
+            i.fa.fa-calendar
+            |             
+            .box-text 赛程安排
+          |           
+          .box
+            i.fa.fa-thumb-tack
+            |             
+            .box-text 赛区
+          |           
+          .box
+            i.fa.fa-arrows
+            |             
+            .box-text 时间
+        |         
+        .accordion-item-content.filter-details
+          span.filter-details-item
+            | 赛事:
+            span.filter-details-item-text
+              | 2015 CRT中网级别联赛
+              a.btn-remove(href='#') ☓
+          |           
+          span.filter-details-item
+            | 类型:
+            span.filter-details-item-text
+              | 第一季
+              a.btn-remove(href='#') ☓
+            |             
+            span.filter-details-item-text
+              | 第二季
+              a.btn-remove(href='#') ☓
+          |           
+          span.filter-details-item
+            | 地区:
+            span.filter-details-item-text
+              | 北京
+              a.btn-remove(href='#') ☓
+        |           
+        |         
+        .accordion-item-toggle
+          .toggle-content.display-expanded
+            i.fa.fa-angle-double-up
+            |             收起
+          |           
+          .toggle-content.display-non-expanded
+            i.fa.fa-angle-double-down
+            |             筛选
+    |     
+    .list-block.news-list
+      ul
+        li
+          a(href='#')
+            .item-category 公告通知
+            |             
+            .item-title 北京赛区第一季重要通知
+            |             
+            .item-time 2015-06-05
         |     
-        .list-block.news-list
-          ul
-            li
-              a(href='#')
-                .item-category 公告通知
-                |             
-                .item-title 北京赛区第一季重要通知
-                |             
-                .item-time 2015-06-05
-            |     
-            |         
-            li
-              a(href='#')
-                .item-category 上海赛区
-                |             
-                .item-title 2013年CRT中网级别联赛上海第三季赛程安排
-                |             
-                .item-time 2015-06-05
-            |         
-            li
-              a(href='#')
-                .item-category 上海赛区
-                |             
-                .item-title 2013年CRT中网级别联赛上海第三季赛程安排
-                |             
-                .item-time 2015-06-05
+        |         
+        li
+          a(href='#')
+            .item-category 上海赛区
+            |             
+            .item-title 2013年CRT中网级别联赛上海第三季赛程安排
+            |             
+            .item-time 2015-06-05
+        |         
+        li
+          a(href='#')
+            .item-category 上海赛区
+            |             
+            .item-title 2013年CRT中网级别联赛上海第三季赛程安排
+            |             
+            .item-time 2015-06-05

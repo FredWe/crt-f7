@@ -1,43 +1,41 @@
-html
-  body
-    .navbar
-      // Navbar inner for apply page
-      .navbar-inner(data-page='apply')
-        // Sub navbar
-        .subnavbar
-          .go-back
-            a.back.link(href='#')
-              i.fa.fa-chevron-left
-              |  返回
-          |       
-          .time-filter
-            a.link(href='#')
-              i.fa.fa-chevron-down
-              |  时间
-    #apply-page.page.with-subnavbar(data-page='apply')
-      // Scrollable page content
-      .page-content.hide-bars-on-scroll
-        .list-block.media-list
-          ul.month-match
-            .row
-              .col-auto.month-title 2015年5月
-            |         
-            li.item-beijing
-          |       
-          ul.month-match
-            .row
-              .col-auto.month-title 2015年6月
-            |                   
-            |         
-            li.item-beijing
-            |         
-            li.item-wuhan
-          |       
-          ul.month-match
-            .row
-              .col-auto.month-title 2015年7月
-            |                   
-            |         
-            li.item-beijing
-            |         
-            li.item-wuhan
+.navbar
+  // Navbar inner for apply page
+  .navbar-inner(data-page='apply')
+    // Sub navbar
+    .subnavbar
+      .go-back
+        a.back.link(href='#')
+          i.fa.fa-chevron-left
+          |  返回
+      |       
+      .time-filter
+        a.link(href='#')
+          i.fa.fa-chevron-down
+          |  时间
+#apply-page.page.with-subnavbar(data-page='apply')
+  // Scrollable page content
+  .page-content.hide-bars-on-scroll
+    .list-block.media-list
+      ul.month-match
+        .row
+          .col-auto.month-title 2015年5月
+        |         
+        li.item-beijing
+      |       
+      ul.month-match
+        .row
+          .col-auto.month-title 2015年6月
+        |                   
+        |         
+        li.item-beijing
+        |         
+        li.item-wuhan
+      |       
+      ul.month-match
+        .row
+          .col-auto.month-title 2015年7月
+        |                   
+        |         
+        li.item-beijing
+        |         
+        li.item-wuhan

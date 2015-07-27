@@ -1,37 +1,35 @@
-html
-  body
-    .navbar
-      .navbar-inner(data-page='sign-in', data-logobar-title='中国CRT赛事选手登录')
-    #sign-in-page.page(data-page='sign-in')
-      // Scrollable page content
-      .page-content
-        #sign-in_title.content-block.content-title
-          span.go-back
-            a.back.link(href='#')
-              i.fa.fa-chevron-left
-              |  返回
-          |       
-          span.title-name 选手登录
-        |     
-        #sign-in_user-account.content-block
-          form
-            .list-block
-              ul
-                li.item-content
-                  .item-inner
-                    .item-input
-                      input(type='text', name='username', placeholder='用户名')
-                |             
-                li.item-content
-                  .item-inner
-                    .item-input
-                      input(type='password', name='password', placeholder='密码')
-            |         
-            .list-block
-              ul
-                li
-                  a#signin.item-link.list-button.button(href='#') 登 录
-              |           
-              .list-block-label
-                | 还没有注册？ 
-                a(href='#') 注册一个账户
+.navbar
+  .navbar-inner(data-page='sign-in', data-logobar-title='中国CRT赛事选手登录')
+#sign-in-page.page(data-page='sign-in')
+  // Scrollable page content
+  .page-content
+    #sign-in_title.content-block.content-title
+      span.go-back
+        a.back.link(href='#')
+          i.fa.fa-chevron-left
+          |  返回
+      |       
+      span.title-name 选手登录
+    |     
+    #sign-in_user-account.content-block
+      form
+        .list-block
+          ul
+            li.item-content
+              .item-inner
+                .item-input
+                  input(type='text', name='username', placeholder='用户名')
+            |             
+            li.item-content
+              .item-inner
+                .item-input
+                  input(type='password', name='password', placeholder='密码')
+        |         
+        .list-block
+          ul
+            li
+              a#signin.item-link.list-button.button(href='#') 登 录
+          |           
+          .list-block-label
+            | 还没有注册？ 
+            a(href='#') 注册一个账户
