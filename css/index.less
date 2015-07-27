@@ -183,14 +183,24 @@ body {
 		font-size: 24px; 
 	}
 }
+@apply-subnavebar-link-size: 18px;
+[data-page = "apply"].navbar-inner a.back.link { font-size: @apply-subnavebar-link-size; }
 .subnavbar {
 	height: auto;
-	background-color: #007aff;
-	.buttons-row {
-		padding: 17px 0;
-		.button:first-child {
-			border-left-width: 0;
+	line-height: 40px;
+	background-color: lightgray;
+	.go-back, .time-filter { 
+		display: inline-block;
+		a {
+			color: white;
+			font-size: @apply-subnavebar-link-size;
 		}
+	}
+	text-align: justify;
+	div:last-child::after {
+		display: inline-block;
+		width: 100%;
+		height: 0;
 	}
 	.button.button-big-big {
 		height: auto;
@@ -705,7 +715,7 @@ body {
 		margin-top: 0;
 		padding-top: 35px;
 		padding-left: 27px;
-		.prev.link { 
+		.back.link { 
 			color: #b3b3b3; 
 			font-size: 19px;
 			padding-right: 0.5em;
@@ -1103,7 +1113,7 @@ body {
 		margin-top: @dxBetwNavAndSubnav;
 	}
 	.page-content {
-		padding-top: 196px;
+		.list-block ul.month-match::before { display: none; }
 		.list-block ul.month-match {
 			box-shadow: 0 1px 3px #d1d1d1;
 			margin-bottom: 2px;
@@ -1212,10 +1222,20 @@ body {
 			padding: 0 21px;
 		}
 		.content-block.reg-banner {
+			position: relative;
 			color: white;
 			height: 411px;
 			background-image: url(../resources/reg-pic1.jpg);
 			background-size: cover;
+			.go-back {
+				position: absolute;
+				a.back.link {
+					font-size: 18px;
+					color: white;
+				}
+				top: 28px;
+				left: 30px;
+			}
 			.flex-x-center;
 			.flex-y-center;/*mixin*/
 			.banner-title {

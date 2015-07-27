@@ -5,41 +5,15 @@ html
       .navbar-inner(data-page='apply')
         // Sub navbar
         .subnavbar
-          .buttons-row
-            a.button.button-big-big.button-fill(href='#tab1')
-              i.fa.fa-flag-o.fa-5
-              br
-              span 赛事
-            |         
-            a.button.button-big-big.button-fill(href='#tab2')
-              i.fa.fa-list-alt.fa-5
-              br
-              span 类型
-            |         
-            a.button.button-big-big.button-fill(href='#tab3')
-              i.fa.fa-location-arrow.fa-5
-              br
-              span 地区
-            |         
-            a.button.button-big-big.button-fill(href='#tab1')
-              i.fa.fa-bookmark-o.fa-5
-              br
-              span 签位数
-            |         
-            a.button.button-big-big.button-fill(href='#tab2')
-              i.fa.fa-pencil-square-o.fa-5
-              br
-              span 报名时间
-            |         
-            a.button.button-big-big.button-fill(href='#tab3')
-              i.fa.fa-bell-o.fa-5
-              br
-              span 比赛时间
-            |         
-            a.button.button-big-big.button-fill(href='#tab1')
-              i.fa.fa-clock-o.fa-5
-              br
-              span 抽签时间
+          .go-back
+            a.back.link(href='#')
+              i.fa.fa-chevron-left
+              |  返回
+          |       
+          .time-filter
+            a.link(href='#')
+              i.fa.fa-chevron-down
+              |  时间
     #apply-page.page.with-subnavbar(data-page='apply')
       // Scrollable page content
       .page-content.hide-bars-on-scroll
