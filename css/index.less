@@ -9,6 +9,8 @@
 @swiperBtnBgNext: replace("data: image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E", "007aff", @swiperBtnColor);
 @swiperBtnColor: "33ccff";
 
+@backLinkFontSize: 24px;
+
 /*mixin*/
 .flex-display {
 	display: -webkit-flex;
@@ -29,12 +31,12 @@
 	justify-content: space-between;
 	-webkit-justify-content: space-between;
 }
-.flex-y-center-but-x-justify {
+.flex-y-center-using-direction {
 	.flex-display;
-	align-items: center;
-	justify-content: space-between;
-	-webkit-align-items: center;
-	-webkit-justify-content: space-between;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	justify-content: center;
+	-webkit-justify-content: center;
 }
 .tennis-logo {
 	display: inline-block;
@@ -104,7 +106,7 @@ body {
 		z-index: 30;
 	}
 	a.back.link.right {
-		font-size: 24px;
+		font-size: @backLinkFontSize;
 		color: #33ccff;
 		padding-right: 32px;
 	}
@@ -169,7 +171,7 @@ body {
 	}
 	a.back.link {
 		margin-left: 14px;
-		font-size: 20px;
+		font-size: @backLinkFontSize;
 		font-weight: normal;
 		line-height: 30px;/*useablility*/
 	}
@@ -177,17 +179,18 @@ body {
 		font-size: 24px; 
 	}
 }
-@apply-subnavebar-link-size: 18px;
-[data-page = "apply"].navbar-inner a.back.link { font-size: @apply-subnavebar-link-size; }
+[data-page = "apply"].navbar-inner a.back.link {
+	font-size: @backLinkFontSize;
+}
 .subnavbar {
 	height: auto;
 	line-height: 40px;
 	background-color: lightgray;
-	.go-back, .time-filter { 
+	.go-back { 
 		display: inline-block;
 		a {
 			color: white;
-			font-size: @apply-subnavebar-link-size;
+			font-size: @backLinkFontSize;
 		}
 	}
 	text-align: justify;
@@ -606,7 +609,6 @@ body {
 				.flex-y-center; 
 				.flex-x-center;
 				.link-name {
-					width: 4em;
 					white-space: normal;
 					line-height: 1.32;
 				}
@@ -710,9 +712,9 @@ body {
 		margin-top: 0;
 		padding-top: 35px;
 		padding-left: 27px;
-		a.link { 
+		a.back.link { 
 			color: #b3b3b3; 
-			font-size: 19px;
+			font-size: @backLinkFontSize;
 			padding-right: 0.5em;
 		}
 		.title-name { 
@@ -800,7 +802,7 @@ body {
 		.banner-title-head { line-height: 1; }
 		.back.link {
 			position: absolute;
-			font-size: 20px;
+			font-size: @backLinkFontSize;
 			padding: 30px;
 			top: 0;
 			left: 0;
@@ -903,7 +905,7 @@ body {
 		.back.link {
 			display: inline-block;
 			padding-left: 27px;
-			font-size: 19px;
+			font-size: @backLinkFontSize;
 			padding-right: 1.5em;
 			color: #9e9ea2;
 			i { color: #007aff; }
@@ -1121,19 +1123,7 @@ body {
 			margin-bottom: 2px;
 			li {
 				background-color: #fafafa;
-				border-bottom: 1px solid #ececec;
-				.img-title {
-					position: absolute;
-					bottom: 52px;
-					left: 30px;
-					font-size: 23px;
-					color: white;
-					font-weight: bold;
-				}
-				.img-title + .img-title {
-					bottom: 20px;
-					font-weight: normal;
-				}
+				border-bottom: 3px solid #ececec;
 			}
 			.month-title {
 				text-align: center;
@@ -1144,9 +1134,31 @@ body {
 				border-bottom: 1px solid #ececec;
 			}
 			.item-content {
-				.item-inner:after {
-					display: none;
+				.item-media {
+					width: 319px;
+					height: 162px;
+					background-image: url(../resources/pic1.png);
+					background-origin: content-box;
+					background-repeat: no-repeat;
+					.img-title {
+						margin-left: 0.565em;
+						font-size: 23px;
+						color: white;
+						font-weight: bold;
+					}
+					.img-title:last-child {
+						bottom: 20px;
+						font-weight: normal;
+					}
 				}
+				.item-media, .item-inner {
+					.flex-y-center-using-direction;
+				}				
+				.item-media {
+					align-items: flex-start;
+					-webkit-align-items: flex-start;
+				}
+				.item-inner:after { display: none; }
 				.item-inner {
 					text-align: center;
 					.item-title {
@@ -1232,7 +1244,7 @@ body {
 			.go-back {
 				position: absolute;
 				a.back.link {
-					font-size: 18px;
+					font-size: @backLinkFontSize;
 					color: white;
 				}
 				top: 28px;
@@ -1258,7 +1270,8 @@ body {
 		.content-block {
 			.row.form-header {
 				height: 93px;
-				.flex-y-center-but-x-justify;
+				.flex-y-center;
+				.flex-x-justify;
 				.form-title {
 					font-size: 29px;
 					color: #333333;
@@ -1487,7 +1500,7 @@ body {
 		.back.link {
 			display: inline-block;
 			padding-left: 27px;
-			font-size: 19px;
+			font-size: @backLinkFontSize;
 			padding-right: 1.5em;
 			color: #33cbff;
 		}
