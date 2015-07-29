@@ -61,6 +61,15 @@ var generateNav = function(e){
   e.innerHTML += logobarHTML;
 };
 myApp.onPageInit('*', 
+=======
+  var logobarHTML = Template7.templates.logobarTemplate(
+   { title: e.dataset.logobarTitle } 
+   );
+  e.innerHTML += logobarHTML;
+};
+
+myApp.onPageInit( '*', 
+>>>>>>> origin/gh-pages
   function(page){ 
     if (isMember(page.name, pageSetPart1)) {
       var logobarTop = $$('#logobar-top').html();
@@ -88,6 +97,14 @@ var appendArea = function(area, v, i){
       nameCn: v,
       nameEn: btnName.en[i].toUpperCase()
     });
+=======
+  var tempHTML = Template7.templates.itemArea(
+    {
+      nameCn: v,
+      nameEn: btnName.en[i].toUpperCase()
+    }
+    );
+>>>>>>> origin/gh-pages
   area.innerHTML += tempHTML;
 };
 var randomAppendClass = function (elementSet, classTextSet) {
@@ -98,6 +115,16 @@ var randomAppendClass = function (elementSet, classTextSet) {
     });
 }
 myApp.onPageInit("match-info-table", 
+=======
+  elementSet.forEach( 
+    function(member,index){ 
+      var indexRandomSelected = (Math.random() * (classTextSet.length - 1)).toFixed();
+      member.setAttribute("class", member.getAttribute("class") + " " + classTextSet[indexRandomSelected])
+    } 
+    );
+}
+myApp.onPageInit( "match-info-table", 
+>>>>>>> origin/gh-pages
   function(page){ 
     var area = document.querySelector("#match-info-table-page .area-content");
     btnName.cn.forEach( function(value,index){ appendArea(area, value, index); } );

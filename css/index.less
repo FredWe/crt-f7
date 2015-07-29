@@ -35,6 +35,38 @@
 	justify-content: space-between;
 	-webkit-align-items: center;
 	-webkit-justify-content: space-between;
+=======
+@swiperBtnBgPrev: replace("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E", "007aff", @swiperBtnColor);
+@swiperBtnBgNext: replace("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E", "007aff", @swiperBtnColor);
+@swiperBtnColor: "33ccff";
+
+/*mixin*/
+.flex-y-center {
+	display: -webkit-flex;
+	display: flex;
+	align-items:center;
+	-webkit-align-items:center;
+}
+.flex-x-center {
+	display: -webkit-flex;
+	display: flex;
+	justify-content:center;
+	-webkit-justify-content:center;
+}
+.flex-x-justify {
+	display: -webkit-flex;
+	display: flex;
+	justify-content:center;
+	-webkit-justify-content:center;
+}
+.flex-y-center-but-x-justify {
+	display: -webkit-flex;
+	display: flex;
+	align-items:center;
+	justify-content:space-between;
+	-webkit-align-items:center;
+	-webkit-justify-content:space-between;
+>>>>>>> origin/gh-pages
 }
 .tennis-logo {
 	display: inline-block;
@@ -67,6 +99,9 @@
 .border-test {border: 1px solid black;}
 .shadow-bottom(@bottom) { box-shadow: 0px @bottom 3px #cfd6d8 }
 .btn-aqua(@fontsize, @bordersize: 0px, @heightsize, @weightsize, @borderadius, @btnColor: #33ccff) { /*with .button*/
+=======
+.btn-aqua(@fontsize, @bordersize: 0px, @heightsize, @weightsize, @borderadius) { /*with .button*/
+>>>>>>> origin/gh-pages
 	font-size: @fontsize;
 	color: white;
 	height: @heightsize;
@@ -269,6 +304,14 @@ body {
 		height: 34.286%;
 		.swiper-container { height: 100%; }
 		.explain-text {
+=======
+		position:relative;
+		padding: 4.214% 0; /*computed based on width*/
+		border-bottom: 1px solid #ededed;
+		height: 34.286%;
+		.swiper-container { height: 100%; }  
+		.explain-text{
+>>>>>>> origin/gh-pages
 			z-index: 10;
 			position: absolute;
 			width: 100%;
@@ -376,6 +419,13 @@ body {
 /* pages */
 #user-center-page,
 #user-center_news-page {
+=======
+	}	
+}
+
+/* pages */
+#user-center-page {
+>>>>>>> origin/gh-pages
 	.content-block {
 		margin: 0;
 	}
@@ -629,6 +679,8 @@ body {
 				font-size: 22px;
 				line-height: 2.045;
 				a { color: inherit; }
+=======
+>>>>>>> origin/gh-pages
 			}
 			li::before { 
 				content: "•";
@@ -650,6 +702,8 @@ body {
 			color: white;
 			.flex-x-center;
 			border-radius: 0;
+=======
+>>>>>>> origin/gh-pages
 		}
 		.btn-signin {  
 			background-color: #33ccff;
@@ -730,6 +784,8 @@ body {
 			padding: 0; 		
 			overflow: hidden;		
 		}
+=======
+>>>>>>> origin/gh-pages
 	}
 	.button {
 		height: 200px;
@@ -1197,6 +1253,56 @@ body {
 				text-align: center;
 			}
 			.banner-title1 {
+=======
+			.item-content{
+				.item-inner:after{
+					display:none;
+				}
+				.item-inner{
+					text-align:center;
+					.item-title{
+						font-size:45px;
+						font-weight: bold;
+						color:#ebebeb;
+						text-shadow:0 -2px 1px #d9d9d9;
+					}
+					.item-subtitle{
+						font-size: 19px;
+						text-shadow:0 0 1px #d9d9d9;
+					}
+				}
+			}
+		} 
+	}
+}
+/**apply2*****************************************/
+#apply2-page, #apply2-2-page{
+	.page-content {
+		background-color: white;
+		padding:61px 0 120px;
+		.content-block.apply-swiper{
+			margin: 0;
+			padding:0 39px;
+			height: 38.791%;
+		}
+		.content-block{
+			margin: 0;
+		}
+		.content-block.apply-banner{
+			color: white;
+			height: 32.566%;
+			padding:28px 30px;
+			background-image: url(../resources/apply2-pic1.jpg);
+			background-size: cover;
+			a{
+				color: white;
+				font-size: 18px;
+			}
+			.banner-title{
+				text-align: center;
+			}
+			.banner-title1{
+>>>>>>> origin/gh-pages
 				font-size: 20px;
 				padding-top: 7.095%;
 				letter-spacing: 4px;
@@ -1250,6 +1356,40 @@ body {
 				text-align: center;
 			}
 			.banner-title1 {
+=======
+			.banner-title3,.banner-title4{
+				font-size: 22px;
+			}
+			.banner-title3{
+				font-weight:bold;
+			}
+			.banner-title4{
+				padding: 8px;
+			}
+		}
+	}
+}
+/**reg**************************************/
+#reg1-page, .reg-page{
+	.page-content {
+		background-color: white;
+		padding:61px 0 120px;
+		.content-block{
+			margin: 0;
+			padding: 0 21px;
+		}
+		.content-block.reg-banner{
+			color: white;
+			height: 411px;
+			background-image: url(../resources/reg-pic1.jpg);
+			background-size: cover;
+			.flex-x-center;
+			.flex-y-center;/*mixin*/
+			.banner-title{
+				text-align: center;
+			}
+			.banner-title1{
+>>>>>>> origin/gh-pages
 				font-size: 20px;
 				padding-top: 20px;
 				letter-spacing: 4px;
@@ -1319,6 +1459,17 @@ body {
 .reg-page {
 	.page-content {
 		.content-block.reg-basic {
+=======
+				}						
+			}
+		}
+	}	
+}
+/**reg2********************************************/
+.reg-page{
+	.page-content{
+		.content-block.reg-basic{
+>>>>>>> origin/gh-pages
 			background-color: white;
 			border-top: 11px solid #cecece;
 			border-bottom: 1px solid #e4e4e4;
@@ -1529,3 +1680,5 @@ body {
 		}
 	}
 }
+=======
+>>>>>>> origin/gh-pages
