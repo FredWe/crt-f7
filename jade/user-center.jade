@@ -1,41 +1,44 @@
 .navbar
   .navbar-inner(data-page='user-center', data-logobar-title='用户中心')
     .right
-      a.back.link(href='user-center.html') 个人中心
+      a.back.link(href='#') 登出
 #user-center-page.page(data-page='user-center')
   // Scrollable page content
   .page-content
-    #user-contact.content-block
+    .content-block.user-contact
       .mask
-        #user-name 纳达尔
+        .info-title.justify_fix
+          span#user-name 纳达尔
+          |  
+          |           
+          a.button.btn.btn-edit(href='#') 编辑
         |         
-        span#user-phone
-          i.fa.fa-mobile
-          |  12533333333
+        .info-contact
+          span#user-phone
+            i.fa.fa-mobile
+            |  12533333333
+          |           
+          span#user-mail
+            i.fa.fa-envelope-o
+            |  ddd333@sina.com.cn
         |         
-        span#user-mail
-          i.fa.fa-envelope-o
-          |  ddd333@sina.com.cn
-        |         
-        a.button.btn.btn-edit(href='#') 编辑
+        .row.no-gutter.user-display
+          .col-auto
+            .info 5
+            |             
+            .title 级别
+          |           
+          .col-auto
+            .info 北京
+            |             
+            .title 地区
+          |           
+          .col-auto
+            .info 王默默
+            |             
+            .title 姓名
     |     
-    #user-function.content-block
-      #user-display.row.no-gutter
-        .col-auto
-          .info 5
-          |           
-          .title 级别
-        |         
-        .col-auto
-          .info 北京
-          |           
-          .title 地区
-        |         
-        .col-auto
-          .info 王默默
-          |           
-          .title 姓名
-      |       
+    .content-block.user-info
       #user-operation.row
         .col-auto
           a.button.btn-bigsquare.btn-apply(href='#')

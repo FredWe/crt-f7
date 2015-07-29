@@ -1,45 +1,41 @@
 <div class="navbar">
-  <div data-page="user-center" class="navbar-inner" data-logobar-title="用户中心">
+  <div data-page="user-center-old" class="navbar-inner" data-logobar-title="用户中心">
     <div class="right">
       <a class="back link" href="#">登出</a>
     </div>
   </div>                 
 </div>
 
-<div data-page="user-center" class="page" id="user-center-page">
+<div data-page="user-center-old" class="page" id="user-center-old-page">
   <!-- Scrollable page content-->
   <div class="page-content">
-    <div class="content-block user-contact">
+    <div class="content-block" id="user-contact">
       <div class="mask">
-        <div class="info-title justify_fix">
-          <span id="user-name">纳达尔</span> 
-          <a href="#" class="button btn btn-edit">编辑</a>
-        </div>
-        <div class="info-contact">
-          <span id="user-phone">
-            <i class="fa fa-mobile"></i> 12533333333&nbsp;
-          </span>
-          <span id="user-mail">
-            <i class="fa fa-envelope-o"></i> ddd333@sina.com.cn
-          </span>       
-        </div>
-        <div class="row no-gutter user-display">
-          <div class="col-auto">
-            <div class="info">5</div>
-            <div class="title">级别</div>
-          </div>
-          <div class="col-auto">
-            <div class="info">北京</div>
-            <div class="title">地区</div>
-          </div>
-          <div class="col-auto">
-            <div class="info">王默默</div>
-            <div class="title">姓名</div>
-          </div>
-        </div>      
-      </div>      
+        <div id="user-name">纳达尔</div>
+        <span id="user-phone">
+          <i class="fa fa-mobile"></i> 12533333333&nbsp;
+        </span>
+        <span id="user-mail">
+          <i class="fa fa-envelope-o"></i> ddd333@sina.com.cn
+        </span>
+        <a href="#" class="button btn btn-edit">编辑</a>
+      </div>
     </div>
-    <div class="content-block user-info">
+    <div class="content-block" id="user-function">
+      <div class="row no-gutter" id="user-display">
+        <div class="col-auto">
+          <div class="info">5</div>
+          <div class="title">级别</div>
+        </div>
+        <div class="col-auto">
+          <div class="info">北京</div>
+          <div class="title">地区</div>
+        </div>
+        <div class="col-auto">
+          <div class="info">王默默</div>
+          <div class="title">姓名</div>
+        </div>
+      </div>
       <div class="row" id="user-operation">
         <div class="col-auto">
           <a href="#" class="button btn-bigsquare btn-apply">
