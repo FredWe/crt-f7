@@ -1,5 +1,9 @@
 <div class="navbar">
-  <div data-page="reg2" class="navbar-inner"></div>  
+  <div data-page="reg2" class="navbar-inner">
+    <div class="right">
+      <a class="link" href="user-center.html">个人中心</a>
+    </div>
+  </div>  
 </div>
 
 <div data-page="reg2" class="page reg-page" id="reg2-page">
@@ -16,219 +20,253 @@
       </div>
     </div>
     <div class="list-block form-basic">
-      <ul>
-        <!-- Text inputs -->
-        <li>
-          <div class="item-content">
-            <div class="item-media">
-              <i class="icon icon-form icon-form-1"></i>
-            </div>
-            <div class="item-inner">
-              <div class="item-title label">真实姓名</div>
-              <div class="item-input">
-                <input type="text" placeholder="你的名字">
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="item-content">
-            <div class="item-media">
-              <i class="icon icon-form icon-form-2"></i>
-            </div>
-            <div class="item-inner">
-              <div class="item-title label">身份证号</div>
-              <div class="item-input">
-                <input type="text" placeholder="你身份证号码">
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="item-content">
-            <div class="item-media">
-              <i class="icon icon-form icon-form-3"></i>
-            </div>
-            <div class="item-inner">
-              <div class="item-title label">用户名</div>
-              <div class="item-input">
-                <input type="text" placeholder="您在CRT官网的用户名">
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="item-content">
-            <div class="item-media">
-              <i class="icon icon-form icon-form-4"></i>
-            </div>
-            <div class="item-inner">
-              <div class="item-title label">输入密码</div>
-              <div class="item-input">
-                <input type="text" placeholder="输入密码">
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="item-content">
-            <div class="item-media">
-              <i class="icon icon-form icon-form-4"></i>
-            </div>
-            <div class="item-inner">
-              <div class="item-title label">再次输入密码</div>
-              <div class="item-input">
-                <input type="text" placeholder="再次输入密码">
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <!-- Additional "smart-select" class -->
-          <a href="#" class="item-link smart-select">
-            <!-- select -->
-            <select name="gender">
-              <option value="man" selected>男</option>
-              <option value="woman">女</option>
-            </select>
+      <form id="reg2" class="store-data">
+      <form id="reg2" class="store-data">
+        <ul>
+          <!-- Text inputs-->
+          <li>
             <div class="item-content">
-              <div class="item-media">
-                <i class="icon icon-form icon-form-5"></i>
-              </div>
+              <div class="item-media"><i class="icon icon-form icon-form-1"></i></div>            
               <div class="item-inner">
-                <!-- Select label -->
-                <div class="item-title label">性别</div>
-                <!-- Selected value, not required -->
-                <div class="item-after">男</div>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <div class="item-content">
-            <div class="item-media">
-              <i class="icon icon-form icon-form-6"></i>
-            </div>
-            <div class="item-inner">
-              <div class="item-title label">出生日期</div>
-              <div class="item-input">
-                <input type="text" placeholder="选择出生日期" readonly id="calendar-default">
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <!-- Additional "smart-select" class -->
-          <a href="#" class="item-link smart-select">
-            <!-- select -->
-            <select name="region">
-              <option value="man" selected>点击选取您所在的区域</option>
-              <option value="woman">女</option>
-            </select>
-            <div class="item-content">
-              <div class="item-media">
-                <i class="icon icon-form icon-form-7"></i>
-              </div>
-              <div class="item-inner">
-                <!-- Select label -->
-                <div class="item-title label">所属地区</div>
-                <!-- Selected value, not required -->
-                <div class="item-after">点击选取您所在的区域</div>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <!-- Additional "smart-select" class -->
-          <a href="#" class="item-link smart-select">
-            <!-- select -->
-            <select name="gender">
-              <option value="man" selected>点击选取您的国籍</option>
-              <option value="woman">女</option>
-            </select>
-            <div class="item-content">
-              <div class="item-media">
-                <i class="icon icon-form icon-form-8"></i>
-              </div>
-              <div class="item-inner">
-                <!-- Select label -->
-                <div class="item-title label">国籍</div>
-                <!-- Selected value, not required -->
-                <div class="item-after">点击选取您的国籍</div>
-              </div>
-            </div>
-          </a>
-        </li>                  
-        <li>
-          <!-- Additional "smart-select" class -->
-          <a href="#" class="item-link smart-select">
-            <!-- select -->
-            <select name="gender">
-              <option value="man" selected>点击选取您的所在城市</option>
-              <option value="woman">女</option>
-            </select>
-            <div class="item-content">
-              <div class="item-media">
-                <i class="icon icon-form icon-form-9"></i>
-              </div>
-              <div class="item-inner">
-                <!-- Select label -->
-                <div class="item-title label">常驻城市</div>
-                <!-- Selected value, not required -->
-                <div class="item-after">点击选取您的所在城市</div>
-              </div>
-            </div>
-          </a>
-        </li>                  
-        <li>
-          <a href="#" class="item-link smart-select" data-back-text="返回">
-            <!-- "multiple" attribute for multiple select-->
-            <select name="car" multiple>
-              <!-- options grouped within "optgroup" tag-->
-              <optgroup label="5.0级别">
-                <option value="honda" selected>Honda</option>
-                <option value="lexus">Lexus</option>
-                <option value="mazda">Mazda</option>
-                <option value="nissan">Nissan</option>
-                <option value="toyota">Toyota</option>
-              </optgroup>
-              <optgroup label="4.0级别">
-                <option value="audi" selected>Audi</option>
-                <option value="bmw">BMW</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="vw">Volkswagen</option>
-                <option value="volvo">Volvo</option>
-              </optgroup>
-              <optgroup label="3.0级别">
-                <option value="cadillac">Cadillac</option>
-                <option value="chrysler">Chrysler</option>
-                <option value="dodge">Dodge</option>
-                <option value="ford" selected>Ford</option>
-              </optgroup>
-            </select>
-            <div class="item-content">
-                <div class="item-media">
-                  <i class="icon icon-form icon-form-10"></i>
+                <div class="item-title label">真实姓名</div>              
+                <div class="item-input">
+                  <input name="f_truename" type="text" placeholder="你的名字"/>
                 </div>
+              </div>
+            </div>
+          </li>        
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form icon-form-2"></i></div>            
+              <div class="item-inner">
+                <div class="item-title label">身份证号</div>              
+                <div class="item-input">
+                  <input name="f_idcard" type="text" placeholder="你身份证号码"/>
+                </div>
+              </div>
+            </div>
+          </li>        
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form icon-form-3"></i></div>            
+              <div class="item-inner">
+                <div class="item-title label">用户名</div>              
+                <div class="item-input">
+                  <input name="username" type="text" placeholder="您在CRT官网的用户名"/>
+                </div>
+              </div>
+            </div>
+          </li>        
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form icon-form-4"></i></div>            
+              <div class="item-inner">
+                <div class="item-title label">输入密码</div>              
+                <div class="item-input">
+                  <input name="password" type="text" placeholder="输入密码"/>
+                </div>
+              </div>
+            </div>
+          </li>        
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form icon-form-4"></i></div>            
+              <div class="item-inner">
+                <div class="item-title label">再次输入密码</div>              
+                <div class="item-input">
+                  <input name="password_re" type="text" placeholder="再次输入密码"/>
+                </div>
+              </div>
+            </div>
+          </li>        
+          <li>
+            <!-- Additional "smart-select" class--><a href="#" class="item-link smart-select">
+              <!-- select-->
+              <select name="f_sex">
+                <option value="男">男</option>              
+                <option value="女">女</option>
+              </select>            
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-form icon-form-5"></i></div>              
                 <div class="item-inner">
-                  <!-- Select label -->
-                  <div class="item-title label">球员往绩</div>
-                  <!-- Selected value, not required -->
-                  <div class="item-after smart-select-value">请如实选择您的往绩</div>
+                  <!-- Select label-->
+                  <div class="item-title label">性别</div>
+                  <!-- Selected value, not required-->
+                  <div class="item-after">男</div>
                 </div>
+              </div></a>
+          </li>        
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form icon-form-6"></i></div>            
+              <div class="item-inner">
+                <div class="item-title label">出生日期</div>              
+                <div class="item-input">
+                  <input id="calendar-default" name="f_birthday" type="text" placeholder="选择出生日期" readonly=""/>
+                </div>
+              </div>
             </div>
-          </a>
-        </li>
-      </ul>
+          </li>        
+          <li>
+            <!-- Additional "smart-select" class--><a href="#" class="item-link smart-select">
+              <!-- select-->
+              <select name="f_area">{{#each area}}
+                <option value="{{city}}">{{city}}</option>{{/each}}
+              </select>            
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-form icon-form-7"></i></div>              
+                <div class="item-inner">
+                  <div class="item-title label">所属地区</div>
+                </div>
+              </div></a>
+          </li>        
+          <li>
+            <!-- Additional "smart-select" class--><a href="#" class="item-link smart-select">
+              <!-- select-->
+              <select name="f_nationality">
+                <option value="中国">&#20013;&#22269;</option>
+                <option value="中国香港">&#20013;&#22269;&#39321;&#28207;</option>
+                <option value="中国澳门">&#20013;&#22269;&#28595;&#38376;</option>
+                <option value="中国台湾">&#20013;&#22269;&#21488;&#28286;</option>
+                <option value="日本">&#26085;&#26412;</option>
+                <option value="韩国">&#38889;&#22269;</option>
+                <option value="澳大利亚">&#28595;&#22823;&#21033;&#20122;</option>
+                <option value="新西兰">&#26032;&#35199;&#20848;</option>
+                <option value="智利">&#26234;&#21033;</option>
+                <option value="加拿大">&#21152;&#25343;&#22823;</option>
+                <option value="墨西哥">&#22696;&#35199;&#21733;</option>
+                <option value="美国">&#32654;&#22269;</option>
+                <option value="波兰">&#27874;&#20848;</option>
+                <option value="捷克">&#25463;&#20811;</option>
+                <option value="斯洛伐克">&#26031;&#27931;&#20240;&#20811;</option>
+                <option value="匈牙利">&#21256;&#29273;&#21033;</option>
+                <option value="奥地利">&#22885;&#22320;&#21033;</option>
+                <option value="比利时">&#27604;&#21033;&#26102;</option>
+                <option value="瑞士">&#29790;&#22763;</option>
+                <option value="德国">&#24503;&#22269;</option>
+                <option value="丹麦">&#20025;&#40614;</option>
+                <option value="西班牙">&#35199;&#29677;&#29273;</option>
+                <option value="芬兰">&#33452;&#20848;</option>
+                <option value="法国">&#27861;&#22269;</option>
+                <option value="英国">&#33521;&#22269;</option>
+                <option value="希腊">&#24076;&#33098;</option>
+                <option value="爱尔兰">&#29233;&#23572;&#20848;</option>
+                <option value="冰岛">&#20912;&#23707;</option>
+                <option value="意大利">&#24847;&#22823;&#21033;</option>
+                <option value="卢森堡">&#21346;&#26862;&#22561;</option>
+                <option value="土耳其">&#22303;&#32819;&#20854;</option>
+                <option value="瑞典">&#29790;&#20856;</option>
+                <option value="葡萄牙">&#33889;&#33796;&#29273;</option>
+                <option value="挪威">&#25386;&#23041;</option>
+                <option value="荷兰">&#33655;&#20848;</option>
+                <option value="摩洛哥">&#25705;&#27931;&#21733;</option>
+                <option value="马耳他">&#39532;&#32819;&#20182;</option>
+                <option value="塞普洛斯">&#22622;&#26222;&#27931;&#26031;</option>
+                <option value="波斯尼亚和黑塞哥维那">&#27874;&#26031;&#23612;&#20122;&#21644;&#40657;&#22622;&#21733;&#32500;&#37027;</option>
+                <option value="保加利亚">&#20445;&#21152;&#21033;&#20122;</option>
+                <option value="白俄罗斯">&#30333;&#20420;&#32599;&#26031;</option>
+                <option value="爱沙尼亚">&#29233;&#27801;&#23612;&#20122;</option>
+                <option value="克罗地亚">&#20811;&#32599;&#22320;&#20122;</option>
+                <option value="匈牙利">&#21256;&#29273;&#21033;</option>
+                <option value="立陶宛">&#31435;&#38518;&#23451;</option>
+                <option value="拉托维亚">&#25289;&#25176;&#32500;&#20122;</option>
+                <option value="摩尔多瓦">&#25705;&#23572;&#22810;&#29926;</option>
+                <option value="罗马尼亚">&#32599;&#39532;&#23612;&#20122;</option>
+                <option value="俄罗斯">&#20420;&#32599;&#26031;</option>
+                <option value="斯洛文尼亚">&#26031;&#27931;&#25991;&#23612;&#20122;</option>
+                <option value="亚美尼亚">&#20122;&#32654;&#23612;&#20122;</option>
+                <option value="阿塞拜疆">&#38463;&#22622;&#25308;&#30086;</option>
+                <option value="乌克兰">&#20044;&#20811;&#20848;</option>
+                <option value="塞尔维亚">&#22622;&#23572;&#32500;&#20122;</option>
+                <option value="乌兹别克斯坦">&#20044;&#20857;&#21035;&#20811;&#26031;&#22374;</option>
+                <option value="吉尔吉斯斯坦">&#21513;&#23572;&#21513;&#26031;&#26031;&#22374;</option>
+                <option value="哈萨克斯坦">&#21704;&#33832;&#20811;&#26031;&#22374;</option>
+                <option value="斯里兰卡">&#26031;&#37324;&#20848;&#21345;</option>
+                <option value="马来西亚">&#39532;&#26469;&#35199;&#20122;</option>
+                <option value="菲律宾">&#33778;&#24459;&#23486;</option>
+                <option value="新加坡">&#26032;&#21152;&#22369;</option>
+                <option value="泰国">&#27888;&#22269;</option>
+                <option value="阿联酋">&#38463;&#32852;&#37195;</option>
+                <option value="巴林">&#24052;&#26519;</option>
+                <option value="埃及">&#22467;&#21450;</option>
+                <option value="以色列">&#20197;&#33394;&#21015;</option>
+                <option value="伊朗">&#20234;&#26391;</option>
+                <option value="黎巴嫩">&#40654;&#24052;&#23273;</option>
+                <option value="阿曼">&#38463;&#26364;</option>
+                <option value="沙特阿拉伯">&#27801;&#29305;&#38463;&#25289;&#20271;</option>
+                <option value="阿尔及利亚">&#38463;&#23572;&#21450;&#21033;&#20122;</option>
+                <option value="摩洛哥">&#25705;&#27931;&#21733;</option>
+                <option value="毛里求斯">&#27611;&#37324;&#27714;&#26031;</option>
+                <option value="突尼斯">&#31361;&#23612;&#26031;</option>
+                <option value="南非">&#21335;&#38750;</option>
+                <option value="象牙海岸">&#35937;&#29273;&#28023;&#23736;</option>
+                <option value="印度">&#21360;&#24230;</option>
+                <option value="巴西">&#24052;&#35199;</option>
+              </select>            
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-form icon-form-8"></i></div>              
+                <div class="item-inner">
+                  <!-- Select label-->
+                  <div class="item-title label">国籍</div>
+                </div>
+              </div></a>
+          </li>                  
+                  
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form icon-form-9"></i></div>            
+              <div class="item-inner">
+                <div class="item-title label">常驻城市</div>              
+                <div class="item-input">
+                  <input name="f_city" type="text" placeholder="常驻城市"/>
+                </div>
+              </div>
+            </div>
+          </li>                  
+                  
+          <li><a href="#" data-back-text="返回" class="item-link smart-select">
+              <!-- "multiple" attribute for multiple select-->
+              <select name="f_achievements" multiple="">
+                <!-- options grouped within "optgroup" tag-->
+                <optgroup label="5.0级别">
+                  <option value="a">A.专业网球队退役球员</option>
+                  <option value="b">B.15岁以上正在集训球员</option>
+                  <option value="c">C.曾获全国性业余网球公开赛前四名（含地区分站赛）</option>
+                  <option value="d">D.CTA中国网球协会全国业余网球排名榜前50名</option>
+                  <option value="e">E.12岁—15岁正在集训球员</option>
+                  <option value="f">F.ATP或WTA退役球员</option>
+                  <option value="g">G.ITF注册球员</option>
+                  <option value="h">H.曾经在青少年网球学校训练</option>
+                  <option value="i">I.现任业余网球教练</option>
+                </optgroup>
+                <optgroup label="4.0级别">
+                  <option value="j">J.经常参加本地区城市业余（甲组或精英组）网球赛</option>
+                  <option value="k">K.曾在本地区城市业余网球赛获奖</option>
+                </optgroup>
+                <optgroup label="3.0级别">
+                  <option value="l">L.初级水平，缺少比赛经验</option>
+                  <option value="m">M.热爱网球运动，但从未参加或极少参加过任何业余网球赛</option>
+                </optgroup>
+              </select>            
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-form icon-form-10"></i></div>                
+                <div class="item-inner">
+                  <!-- Select label-->
+                  <div class="item-title label">球员往绩</div>
+                </div>
+              </div></a></li>
+        </ul>
+      </form>
+      </form>
     </div>
   </div>
   <div class="toolbar">
     <div class="row">
       <div class="col-auto">
-        <a href="#reg2" class="button button-big disabled">上一步</a>
+        <a href="reg2.html" class="button button-big disabled">上一步</a>
       </div>
       <div class="col-auto">
-        <a href="#reg3" class="button button-big button-green">下一步</a>
+        <a href="reg3.html" class="button button-big button-green">下一步</a>
       </div>
     </div> 
   </div> 

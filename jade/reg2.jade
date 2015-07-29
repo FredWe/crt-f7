@@ -1,5 +1,7 @@
 .navbar
   .navbar-inner(data-page='reg2')
+    .right
+      a.link(href='user-center.html') 个人中心
 #reg2-page.page.reg-page(data-page='reg2')
   .page-content.hide-bars-on-scroll
     .content-block.reg-basic
@@ -18,202 +20,372 @@
           | 步
     |     
     .list-block.form-basic
-      ul
-        // Text inputs
-        li
-          .item-content
-            .item-media
-              i.icon.icon-form.icon-form-1
-            |             
-            .item-inner
-              .item-title.label 真实姓名
-              |               
-              .item-input
-                input(type='text', placeholder='你的名字')
-        |         
-        li
-          .item-content
-            .item-media
-              i.icon.icon-form.icon-form-2
-            |             
-            .item-inner
-              .item-title.label 身份证号
-              |               
-              .item-input
-                input(type='text', placeholder='你身份证号码')
-        |         
-        li
-          .item-content
-            .item-media
-              i.icon.icon-form.icon-form-3
-            |             
-            .item-inner
-              .item-title.label 用户名
-              |               
-              .item-input
-                input(type='text', placeholder='您在CRT官网的用户名')
-        |         
-        li
-          .item-content
-            .item-media
-              i.icon.icon-form.icon-form-4
-            |             
-            .item-inner
-              .item-title.label 输入密码
-              |               
-              .item-input
-                input(type='text', placeholder='输入密码')
-        |         
-        li
-          .item-content
-            .item-media
-              i.icon.icon-form.icon-form-4
-            |             
-            .item-inner
-              .item-title.label 再次输入密码
-              |               
-              .item-input
-                input(type='text', placeholder='再次输入密码')
-        |         
-        li
-          // Additional "smart-select" class
-          a.item-link.smart-select(href='#')
-            // select
-            select(name='gender')
-              option(value='man', selected='') 男
-              |               
-              option(value='woman') 女
-            |             
-            .item-content
-              .item-media
-                i.icon.icon-form.icon-form-5
-              |               
-              .item-inner
-                // Select label
-                .item-title.label 性别
-                // Selected value, not required
-                .item-after 男
-        |         
-        li
-          .item-content
-            .item-media
-              i.icon.icon-form.icon-form-6
-            |             
-            .item-inner
-              .item-title.label 出生日期
-              |               
-              .item-input
-                input#calendar-default(type='text', placeholder='选择出生日期', readonly='')
-        |         
-        li
-          // Additional "smart-select" class
-          a.item-link.smart-select(href='#')
-            // select
-            select(name='region')
-              option(value='man', selected='') 点击选取您所在的区域
-              |               
-              option(value='woman') 女
-            |             
-            .item-content
-              .item-media
-                i.icon.icon-form.icon-form-7
-              |               
-              .item-inner
-                // Select label
-                .item-title.label 所属地区
-                // Selected value, not required
-                .item-after 点击选取您所在的区域
-        |         
-        li
-          // Additional "smart-select" class
-          a.item-link.smart-select(href='#')
-            // select
-            select(name='gender')
-              option(value='man', selected='') 点击选取您的国籍
-              |               
-              option(value='woman') 女
-            |             
-            .item-content
-              .item-media
-                i.icon.icon-form.icon-form-8
-              |               
-              .item-inner
-                // Select label
-                .item-title.label 国籍
-                // Selected value, not required
-                .item-after 点击选取您的国籍
-        |                   
-        |         
-        li
-          // Additional "smart-select" class
-          a.item-link.smart-select(href='#')
-            // select
-            select(name='gender')
-              option(value='man', selected='') 点击选取您的所在城市
-              |               
-              option(value='woman') 女
-            |             
-            .item-content
-              .item-media
-                i.icon.icon-form.icon-form-9
-              |               
-              .item-inner
-                // Select label
-                .item-title.label 常驻城市
-                // Selected value, not required
-                .item-after 点击选取您的所在城市
-        |                   
-        |         
-        li
-          a.item-link.smart-select(href='#', data-back-text='返回')
-            // "multiple" attribute for multiple select
-            select(name='car', multiple='')
-              // options grouped within "optgroup" tag
-              optgroup(label='5.0级别')
-                option(value='honda', selected='') Honda
-                |                 
-                option(value='lexus') Lexus
-                |                 
-                option(value='mazda') Mazda
-                |                 
-                option(value='nissan') Nissan
-                |                 
-                option(value='toyota') Toyota
-              |               
-              optgroup(label='4.0级别')
-                option(value='audi', selected='') Audi
-                |                 
-                option(value='bmw') BMW
-                |                 
-                option(value='mercedes') Mercedes
-                |                 
-                option(value='vw') Volkswagen
-                |                 
-                option(value='volvo') Volvo
-              |               
-              optgroup(label='3.0级别')
-                option(value='cadillac') Cadillac
-                |                 
-                option(value='chrysler') Chrysler
-                |                 
-                option(value='dodge') Dodge
-                |                 
-                option(value='ford', selected='') Ford
-            |             
-            .item-content
-              .item-media
-                i.icon.icon-form.icon-form-10
-              |                 
-              .item-inner
-                // Select label
-                .item-title.label 球员往绩
-                // Selected value, not required
-                .item-after.smart-select-value 请如实选择您的往绩
+      form#reg2.store-data
+        form#reg2.store-data
+          ul
+            // Text inputs
+            li
+              .item-content
+                .item-media
+                  i.icon.icon-form.icon-form-1
+                |             
+                |               
+                .item-inner
+                  .item-title.label 真实姓名
+                  |               
+                  |                 
+                  .item-input
+                    input(name='f_truename', type='text', placeholder='你的名字')
+            |         
+            |           
+            li
+              .item-content
+                .item-media
+                  i.icon.icon-form.icon-form-2
+                |             
+                |               
+                .item-inner
+                  .item-title.label 身份证号
+                  |               
+                  |                 
+                  .item-input
+                    input(name='f_idcard', type='text', placeholder='你身份证号码')
+            |         
+            |           
+            li
+              .item-content
+                .item-media
+                  i.icon.icon-form.icon-form-3
+                |             
+                |               
+                .item-inner
+                  .item-title.label 用户名
+                  |               
+                  |                 
+                  .item-input
+                    input(name='username', type='text', placeholder='您在CRT官网的用户名')
+            |         
+            |           
+            li
+              .item-content
+                .item-media
+                  i.icon.icon-form.icon-form-4
+                |             
+                |               
+                .item-inner
+                  .item-title.label 输入密码
+                  |               
+                  |                 
+                  .item-input
+                    input(name='password', type='text', placeholder='输入密码')
+            |         
+            |           
+            li
+              .item-content
+                .item-media
+                  i.icon.icon-form.icon-form-4
+                |             
+                |               
+                .item-inner
+                  .item-title.label 再次输入密码
+                  |               
+                  |                 
+                  .item-input
+                    input(name='password_re', type='text', placeholder='再次输入密码')
+            |         
+            |           
+            li
+              // Additional "smart-select" class
+              a.item-link.smart-select(href='#')
+                // select
+                select(name='f_sex')
+                  option(value='男') 男
+                  |               
+                  |                 
+                  option(value='女') 女
+                |             
+                |               
+                .item-content
+                  .item-media
+                    i.icon.icon-form.icon-form-5
+                  |               
+                  |                 
+                  .item-inner
+                    // Select label
+                    .item-title.label 性别
+                    // Selected value, not required
+                    .item-after 男
+            |         
+            |           
+            li
+              .item-content
+                .item-media
+                  i.icon.icon-form.icon-form-6
+                |             
+                |               
+                .item-inner
+                  .item-title.label 出生日期
+                  |               
+                  |                 
+                  .item-input
+                    input#calendar-default(name='f_birthday', type='text', placeholder='选择出生日期', readonly='')
+            |         
+            |           
+            li
+              // Additional "smart-select" class
+              a.item-link.smart-select(href='#')
+                // select
+                select(name='f_area')
+                  | {{#each area}}
+                  option(value='{{city}}') {{city}}
+                  | {{/each}}
+                |             
+                |               
+                .item-content
+                  .item-media
+                    i.icon.icon-form.icon-form-7
+                  |               
+                  |                 
+                  .item-inner
+                    .item-title.label 所属地区
+            |         
+            |           
+            li
+              // Additional "smart-select" class
+              a.item-link.smart-select(href='#')
+                // select
+                select(name='f_nationality')
+                  option(value='中国') 中国
+                  |                 
+                  option(value='中国香港') 中国香港
+                  |                 
+                  option(value='中国澳门') 中国澳门
+                  |                 
+                  option(value='中国台湾') 中国台湾
+                  |                 
+                  option(value='日本') 日本
+                  |                 
+                  option(value='韩国') 韩国
+                  |                 
+                  option(value='澳大利亚') 澳大利亚
+                  |                 
+                  option(value='新西兰') 新西兰
+                  |                 
+                  option(value='智利') 智利
+                  |                 
+                  option(value='加拿大') 加拿大
+                  |                 
+                  option(value='墨西哥') 墨西哥
+                  |                 
+                  option(value='美国') 美国
+                  |                 
+                  option(value='波兰') 波兰
+                  |                 
+                  option(value='捷克') 捷克
+                  |                 
+                  option(value='斯洛伐克') 斯洛伐克
+                  |                 
+                  option(value='匈牙利') 匈牙利
+                  |                 
+                  option(value='奥地利') 奥地利
+                  |                 
+                  option(value='比利时') 比利时
+                  |                 
+                  option(value='瑞士') 瑞士
+                  |                 
+                  option(value='德国') 德国
+                  |                 
+                  option(value='丹麦') 丹麦
+                  |                 
+                  option(value='西班牙') 西班牙
+                  |                 
+                  option(value='芬兰') 芬兰
+                  |                 
+                  option(value='法国') 法国
+                  |                 
+                  option(value='英国') 英国
+                  |                 
+                  option(value='希腊') 希腊
+                  |                 
+                  option(value='爱尔兰') 爱尔兰
+                  |                 
+                  option(value='冰岛') 冰岛
+                  |                 
+                  option(value='意大利') 意大利
+                  |                 
+                  option(value='卢森堡') 卢森堡
+                  |                 
+                  option(value='土耳其') 土耳其
+                  |                 
+                  option(value='瑞典') 瑞典
+                  |                 
+                  option(value='葡萄牙') 葡萄牙
+                  |                 
+                  option(value='挪威') 挪威
+                  |                 
+                  option(value='荷兰') 荷兰
+                  |                 
+                  option(value='摩洛哥') 摩洛哥
+                  |                 
+                  option(value='马耳他') 马耳他
+                  |                 
+                  option(value='塞普洛斯') 塞普洛斯
+                  |                 
+                  option(value='波斯尼亚和黑塞哥维那') 波斯尼亚和黑塞哥维那
+                  |                 
+                  option(value='保加利亚') 保加利亚
+                  |                 
+                  option(value='白俄罗斯') 白俄罗斯
+                  |                 
+                  option(value='爱沙尼亚') 爱沙尼亚
+                  |                 
+                  option(value='克罗地亚') 克罗地亚
+                  |                 
+                  option(value='匈牙利') 匈牙利
+                  |                 
+                  option(value='立陶宛') 立陶宛
+                  |                 
+                  option(value='拉托维亚') 拉托维亚
+                  |                 
+                  option(value='摩尔多瓦') 摩尔多瓦
+                  |                 
+                  option(value='罗马尼亚') 罗马尼亚
+                  |                 
+                  option(value='俄罗斯') 俄罗斯
+                  |                 
+                  option(value='斯洛文尼亚') 斯洛文尼亚
+                  |                 
+                  option(value='亚美尼亚') 亚美尼亚
+                  |                 
+                  option(value='阿塞拜疆') 阿塞拜疆
+                  |                 
+                  option(value='乌克兰') 乌克兰
+                  |                 
+                  option(value='塞尔维亚') 塞尔维亚
+                  |                 
+                  option(value='乌兹别克斯坦') 乌兹别克斯坦
+                  |                 
+                  option(value='吉尔吉斯斯坦') 吉尔吉斯斯坦
+                  |                 
+                  option(value='哈萨克斯坦') 哈萨克斯坦
+                  |                 
+                  option(value='斯里兰卡') 斯里兰卡
+                  |                 
+                  option(value='马来西亚') 马来西亚
+                  |                 
+                  option(value='菲律宾') 菲律宾
+                  |                 
+                  option(value='新加坡') 新加坡
+                  |                 
+                  option(value='泰国') 泰国
+                  |                 
+                  option(value='阿联酋') 阿联酋
+                  |                 
+                  option(value='巴林') 巴林
+                  |                 
+                  option(value='埃及') 埃及
+                  |                 
+                  option(value='以色列') 以色列
+                  |                 
+                  option(value='伊朗') 伊朗
+                  |                 
+                  option(value='黎巴嫩') 黎巴嫩
+                  |                 
+                  option(value='阿曼') 阿曼
+                  |                 
+                  option(value='沙特阿拉伯') 沙特阿拉伯
+                  |                 
+                  option(value='阿尔及利亚') 阿尔及利亚
+                  |                 
+                  option(value='摩洛哥') 摩洛哥
+                  |                 
+                  option(value='毛里求斯') 毛里求斯
+                  |                 
+                  option(value='突尼斯') 突尼斯
+                  |                 
+                  option(value='南非') 南非
+                  |                 
+                  option(value='象牙海岸') 象牙海岸
+                  |                 
+                  option(value='印度') 印度
+                  |                 
+                  option(value='巴西') 巴西
+                |             
+                |               
+                .item-content
+                  .item-media
+                    i.icon.icon-form.icon-form-8
+                  |               
+                  |                 
+                  .item-inner
+                    // Select label
+                    .item-title.label 国籍
+            |                   
+            |                   
+            |           
+            li
+              .item-content
+                .item-media
+                  i.icon.icon-form.icon-form-9
+                |             
+                |               
+                .item-inner
+                  .item-title.label 常驻城市
+                  |               
+                  |                 
+                  .item-input
+                    input(name='f_city', type='text', placeholder='常驻城市')
+            |                   
+            |                   
+            |           
+            li
+              a.item-link.smart-select(href='#', data-back-text='返回')
+                // "multiple" attribute for multiple select
+                select(name='f_achievements', multiple='')
+                  // options grouped within "optgroup" tag
+                  optgroup(label='5.0级别')
+                    option(value='a') A.专业网球队退役球员
+                    |                   
+                    option(value='b') B.15岁以上正在集训球员
+                    |                   
+                    option(value='c') C.曾获全国性业余网球公开赛前四名（含地区分站赛）
+                    |                   
+                    option(value='d') D.CTA中国网球协会全国业余网球排名榜前50名
+                    |                   
+                    option(value='e') E.12岁—15岁正在集训球员
+                    |                   
+                    option(value='f') F.ATP或WTA退役球员
+                    |                   
+                    option(value='g') G.ITF注册球员
+                    |                   
+                    option(value='h') H.曾经在青少年网球学校训练
+                    |                   
+                    option(value='i') I.现任业余网球教练
+                  |                 
+                  optgroup(label='4.0级别')
+                    option(value='j') J.经常参加本地区城市业余（甲组或精英组）网球赛
+                    |                   
+                    option(value='k') K.曾在本地区城市业余网球赛获奖
+                  |                 
+                  optgroup(label='3.0级别')
+                    option(value='l') L.初级水平，缺少比赛经验
+                    |                   
+                    option(value='m') M.热爱网球运动，但从未参加或极少参加过任何业余网球赛
+                |             
+                |               
+                .item-content
+                  .item-media
+                    i.icon.icon-form.icon-form-10
+                  |                 
+                  |                 
+                  .item-inner
+                    // Select label
+                    .item-title.label 球员往绩
   |   
   .toolbar
     .row
       .col-auto
-        a.button.button-big.disabled(href='#reg2') 上一步
+        a.button.button-big.disabled(href='reg2.html') 上一步
       |       
       .col-auto
-        a.button.button-big.button-green(href='#reg3') 下一步
+        a.button.button-big.button-green(href='reg3.html') 下一步

@@ -105,7 +105,7 @@ body {
 		font-weight: bold;
 		z-index: 30;
 	}
-	a.back.link.right {
+	.right a.link{
 		font-size: @backLinkFontSize;
 		color: #33ccff;
 		padding-right: 32px;
@@ -378,6 +378,7 @@ body {
 
 /* pages */
 #user-center-page,
+#user-center-old-page,
 #user-center_news-page {
 	.content-block {
 		margin: 0;
@@ -1195,9 +1196,9 @@ body {
 			padding: 28px 30px;
 			background-image: url(../resources/apply2-pic1.jpg);
 			background-size: cover;
-			a {
+			a.back.link {
 				color: white;
-				font-size: 18px;
+				font-size: @backLinkFontSize;
 			}
 			.banner-title {
 				text-align: center;
@@ -1534,5 +1535,12 @@ body {
 			font-size: 30px;
 			color: #666;
 		}
+	}
+}
+
+/*** user-center modified *******************************************/
+#user-center-page {
+	#user-info > ul {
+		.flex-display;
 	}
 }
