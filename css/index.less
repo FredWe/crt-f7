@@ -105,10 +105,14 @@ body {
 		font-weight: bold;
 		z-index: 30;
 	}
-	.right a.link{
+	.right a.back.link{
 		font-size: @backLinkFontSize;
 		color: #33ccff;
 		padding-right: 32px;
+	}
+	.right a.link{
+		color: #33ccff;
+		padding-left: 4em;
 	}
 }
 .navbar::after {display: none;}
@@ -170,7 +174,7 @@ body {
 		font-size: 18px;
 	}
 	a.back.link {
-		margin-left: 14px;
+		padding: 0 14px;
 		font-size: @backLinkFontSize;
 		font-weight: normal;
 		line-height: 30px;/*useablility*/
@@ -713,7 +717,7 @@ body {
 		margin-top: 0;
 		padding-top: 35px;
 		padding-left: 27px;
-		a.back.link { 
+		a.link { 
 			color: #b3b3b3; 
 			font-size: @backLinkFontSize;
 			padding-right: 0.5em;
@@ -1199,6 +1203,9 @@ body {
 			a.back.link {
 				color: white;
 				font-size: @backLinkFontSize;
+				margin-top: -28px;
+				margin-left: -30px;
+				padding: 28px 30px;
 			}
 			.banner-title {
 				text-align: center;
@@ -1247,6 +1254,9 @@ body {
 				a.back.link {
 					font-size: @backLinkFontSize;
 					color: white;
+					margin-left: -30px;
+					margin-top: -28px;
+					padding: 28px 30px;
 				}
 				top: 28px;
 				left: 30px;
@@ -1549,8 +1559,7 @@ body {
 	.content-block.user-contact {
 		a.back.link {
 			position: absolute;
-			padding-top: 14px;
-			padding-left: 15px;
+			padding: 15px 15px 0;
 			font-size: 20px;
 			color: white;
 			font-weight: normal;
@@ -1625,6 +1634,7 @@ body {
 		a.tab-link {
 			height: 100%;
 			flex-grow: 1;
+			-webkit-flex-grow: 1;
 			font-size: 26px;
 			text-align: center;
 			line-height: 75px;

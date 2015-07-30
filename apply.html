@@ -34,8 +34,32 @@
         <div class="row">
           <div class="col-auto month-title">2015年7月</div>
         </div>                  
-        <li class="item-beijing"></li>
-        <li class="item-wuhan"></li>
+        <li>
+          <div class="item-content">
+            <div class="item-media">
+              <div class="img-title">2015 CRT中网级别联赛</div> 
+              <div class="img-title">第一季 北京地区 男单</div> 
+              <div class="img-title">2015-05-30～2015-05-31              </div>
+            </div> 
+            <div class="item-inner">
+              <div class="item-title"> <a href="#" data-id="{{id}}" class="apply">立即报名</a></div>
+              <div class="item-subtitle">报名时间:03-20~05-25<br>抽签时间:05-26 签位数:128</div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-content">
+            <div class="item-media">
+              <div class="img-title">{{match_year}} {{match_name}}</div> 
+              <div class="img-title">{{match_style}} {{match_zone}}地区 {{match_type}}</div> 
+              <div class="img-title">{{match_begin}}～{{match_end}}              </div>
+            </div> 
+            <div class="item-inner">
+              <div class="item-title"> <a href="#" data-id="{{id}}" class="apply">立即报名</a></div>
+              <div class="item-subtitle">报名时间:{{js "this.match_signupbegin.substr(5,5)"}}~{{js "this.match_signupend.substr(5,5)"}}<br>抽签时间:{{#if "match_lottime === '0000-00-00'"}}未开始{{else}}{{match_lottime}}{{/if}}  签位数:{{match_number}}</div>
+            </div>
+          </div>
+        </li>
       </ul>  
     </div>            
   </div>

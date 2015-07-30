@@ -33,6 +33,44 @@
           .col-auto.month-title 2015年7月
         |                   
         |         
-        li.item-beijing
+        li
+          .item-content
+            .item-media
+              .img-title 2015 CRT中网级别联赛
+              |  
+              |               
+              .img-title 第一季 北京地区 男单
+              |  
+              |               
+              .img-title 2015-05-30～2015-05-31              
+            |  
+            |             
+            .item-inner
+              .item-title
+                a.apply(href='#', data-id='{{id}}') 立即报名
+              |               
+              .item-subtitle
+                | 报名时间:03-20~05-25
+                br
+                | 抽签时间:05-26 签位数:128
         |         
-        li.item-wuhan
+        li
+          .item-content
+            .item-media
+              .img-title {{match_year}} {{match_name}}
+              |  
+              |               
+              .img-title {{match_style}} {{match_zone}}地区 {{match_type}}
+              |  
+              |               
+              .img-title {{match_begin}}～{{match_end}}              
+            |  
+            |             
+            .item-inner
+              .item-title
+                a.apply(href='#', data-id='{{id}}') 立即报名
+              |               
+              .item-subtitle
+                | 报名时间:{{js "this.match_signupbegin.substr(5,5)"}}~{{js "this.match_signupend.substr(5,5)"}}
+                br
+                | 抽签时间:{{#if "match_lottime === '0000-00-00'"}}未开始{{else}}{{match_lottime}}{{/if}}  签位数:{{match_number}}
