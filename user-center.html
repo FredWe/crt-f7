@@ -39,47 +39,48 @@
         </div>      
       </div>      
     </div>
-    <div class="content-block user-info">
-      <div class="row" id="user-operation">
-        <div class="col-auto">
-          <a href="#" class="button btn-bigsquare btn-apply">
-            <div class="icon">
-              <i class="fa fa-pencil-square-o"></i>
-            </div>
-            <div class="title">在线报名</div>
-          </a>
-        </div>
-        <div class="col-auto">
-          <a href="#" class="button btn-bigsquare btn-sign">
-            <div class="icon">
-              <i class="fa fa-check-circle"></i>
-            </div>
-            <div class="title">抽签&amp;签到</div>
-          </a>
-        </div>
-        <div class="col-auto">
-          <a href="#" class="button btn-bigsquare btn-history">
-            <div class="icon">
-              <i class="fa fa-repeat"></i>
-            </div>
-            <div class="title">历史战绩</div>
-          </a>
-        </div>
-      </div>                
-    </div>      
-    <div class="list-block accordion-list" id="user-info">
-      <ul>
-        <li class="accordion-item">
-          <a href="#" class="item-content item-link">
-            <div class="item-inner">
-              <span class="item-title">已报项目</span>
-              <span class="item-title">1项</span>
-            </div>
-          </a>
-          <div class="accordion-item-content">
-            <div class="content-block">
-              <ul>
-                <li>
+    <div class="content-block user-function">
+      <!-- Link to 1st tab, active -->
+      <a href="#tab1" class="tab-link active button">
+        <span class="link-title">
+          在线报名
+          <span class="badge-wrapper">
+            <span class="badge bg-aqua badge-1">1</span>
+          </span>
+        </span>
+      </a>
+      <!-- Link to 2nd tab -->
+      <a href="#tab2" class="tab-link button">
+        <span class="link-title">
+          抽签
+          <span class="badge-wrapper">
+            <span class="badge bg-aqua badge-2">1</span>
+          </span>
+        </span>
+      </a>
+      <!-- Link to 3rd tab -->
+      <a href="#tab3" class="tab-link button">
+        <span class="link-title">
+          历史战绩
+          <span class="badge-wrapper">
+            <span class="badge bg-aqua badge-3">1</span>
+          </span>
+        </span>
+      </a>
+    </div> 
+    <!-- Tabs animated wrapper, required to switch tabs with transition -->
+    <div class="tabs-animated-wrap">
+      <!-- Tabs, tabs wrapper -->
+      <div class="tabs">
+        <!-- Tab 1, active by default -->
+        <div id="tab1" class="tab active">
+          <div class="list-block user-info">
+            <ul>
+              <li class="item">
+                <div class="item-title">
+                  2015年7月7日
+                </div>
+                <div class="item-content">
                   <div class="row no-gutter">
                     <div class="col-75">
                       <p>2015 CRT中网级别联赛 第一季 北京 5.0级别</p>
@@ -107,14 +108,18 @@
                           </p>
                         </div>
                       </div>
-
                     </div>
                     <div class="col-25">
-                      <a href="#" class="button btn sign">选手签到</a>
+                      <a href="#" class="button btn sign">抽签</a>
                     </div>
-                  </div>
-                </li>
-                <li>
+                  </div>                
+                </div>
+              </li>
+              <li class="item">
+                <div class="item-title">
+                  2015年7月7日
+                </div>
+                <div class="item-content">
                   <div class="row no-gutter">
                     <div class="col-75">
                       <p>2015 CRT中网级别联赛 第一季 北京 5.0级别</p>
@@ -142,28 +147,142 @@
                           </p>
                         </div>
                       </div>
-
                     </div>
                     <div class="col-25">
-                      <a href="#" class="button btn sign">选手签到</a>
+                      <a href="#" class="button btn sign">抽签</a>
                     </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
+                  </div>                
+                </div>
+              </li>
+              <li class="item">
+                <div class="item-title">
+                  2015年7月7日
+                </div>
+                <div class="item-content">
+                  <div class="row no-gutter">
+                    <div class="col-75">
+                      <p>2015 CRT中网级别联赛 第一季 北京 5.0级别</p>
+                      <p>项目：
+                        <span class="info">单打</span> &emsp; 参赛者：
+                        <span class="info">王默默</span>
+                      </p>
+                      <div class="row no-gutter">
+                        <div class="col-auto">
+                          <p>抽签日期:
+                            <span class="number">2015-06-16</span>
+                          </p>
+                          <p>签位数:
+                            <span class="number">256</span>
+                          </p>
+                        </div>
+                        <div class="col-auto">
+                          <p>
+                            比赛日期:
+                            <span class="number">2015-06-18</span>
+                          </p>
+                          <p>
+                           签/报:
+                            <span class="number">2015-06-16</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-25">
+                      <a href="#" class="button btn sign">抽签</a>
+                    </div>
+                  </div>                
+                </div>
+              </li>
+              <li class="item">
+                <div class="item-title">
+                  2015年7月7日
+                </div>
+                <div class="item-content">
+                  <div class="row no-gutter">
+                    <div class="col-75">
+                      <p>2015 CRT中网级别联赛 第一季 北京 5.0级别</p>
+                      <p>项目：
+                        <span class="info">单打</span> &emsp; 参赛者：
+                        <span class="info">王默默</span>
+                      </p>
+                      <div class="row no-gutter">
+                        <div class="col-auto">
+                          <p>抽签日期:
+                            <span class="number">2015-06-16</span>
+                          </p>
+                          <p>签位数:
+                            <span class="number">256</span>
+                          </p>
+                        </div>
+                        <div class="col-auto">
+                          <p>
+                            比赛日期:
+                            <span class="number">2015-06-18</span>
+                          </p>
+                          <p>
+                           签/报:
+                            <span class="number">2015-06-16</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-25">
+                      <a href="#" class="button btn sign">抽签</a>
+                    </div>
+                  </div>                
+                </div>
+              </li>
+              <li class="item">
+                <div class="item-title">
+                  2015年7月7日
+                </div>
+                <div class="item-content">
+                  <div class="row no-gutter">
+                    <div class="col-75">
+                      <p>2015 CRT中网级别联赛 第一季 北京 5.0级别</p>
+                      <p>项目：
+                        <span class="info">单打</span> &emsp; 参赛者：
+                        <span class="info">王默默</span>
+                      </p>
+                      <div class="row no-gutter">
+                        <div class="col-auto">
+                          <p>抽签日期:
+                            <span class="number">2015-06-16</span>
+                          </p>
+                          <p>签位数:
+                            <span class="number">256</span>
+                          </p>
+                        </div>
+                        <div class="col-auto">
+                          <p>
+                            比赛日期:
+                            <span class="number">2015-06-18</span>
+                          </p>
+                          <p>
+                           签/报:
+                            <span class="number">2015-06-16</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-25">
+                      <a href="#" class="button btn sign">抽签</a>
+                    </div>
+                  </div>                
+                </div>
+              </li>
+            </ul>
           </div>
-        </li>
-        <li class="accordion-item">
-          <a href="#" class="item-content item-link">
-            <div class="item-inner">
-              <span class="item-title">抽签&amp;签到</span>
-              <span class="item-title">1项</span>
-            </div>
-          </a>
-          <div class="accordion-item-content">
-            <div class="content-block">
-              <ul>
-                <li>
+        </div>
+        <!-- Tab 2 -->
+        <div id="tab2" class="tab">
+          <div class="list-block user-info">
+            <ul>
+              <li class="item">
+                <div class="item-title">
+                  2015年7月7日
+                </div>
+                <div class="item-content">
                   <div class="row no-gutter">
                     <div class="col-75">
                       <p>2015 CRT中网级别联赛 第一季 北京 5.0级别</p>
@@ -191,14 +310,18 @@
                           </p>
                         </div>
                       </div>
-
                     </div>
                     <div class="col-25">
-                      <a href="#" class="button btn sign">选手签到</a>
+                      <a href="#" class="button btn sign">抽签</a>
                     </div>
-                  </div>
-                </li>
-                <li>
+                  </div>                
+                </div>
+              </li>
+              <li class="item">
+                <div class="item-title">
+                  2015年7月7日
+                </div>
+                <div class="item-content">
                   <div class="row no-gutter">
                     <div class="col-75">
                       <p>2015 CRT中网级别联赛 第一季 北京 5.0级别</p>
@@ -226,28 +349,142 @@
                           </p>
                         </div>
                       </div>
-
                     </div>
                     <div class="col-25">
-                      <a href="#" class="button btn sign">选手签到</a>
+                      <a href="#" class="button btn sign">抽签</a>
                     </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
+                  </div>                
+                </div>
+              </li>
+              <li class="item">
+                <div class="item-title">
+                  2015年7月7日
+                </div>
+                <div class="item-content">
+                  <div class="row no-gutter">
+                    <div class="col-75">
+                      <p>2015 CRT中网级别联赛 第一季 北京 5.0级别</p>
+                      <p>项目：
+                        <span class="info">单打</span> &emsp; 参赛者：
+                        <span class="info">王默默</span>
+                      </p>
+                      <div class="row no-gutter">
+                        <div class="col-auto">
+                          <p>抽签日期:
+                            <span class="number">2015-06-16</span>
+                          </p>
+                          <p>签位数:
+                            <span class="number">256</span>
+                          </p>
+                        </div>
+                        <div class="col-auto">
+                          <p>
+                            比赛日期:
+                            <span class="number">2015-06-18</span>
+                          </p>
+                          <p>
+                           签/报:
+                            <span class="number">2015-06-16</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-25">
+                      <a href="#" class="button btn sign">抽签</a>
+                    </div>
+                  </div>                
+                </div>
+              </li>
+              <li class="item">
+                <div class="item-title">
+                  2015年7月7日
+                </div>
+                <div class="item-content">
+                  <div class="row no-gutter">
+                    <div class="col-75">
+                      <p>2015 CRT中网级别联赛 第一季 北京 5.0级别</p>
+                      <p>项目：
+                        <span class="info">单打</span> &emsp; 参赛者：
+                        <span class="info">王默默</span>
+                      </p>
+                      <div class="row no-gutter">
+                        <div class="col-auto">
+                          <p>抽签日期:
+                            <span class="number">2015-06-16</span>
+                          </p>
+                          <p>签位数:
+                            <span class="number">256</span>
+                          </p>
+                        </div>
+                        <div class="col-auto">
+                          <p>
+                            比赛日期:
+                            <span class="number">2015-06-18</span>
+                          </p>
+                          <p>
+                           签/报:
+                            <span class="number">2015-06-16</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-25">
+                      <a href="#" class="button btn sign">抽签</a>
+                    </div>
+                  </div>                
+                </div>
+              </li>
+              <li class="item">
+                <div class="item-title">
+                  2015年7月7日
+                </div>
+                <div class="item-content">
+                  <div class="row no-gutter">
+                    <div class="col-75">
+                      <p>2015 CRT中网级别联赛 第一季 北京 5.0级别</p>
+                      <p>项目：
+                        <span class="info">单打</span> &emsp; 参赛者：
+                        <span class="info">王默默</span>
+                      </p>
+                      <div class="row no-gutter">
+                        <div class="col-auto">
+                          <p>抽签日期:
+                            <span class="number">2015-06-16</span>
+                          </p>
+                          <p>签位数:
+                            <span class="number">256</span>
+                          </p>
+                        </div>
+                        <div class="col-auto">
+                          <p>
+                            比赛日期:
+                            <span class="number">2015-06-18</span>
+                          </p>
+                          <p>
+                           签/报:
+                            <span class="number">2015-06-16</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-25">
+                      <a href="#" class="button btn sign">抽签</a>
+                    </div>
+                  </div>                
+                </div>
+              </li>
+            </ul>
           </div>
-        </li>
-        <li class="accordion-item">
-          <a href="#" class="item-content item-link">
-            <div class="item-inner">
-              <span class="item-title">历史战绩</span>
-              <span class="item-title">1项</span>
-            </div>
-          </a>
-          <div class="accordion-item-content">
-            <div class="content-block">
-              <ul>
-                <li>
+        </div>
+        <!-- Tab 3 -->
+        <div id="tab3" class="tab">
+          <div class="list-block user-info">
+            <ul>
+              <li class="item">
+                <div class="item-title">
+                  2015年7月7日
+                </div>
+                <div class="item-content">
                   <div class="row no-gutter">
                     <div class="col-75">
                       <p>2015 CRT中网级别联赛 第一季 北京 5.0级别</p>
@@ -275,14 +512,18 @@
                           </p>
                         </div>
                       </div>
-
                     </div>
                     <div class="col-25">
-                      <a href="#" class="button btn sign">选手签到</a>
+                      <a href="#" class="button btn sign">抽签</a>
                     </div>
-                  </div>
-                </li>
-                <li>
+                  </div>                
+                </div>
+              </li>
+              <li class="item">
+                <div class="item-title">
+                  2015年7月7日
+                </div>
+                <div class="item-content">
                   <div class="row no-gutter">
                     <div class="col-75">
                       <p>2015 CRT中网级别联赛 第一季 北京 5.0级别</p>
@@ -310,19 +551,134 @@
                           </p>
                         </div>
                       </div>
-
                     </div>
                     <div class="col-25">
-                      <a href="#" class="button btn sign">选手签到</a>
+                      <a href="#" class="button btn sign">抽签</a>
                     </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
+                  </div>                
+                </div>
+              </li>
+              <li class="item">
+                <div class="item-title">
+                  2015年7月7日
+                </div>
+                <div class="item-content">
+                  <div class="row no-gutter">
+                    <div class="col-75">
+                      <p>2015 CRT中网级别联赛 第一季 北京 5.0级别</p>
+                      <p>项目：
+                        <span class="info">单打</span> &emsp; 参赛者：
+                        <span class="info">王默默</span>
+                      </p>
+                      <div class="row no-gutter">
+                        <div class="col-auto">
+                          <p>抽签日期:
+                            <span class="number">2015-06-16</span>
+                          </p>
+                          <p>签位数:
+                            <span class="number">256</span>
+                          </p>
+                        </div>
+                        <div class="col-auto">
+                          <p>
+                            比赛日期:
+                            <span class="number">2015-06-18</span>
+                          </p>
+                          <p>
+                           签/报:
+                            <span class="number">2015-06-16</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-25">
+                      <a href="#" class="button btn sign">抽签</a>
+                    </div>
+                  </div>                
+                </div>
+              </li>
+              <li class="item">
+                <div class="item-title">
+                  2015年7月7日
+                </div>
+                <div class="item-content">
+                  <div class="row no-gutter">
+                    <div class="col-75">
+                      <p>2015 CRT中网级别联赛 第一季 北京 5.0级别</p>
+                      <p>项目：
+                        <span class="info">单打</span> &emsp; 参赛者：
+                        <span class="info">王默默</span>
+                      </p>
+                      <div class="row no-gutter">
+                        <div class="col-auto">
+                          <p>抽签日期:
+                            <span class="number">2015-06-16</span>
+                          </p>
+                          <p>签位数:
+                            <span class="number">256</span>
+                          </p>
+                        </div>
+                        <div class="col-auto">
+                          <p>
+                            比赛日期:
+                            <span class="number">2015-06-18</span>
+                          </p>
+                          <p>
+                           签/报:
+                            <span class="number">2015-06-16</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-25">
+                      <a href="#" class="button btn sign">抽签</a>
+                    </div>
+                  </div>                
+                </div>
+              </li>
+              <li class="item">
+                <div class="item-title">
+                  2015年7月7日
+                </div>
+                <div class="item-content">
+                  <div class="row no-gutter">
+                    <div class="col-75">
+                      <p>2015 CRT中网级别联赛 第一季 北京 5.0级别</p>
+                      <p>项目：
+                        <span class="info">单打</span> &emsp; 参赛者：
+                        <span class="info">王默默</span>
+                      </p>
+                      <div class="row no-gutter">
+                        <div class="col-auto">
+                          <p>抽签日期:
+                            <span class="number">2015-06-16</span>
+                          </p>
+                          <p>签位数:
+                            <span class="number">256</span>
+                          </p>
+                        </div>
+                        <div class="col-auto">
+                          <p>
+                            比赛日期:
+                            <span class="number">2015-06-18</span>
+                          </p>
+                          <p>
+                           签/报:
+                            <span class="number">2015-06-16</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-25">
+                      <a href="#" class="button btn sign">抽签</a>
+                    </div>
+                  </div>                
+                </div>
+              </li>
+            </ul>
           </div>
-        </li>                  
-      </ul>
-    </div>
-               
+        </div>
+      </div>
+    </div>         
   </div>
 </div>

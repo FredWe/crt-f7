@@ -38,77 +38,38 @@
             |             
             .title 姓名
     |     
-    .content-block.user-info
-      #user-operation.row
-        .col-auto
-          a.button.btn-bigsquare.btn-apply(href='#')
-            .icon
-              i.fa.fa-pencil-square-o
-            |             
-            .title 在线报名
-        |         
-        .col-auto
-          a.button.btn-bigsquare.btn-sign(href='#')
-            .icon
-              i.fa.fa-check-circle
-            |             
-            .title 抽签&签到
-        |         
-        .col-auto
-          a.button.btn-bigsquare.btn-history(href='#')
-            .icon
-              i.fa.fa-repeat
-            |             
-            .title 历史战绩
-    |       
-    |     
-    #user-info.list-block.accordion-list
-      ul
-        li.accordion-item
-          a.item-content.item-link(href='#')
-            .item-inner
-              span.item-title 已报项目
-              |               
-              span.item-title 1项
-          |           
-          .accordion-item-content
-            .content-block
-              ul
-                li
-                  .row.no-gutter
-                    .col-75
-                      p 2015 CRT中网级别联赛 第一季 北京 5.0级别
-                      |                       
-                      p
-                        | 项目：
-                        span.info 单打
-                        |    参赛者：
-                        |                         
-                        span.info 王默默
-                      |                       
-                      .row.no-gutter
-                        .col-auto
-                          p
-                            | 抽签日期:
-                            span.number 2015-06-16
-                          |                           
-                          p
-                            | 签位数:
-                            span.number 256
-                        |                         
-                        .col-auto
-                          p
-                            | 比赛日期:
-                            span.number 2015-06-18
-                          |                           
-                          p
-                            | 签/报:
-                            span.number 2015-06-16
-                    |                     
-                    .col-25
-                      a.button.btn.sign(href='#') 选手签到
+    .content-block.user-function
+      // Link to 1st tab, active
+      a.tab-link.active.button(href='#tab1')
+        span.link-title
+          | 在线报名
+          span.badge-wrapper
+            span.badge.bg-aqua.badge-1 1
+      // Link to 2nd tab
+      a.tab-link.button(href='#tab2')
+        span.link-title
+          | 抽签
+          span.badge-wrapper
+            span.badge.bg-aqua.badge-2 1
+      // Link to 3rd tab
+      a.tab-link.button(href='#tab3')
+        span.link-title
+          | 历史战绩
+          span.badge-wrapper
+            span.badge.bg-aqua.badge-3 1
+    // Tabs animated wrapper, required to switch tabs with transition
+    .tabs-animated-wrap
+      // Tabs, tabs wrapper
+      .tabs
+        // Tab 1, active by default
+        #tab1.tab.active
+          .list-block.user-info
+            ul
+              li.item
+                .item-title
+                  | 2015年7月7日
                 |                 
-                li
+                .item-content
                   .row.no-gutter
                     .col-75
                       p 2015 CRT中网级别联赛 第一季 北京 5.0级别
@@ -140,53 +101,13 @@
                             span.number 2015-06-16
                     |                     
                     .col-25
-                      a.button.btn.sign(href='#') 选手签到
-        |         
-        li.accordion-item
-          a.item-content.item-link(href='#')
-            .item-inner
-              span.item-title 抽签&签到
+                      a.button.btn.sign(href='#') 抽签
               |               
-              span.item-title 1项
-          |           
-          .accordion-item-content
-            .content-block
-              ul
-                li
-                  .row.no-gutter
-                    .col-75
-                      p 2015 CRT中网级别联赛 第一季 北京 5.0级别
-                      |                       
-                      p
-                        | 项目：
-                        span.info 单打
-                        |    参赛者：
-                        |                         
-                        span.info 王默默
-                      |                       
-                      .row.no-gutter
-                        .col-auto
-                          p
-                            | 抽签日期:
-                            span.number 2015-06-16
-                          |                           
-                          p
-                            | 签位数:
-                            span.number 256
-                        |                         
-                        .col-auto
-                          p
-                            | 比赛日期:
-                            span.number 2015-06-18
-                          |                           
-                          p
-                            | 签/报:
-                            span.number 2015-06-16
-                    |                     
-                    .col-25
-                      a.button.btn.sign(href='#') 选手签到
+              li.item
+                .item-title
+                  | 2015年7月7日
                 |                 
-                li
+                .item-content
                   .row.no-gutter
                     .col-75
                       p 2015 CRT中网级别联赛 第一季 北京 5.0级别
@@ -218,53 +139,13 @@
                             span.number 2015-06-16
                     |                     
                     .col-25
-                      a.button.btn.sign(href='#') 选手签到
-        |         
-        li.accordion-item
-          a.item-content.item-link(href='#')
-            .item-inner
-              span.item-title 历史战绩
+                      a.button.btn.sign(href='#') 抽签
               |               
-              span.item-title 1项
-          |           
-          .accordion-item-content
-            .content-block
-              ul
-                li
-                  .row.no-gutter
-                    .col-75
-                      p 2015 CRT中网级别联赛 第一季 北京 5.0级别
-                      |                       
-                      p
-                        | 项目：
-                        span.info 单打
-                        |    参赛者：
-                        |                         
-                        span.info 王默默
-                      |                       
-                      .row.no-gutter
-                        .col-auto
-                          p
-                            | 抽签日期:
-                            span.number 2015-06-16
-                          |                           
-                          p
-                            | 签位数:
-                            span.number 256
-                        |                         
-                        .col-auto
-                          p
-                            | 比赛日期:
-                            span.number 2015-06-18
-                          |                           
-                          p
-                            | 签/报:
-                            span.number 2015-06-16
-                    |                     
-                    .col-25
-                      a.button.btn.sign(href='#') 选手签到
+              li.item
+                .item-title
+                  | 2015年7月7日
                 |                 
-                li
+                .item-content
                   .row.no-gutter
                     .col-75
                       p 2015 CRT中网级别联赛 第一季 北京 5.0级别
@@ -296,4 +177,466 @@
                             span.number 2015-06-16
                     |                     
                     .col-25
-                      a.button.btn.sign(href='#') 选手签到
+                      a.button.btn.sign(href='#') 抽签
+              |               
+              li.item
+                .item-title
+                  | 2015年7月7日
+                |                 
+                .item-content
+                  .row.no-gutter
+                    .col-75
+                      p 2015 CRT中网级别联赛 第一季 北京 5.0级别
+                      |                       
+                      p
+                        | 项目：
+                        span.info 单打
+                        |    参赛者：
+                        |                         
+                        span.info 王默默
+                      |                       
+                      .row.no-gutter
+                        .col-auto
+                          p
+                            | 抽签日期:
+                            span.number 2015-06-16
+                          |                           
+                          p
+                            | 签位数:
+                            span.number 256
+                        |                         
+                        .col-auto
+                          p
+                            | 比赛日期:
+                            span.number 2015-06-18
+                          |                           
+                          p
+                            | 签/报:
+                            span.number 2015-06-16
+                    |                     
+                    .col-25
+                      a.button.btn.sign(href='#') 抽签
+              |               
+              li.item
+                .item-title
+                  | 2015年7月7日
+                |                 
+                .item-content
+                  .row.no-gutter
+                    .col-75
+                      p 2015 CRT中网级别联赛 第一季 北京 5.0级别
+                      |                       
+                      p
+                        | 项目：
+                        span.info 单打
+                        |    参赛者：
+                        |                         
+                        span.info 王默默
+                      |                       
+                      .row.no-gutter
+                        .col-auto
+                          p
+                            | 抽签日期:
+                            span.number 2015-06-16
+                          |                           
+                          p
+                            | 签位数:
+                            span.number 256
+                        |                         
+                        .col-auto
+                          p
+                            | 比赛日期:
+                            span.number 2015-06-18
+                          |                           
+                          p
+                            | 签/报:
+                            span.number 2015-06-16
+                    |                     
+                    .col-25
+                      a.button.btn.sign(href='#') 抽签
+        // Tab 2
+        #tab2.tab
+          .list-block.user-info
+            ul
+              li.item
+                .item-title
+                  | 2015年7月7日
+                |                 
+                .item-content
+                  .row.no-gutter
+                    .col-75
+                      p 2015 CRT中网级别联赛 第一季 北京 5.0级别
+                      |                       
+                      p
+                        | 项目：
+                        span.info 单打
+                        |    参赛者：
+                        |                         
+                        span.info 王默默
+                      |                       
+                      .row.no-gutter
+                        .col-auto
+                          p
+                            | 抽签日期:
+                            span.number 2015-06-16
+                          |                           
+                          p
+                            | 签位数:
+                            span.number 256
+                        |                         
+                        .col-auto
+                          p
+                            | 比赛日期:
+                            span.number 2015-06-18
+                          |                           
+                          p
+                            | 签/报:
+                            span.number 2015-06-16
+                    |                     
+                    .col-25
+                      a.button.btn.sign(href='#') 抽签
+              |               
+              li.item
+                .item-title
+                  | 2015年7月7日
+                |                 
+                .item-content
+                  .row.no-gutter
+                    .col-75
+                      p 2015 CRT中网级别联赛 第一季 北京 5.0级别
+                      |                       
+                      p
+                        | 项目：
+                        span.info 单打
+                        |    参赛者：
+                        |                         
+                        span.info 王默默
+                      |                       
+                      .row.no-gutter
+                        .col-auto
+                          p
+                            | 抽签日期:
+                            span.number 2015-06-16
+                          |                           
+                          p
+                            | 签位数:
+                            span.number 256
+                        |                         
+                        .col-auto
+                          p
+                            | 比赛日期:
+                            span.number 2015-06-18
+                          |                           
+                          p
+                            | 签/报:
+                            span.number 2015-06-16
+                    |                     
+                    .col-25
+                      a.button.btn.sign(href='#') 抽签
+              |               
+              li.item
+                .item-title
+                  | 2015年7月7日
+                |                 
+                .item-content
+                  .row.no-gutter
+                    .col-75
+                      p 2015 CRT中网级别联赛 第一季 北京 5.0级别
+                      |                       
+                      p
+                        | 项目：
+                        span.info 单打
+                        |    参赛者：
+                        |                         
+                        span.info 王默默
+                      |                       
+                      .row.no-gutter
+                        .col-auto
+                          p
+                            | 抽签日期:
+                            span.number 2015-06-16
+                          |                           
+                          p
+                            | 签位数:
+                            span.number 256
+                        |                         
+                        .col-auto
+                          p
+                            | 比赛日期:
+                            span.number 2015-06-18
+                          |                           
+                          p
+                            | 签/报:
+                            span.number 2015-06-16
+                    |                     
+                    .col-25
+                      a.button.btn.sign(href='#') 抽签
+              |               
+              li.item
+                .item-title
+                  | 2015年7月7日
+                |                 
+                .item-content
+                  .row.no-gutter
+                    .col-75
+                      p 2015 CRT中网级别联赛 第一季 北京 5.0级别
+                      |                       
+                      p
+                        | 项目：
+                        span.info 单打
+                        |    参赛者：
+                        |                         
+                        span.info 王默默
+                      |                       
+                      .row.no-gutter
+                        .col-auto
+                          p
+                            | 抽签日期:
+                            span.number 2015-06-16
+                          |                           
+                          p
+                            | 签位数:
+                            span.number 256
+                        |                         
+                        .col-auto
+                          p
+                            | 比赛日期:
+                            span.number 2015-06-18
+                          |                           
+                          p
+                            | 签/报:
+                            span.number 2015-06-16
+                    |                     
+                    .col-25
+                      a.button.btn.sign(href='#') 抽签
+              |               
+              li.item
+                .item-title
+                  | 2015年7月7日
+                |                 
+                .item-content
+                  .row.no-gutter
+                    .col-75
+                      p 2015 CRT中网级别联赛 第一季 北京 5.0级别
+                      |                       
+                      p
+                        | 项目：
+                        span.info 单打
+                        |    参赛者：
+                        |                         
+                        span.info 王默默
+                      |                       
+                      .row.no-gutter
+                        .col-auto
+                          p
+                            | 抽签日期:
+                            span.number 2015-06-16
+                          |                           
+                          p
+                            | 签位数:
+                            span.number 256
+                        |                         
+                        .col-auto
+                          p
+                            | 比赛日期:
+                            span.number 2015-06-18
+                          |                           
+                          p
+                            | 签/报:
+                            span.number 2015-06-16
+                    |                     
+                    .col-25
+                      a.button.btn.sign(href='#') 抽签
+        // Tab 3
+        #tab3.tab
+          .list-block.user-info
+            ul
+              li.item
+                .item-title
+                  | 2015年7月7日
+                |                 
+                .item-content
+                  .row.no-gutter
+                    .col-75
+                      p 2015 CRT中网级别联赛 第一季 北京 5.0级别
+                      |                       
+                      p
+                        | 项目：
+                        span.info 单打
+                        |    参赛者：
+                        |                         
+                        span.info 王默默
+                      |                       
+                      .row.no-gutter
+                        .col-auto
+                          p
+                            | 抽签日期:
+                            span.number 2015-06-16
+                          |                           
+                          p
+                            | 签位数:
+                            span.number 256
+                        |                         
+                        .col-auto
+                          p
+                            | 比赛日期:
+                            span.number 2015-06-18
+                          |                           
+                          p
+                            | 签/报:
+                            span.number 2015-06-16
+                    |                     
+                    .col-25
+                      a.button.btn.sign(href='#') 抽签
+              |               
+              li.item
+                .item-title
+                  | 2015年7月7日
+                |                 
+                .item-content
+                  .row.no-gutter
+                    .col-75
+                      p 2015 CRT中网级别联赛 第一季 北京 5.0级别
+                      |                       
+                      p
+                        | 项目：
+                        span.info 单打
+                        |    参赛者：
+                        |                         
+                        span.info 王默默
+                      |                       
+                      .row.no-gutter
+                        .col-auto
+                          p
+                            | 抽签日期:
+                            span.number 2015-06-16
+                          |                           
+                          p
+                            | 签位数:
+                            span.number 256
+                        |                         
+                        .col-auto
+                          p
+                            | 比赛日期:
+                            span.number 2015-06-18
+                          |                           
+                          p
+                            | 签/报:
+                            span.number 2015-06-16
+                    |                     
+                    .col-25
+                      a.button.btn.sign(href='#') 抽签
+              |               
+              li.item
+                .item-title
+                  | 2015年7月7日
+                |                 
+                .item-content
+                  .row.no-gutter
+                    .col-75
+                      p 2015 CRT中网级别联赛 第一季 北京 5.0级别
+                      |                       
+                      p
+                        | 项目：
+                        span.info 单打
+                        |    参赛者：
+                        |                         
+                        span.info 王默默
+                      |                       
+                      .row.no-gutter
+                        .col-auto
+                          p
+                            | 抽签日期:
+                            span.number 2015-06-16
+                          |                           
+                          p
+                            | 签位数:
+                            span.number 256
+                        |                         
+                        .col-auto
+                          p
+                            | 比赛日期:
+                            span.number 2015-06-18
+                          |                           
+                          p
+                            | 签/报:
+                            span.number 2015-06-16
+                    |                     
+                    .col-25
+                      a.button.btn.sign(href='#') 抽签
+              |               
+              li.item
+                .item-title
+                  | 2015年7月7日
+                |                 
+                .item-content
+                  .row.no-gutter
+                    .col-75
+                      p 2015 CRT中网级别联赛 第一季 北京 5.0级别
+                      |                       
+                      p
+                        | 项目：
+                        span.info 单打
+                        |    参赛者：
+                        |                         
+                        span.info 王默默
+                      |                       
+                      .row.no-gutter
+                        .col-auto
+                          p
+                            | 抽签日期:
+                            span.number 2015-06-16
+                          |                           
+                          p
+                            | 签位数:
+                            span.number 256
+                        |                         
+                        .col-auto
+                          p
+                            | 比赛日期:
+                            span.number 2015-06-18
+                          |                           
+                          p
+                            | 签/报:
+                            span.number 2015-06-16
+                    |                     
+                    .col-25
+                      a.button.btn.sign(href='#') 抽签
+              |               
+              li.item
+                .item-title
+                  | 2015年7月7日
+                |                 
+                .item-content
+                  .row.no-gutter
+                    .col-75
+                      p 2015 CRT中网级别联赛 第一季 北京 5.0级别
+                      |                       
+                      p
+                        | 项目：
+                        span.info 单打
+                        |    参赛者：
+                        |                         
+                        span.info 王默默
+                      |                       
+                      .row.no-gutter
+                        .col-auto
+                          p
+                            | 抽签日期:
+                            span.number 2015-06-16
+                          |                           
+                          p
+                            | 签位数:
+                            span.number 256
+                        |                         
+                        .col-auto
+                          p
+                            | 比赛日期:
+                            span.number 2015-06-18
+                          |                           
+                          p
+                            | 签/报:
+                            span.number 2015-06-16
+                    |                     
+                    .col-25
+                      a.button.btn.sign(href='#') 抽签
