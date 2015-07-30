@@ -103,7 +103,7 @@ body {
 	.left {
 		font-size: 30px;
 		font-weight: bold;
-		z-index: 30;
+		z-index: 530;
 	}
 	.right a.back.link{
 		font-size: @backLinkFontSize;
@@ -721,6 +721,10 @@ body {
 			color: #b3b3b3; 
 			font-size: @backLinkFontSize;
 			padding-right: 0.5em;
+			margin-top: -35px;
+			margin-left: -27px;
+			padding-top: 35px;
+			padding-left: 27px;
 		}
 		.title-name { 
 			font-size: 24px; 
@@ -1299,6 +1303,10 @@ body {
 				:first-child {
 					.go-back {
 						font-size: @backLinkFontSize;
+						a.back.link {
+							margin: -21px;
+							padding: 21px;
+						}
 					}
 				}
 			}
@@ -1559,7 +1567,7 @@ body {
 	.content-block.user-contact {
 		a.back.link {
 			position: absolute;
-			padding: 15px 15px 0;
+			padding: 15px;
 			font-size: 20px;
 			color: white;
 			font-weight: normal;
