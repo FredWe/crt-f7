@@ -1,5 +1,5 @@
 /* === Message Bar === */
-.messagebar {
+.toolbar.messagebar {
     .translate3d(0,0,0);
     .transition(0ms);
     background: #fff;
@@ -41,15 +41,8 @@
         .align-self(flex-end);
         height: @toolbarSize;
         line-height: @toolbarSize;
-    }
-    .link.icon-only:first-child {
-        margin-left: -6px;
-    }
-    .link:not(.icon-only) + textarea {
-        margin-left: 8px;
-    }
-    textarea + .link {
-        margin-left: 8px;
+        .active-highlight-color(rgba(0,0,0,0.1));
+        
     }
     .link {
         .flex-shrink(0);

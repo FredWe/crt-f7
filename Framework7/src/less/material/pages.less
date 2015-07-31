@@ -28,6 +28,8 @@
     .translate3d(0,0,0);
 }
 .page-on-right {
+    opacity: 0;
+    pointer-events: none;
     .translate3d(0, @newPageOffset, 0);
 }
 .page-content {
@@ -44,9 +46,11 @@
 }
 // From/to Right To/from Center animations
 .page-from-right-to-center {
+    pointer-events: none;
     .animation(pageFromRightToCenter @pageDuration forwards);
 }
 .page-from-center-to-right {
+    pointer-events: none;
     .animation(pageFromCenterToRight @pageDuration forwards);
 }
 @-webkit-keyframes pageFromRightToCenter {

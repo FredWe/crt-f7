@@ -1,10 +1,9 @@
 .page(data-page="form-storage")
   .navbar
     .navbar-inner
-      .left.sliding
-        a(href="forms.html").back.link
+      .left
+        a(href="forms.html").back.link.icon-only
           i.icon.icon-back
-          span Forms
       .center Form Storage
       .right
         a(href="#").link.open-panel.icon-only
@@ -99,7 +98,7 @@
             .item-inner 
               .item-title.label About Me
               .item-input
-                textarea(name="about-me")
+                textarea(name="about-me").resizable
     .content-block-title I like
     form.store-data.list-block(id="demoform-2")
       ul

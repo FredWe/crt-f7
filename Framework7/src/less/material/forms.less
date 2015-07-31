@@ -46,7 +46,7 @@
         padding-top: 8px;
         padding-bottom: 7px;
         height: 100px;
-        &.resizeable {
+        &.resizable {
             height: 36px;
         }
     }
@@ -116,7 +116,7 @@
         .transform(scaleY(2)) !important;
     }
 }
-textarea.resizeable {
+textarea.resizable {
     overflow: hidden;
 }
 //Switch
@@ -205,6 +205,7 @@ textarea.resizeable {
     position: relative;
     overflow: hidden;
     .transition(300ms);
+    .translate3d(0,0,0);
     input[type="submit"]&, input[type="button"]&{
         width: 100%;
     }
@@ -240,7 +241,7 @@ textarea.resizeable {
         &:not(.button-fill) {
             color:#fff;
             html:not(.watch-active-state) &:active, &.active-state {
-                background: rgba(255,255,255,0.1);
+                background: rgba(255,255,255,0.15);
             }
         }
     }
@@ -256,7 +257,7 @@ textarea.resizeable {
     .flexbox();
     .flex-wrap(nowrap);
     .button {
-        margin-left: 8px;
+        margin-left: 16px;
         width: 100%;
         -webkit-box-flex:1;
         -ms-flex:1;
@@ -406,6 +407,13 @@ label.label-checkbox, label.label-radio {
         i.icon-form-checkbox, i.icon-form-radio {
             margin-left: 8px;
             margin-right: 16px;
+        }
+    }
+    .media-list &, .media-item & {
+        .item-media {
+            i.icon-form-checkbox, i.icon-form-radio {
+                margin-top: 4px;
+            }       
         }
     }
     html:not(.watch-active-state) &:active, &.active-state {
