@@ -108,10 +108,12 @@ body {
 	.right a.back.link{
 		font-size: @backLinkFontSize;
 		color: #33ccff;
-		padding-right: 32px;
+		padding-right: 1em;
 	}
 	.right a.link{
 		color: #33ccff;
+		font-size: @backLinkFontSize;
+		padding-right: 1em;
 		padding-left: 4em;
 		margin-bottom: -2em;
 		padding-bottom: 2em;
@@ -194,9 +196,14 @@ body {
 	background-color: lightgray;
 	.go-back { 
 		display: inline-block;
-		a {
+		a.back.link {
 			color: white;
 			font-size: @backLinkFontSize;
+			margin-left: -8px;
+			padding-left: 16px;
+			margin-bottom: -1em;
+			padding-bottom: 1em;
+			padding-right: 2em;
 		}
 	}
 	text-align: justify;
@@ -727,6 +734,8 @@ body {
 			margin-left: -27px;
 			padding-top: 35px;
 			padding-left: 27px;
+			margin-bottom: -35px;
+			padding-bottom: 35px;
 		}
 		.title-name { 
 			font-size: 24px; 
