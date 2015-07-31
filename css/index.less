@@ -113,6 +113,8 @@ body {
 	.right a.link{
 		color: #33ccff;
 		padding-left: 4em;
+		margin-bottom: -2em;
+		padding-bottom: 2em;
 	}
 }
 .navbar::after {display: none;}
@@ -1173,11 +1175,16 @@ body {
 					.item-title {
 						font-size: 45px;
 						font-weight: bold;
-						color:#ebebeb;
+						color: #ebebeb;
 						text-shadow: 0 -2px 1px #d9d9d9;
+					}
+					.item-title.applied {
+						color: red;
+						text-shadow: none;
 					}
 					.item-subtitle {
 						font-size: 19px;
+						color: black;
 						text-shadow: 0 0 1px #d9d9d9;
 					}
 				}
@@ -1202,7 +1209,8 @@ body {
 			color: white;
 			height: 32.566%;
 			padding: 28px 30px;
-			background-image: url(../resources/apply2-pic1.jpg);
+			background-image: url(../resources/reg-pic.jpg);
+			background-position: bottom;
 			background-size: cover;
 			a.back.link {
 				color: white;
@@ -1251,7 +1259,7 @@ body {
 			position: relative;
 			color: white;
 			height: 411px;
-			background-image: url(../resources/reg-pic1.jpg);
+			background-image: url(../resources/reg-pic.jpg);
 			background-size: cover;
 			.go-back {
 				position: absolute;

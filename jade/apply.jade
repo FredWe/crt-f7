@@ -2,7 +2,7 @@
   // Navbar inner for apply page
   .navbar-inner(data-page='apply')
     .right
-      a.link(href='user-center.html') 个人中心
+      a.link.no-animation(href='user-center.html') 个人中心
     // Sub navbar
     .subnavbar
       .go-back
@@ -18,6 +18,24 @@
           .col-auto.month-title 2015年5月
         |         
         li.item-beijing
+          a.item-content.apply(href='#', data-id='{{id}}')
+            .item-media
+              .img-title 2015 CRT中网级别联赛
+              |  
+              |               
+              .img-title 第一季 北京地区 男单
+              |  
+              |               
+              .img-title 2015-05-30～2015-05-31
+            |  
+            |             
+            .item-inner
+              .item-title 立即报名
+              |               
+              .item-subtitle
+                | 报名时间:03-20~05-25
+                br
+                | 抽签时间:05-26 签位数:128
       |       
       ul.month-match
         .row
@@ -25,6 +43,24 @@
         |                   
         |         
         li.item-beijing
+          a.item-content.apply(href='#', data-id='{{id}}')
+            .item-media
+              .img-title 2015 CRT中网级别联赛
+              |  
+              |               
+              .img-title 第一季 北京地区 男单
+              |  
+              |               
+              .img-title 2015-05-30～2015-05-31
+            |  
+            |             
+            .item-inner
+              .item-title.applied 已报名
+              |               
+              .item-subtitle
+                | 报名时间:03-20~05-25
+                br
+                | 抽签时间:05-26 签位数:128
         |         
         li.item-wuhan
       |       
@@ -42,7 +78,7 @@
               .img-title 第一季 北京地区 男单
               |  
               |               
-              .img-title 2015-05-30～2015-05-31              
+              .img-title 2015-05-30～2015-05-31
             |  
             |             
             .item-inner
