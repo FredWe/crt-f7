@@ -4,5 +4,7 @@ git add .
 git commit -a -m $m
 git push origin gh-pages
 git checkout master
+git add .
+git commit -a -m $m
 git push origin master
 git checkout gh-pages
