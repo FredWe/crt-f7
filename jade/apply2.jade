@@ -1,14 +1,18 @@
 .navbar
   .navbar-inner(data-page='apply2')
     .right
-      a.link.no-animation(href='user-center.html') 个人中心
+      a.link(href='user-center.html') 个人中心
+    |     
+    .subnavbar
+      .go-back
+        a.back.link(href='#')
+          i.fa.fa-chevron-left
+          |  返回
 #apply2-page.page(data-page='apply2')
   // Scrollable page content
   .page-content
     .content-block.apply-banner
-      a.back.link(href='#')
-        i.fa.fa-chevron-left
-        |  返回
+      a.back.link(href='#')      
       |       
       .banner-title.banner-title1 欢迎报名2015中国网球分级系列赛
       |       
